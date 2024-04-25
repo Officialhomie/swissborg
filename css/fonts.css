@@ -1,0 +1,35 @@
+@font-face {
+    font-family: "TTCommons-Regular";
+    src: url("TTCommons-Regular.woff2");
+    font-display: fallback;
+  }
+  
+  @font-face {
+    font-family: "TTCommons-DemiBold";
+    src: url("TTCommons-DemiBold.woff2");
+    font-display: fallback;
+  }
+  
+  @font-face {
+    font-family: "TTCommons-Light";
+    src: url("TTCommons-Light.woff2");
+    font-display: fallback;
+  }
+  
+  @font-face {
+    font-family: "TTCommons-ExtraLight";
+    src: url("TTCommons-ExtraLight.woff2");
+    font-display: fallback;
+  }
+  
+  @font-face {
+    font-family: "TTCommons-Thin";
+    src: url("TTCommons-Thin.woff2");
+    font-display: fallback;
+  }
+  
+  @font-face {
+    font-family: "RobotoMono-SemiBold";
+    src: url("RobotoMono-SemiBold.woff2") format("woff2");
+    font-display: fallback;
+  }
