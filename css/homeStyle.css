@@ -3,3 +3,21 @@
     background-color: #B30DAD;
     background-image: linear-gradient(135deg, #B30DAD, #D942D1);
 }
+
+.layer {
+    /* object-fit: cover; */
+    border: 2px solid #01C38D;
+}
+
+.layer:hover {
+    background-color: #E5F9F3;
+}
+
+.tilt-up {
+    transition: transform 0.3s ease;
+  }
+  
+  .tilt-up:hover {
+    transform: translateY(-5px);
+  }
+  
