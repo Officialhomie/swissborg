@@ -4,20 +4,10 @@
     background-image: linear-gradient(135deg, #B30DAD, #D942D1);
 }
 
-.layer {
-    /* object-fit: cover; */
-    border: 2px solid #01C38D;
+.green {
+    background-image: linear-gradient(135deg, #09a77d, #12E3BC);
 }
 
-.layer:hover {
-    background-color: #E5F9F3;
+.blue {
+    background-image: linear-gradient(135deg, #2e15ce, #8B7DFF);
 }
-
-.tilt-up {
-    transition: transform 0.3s ease;
-  }
-  
-  .tilt-up:hover {
-    transform: translateY(-5px);
-  }
-  
