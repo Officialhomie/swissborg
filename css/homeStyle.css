@@ -11,3 +11,7 @@
 .blue {
     background-image: linear-gradient(135deg, #2e15ce, #8B7DFF);
 }
+
+.skyblue {
+    background-image: linear-gradient(135deg, #389AFF, #68B3FF);
+}
