@@ -12,6 +12,22 @@
     background-image: linear-gradient(135deg, #2e15ce, #8B7DFF);
 }
 
+<<<<<<< HEAD
 .skyblue {
     background-image: linear-gradient(135deg, #389AFF, #68B3FF);
+=======
+.layer {
+    border: 1px solid #09a77d;
+}
+
+.layer:hover {
+    background-color: #B3EEDB;
+}
+
+.yellow {
+    background-image: url(/Image/bitcoin.jpeg);
+    background-size: cover;
+    background-position: center;
+    height: 200px; 
+>>>>>>> 0ac8e3803447508144ee9dfa6377d72604296207
 }

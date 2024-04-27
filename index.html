@@ -3,99 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>SwissBorg.io</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="/css/output.css" rel="stylesheet">
     <link href="/css/homeStyle.css" rel="stylesheet">
 </head>
 <body>
-    <div class="bg-[#191E29] h-[120vh] text-white" >
-        <nav  class="flex items-center justify-between  py-[40px] px-[300px]">
+    <div class="bg-[#191E29] h-[120vh] md:h-[160vh] text-white" >
+        <nav class="flex items-center justify-between py-4 px-6 md:px-10 lg:px-20">
             <div>
                 <img src="" alt="">
-                <a href=""><h1 class="text-[40px] font-bold cursor-pointer">SwissBorg</h1></a>
+                <a href=""><h1 class="text-2xl md:text-3xl lg:text-4xl font-bold cursor-pointer">SwissBorg</h1></a>
             </div>
-
-            <div class="flex items-center gap-[50px]">
-                <a class="text-[15px] cursor-pointer" href="">Invest</a>
-                <a class="text-[15px] cursor-pointer" href="">About Us</a>
+        
+            <div class="hidden md:flex items-center gap-8">
+                <a class="text-sm md:text-base lg:text-lg cursor-pointer" href="">Invest</a>
+                <a class="text-sm md:text-base lg:text-lg cursor-pointer" href="">About Us</a>
             </div>
+        
             <div>
-               <h1 class="text-[20px] cursor-pointer"> <span class="text-[20px]"><i class="bi bi-globe"></i></span> EN</h1>
+                <h1 class="text-lg md:text-xl lg:text-2xl cursor-pointer"><span class="text-lg md:text-xl lg:text-2xl"><i class="bi bi-globe"></i></span> EN</h1>
             </div>
         </nav>
 
-        <div>
-            <div class="bg-[#2B88E7] absolute p-76 top-150 left-200 rounded-full blur-[70px]">
-
-            </div>
-
-            <div class="bg-[#08A989] absolute p-56 top-70 left-100 rounded-full blur-[70px]">
-
-            </div>
-
-            <div class="flex items-center mx-auto gap-[100px] px-[300px] my-[60px]">
-                <div class="w-[50rem] h-[40rem]">
-                    <img class="w-[100%] h-[85%]" src="/Image/hero-img.png" alt="Front-View">
-                </div>
-
-                <div class="">
-                    <h1 class=" font-extrabold text-[50px] pr-[120px]">Empowering Your Financial Freedom</h1>
-
-                    <h3 class="text-[20px] pr-[50px]">Buy, sell and exchange cryptocurrencies with 16 fiats including EUR, CHF and GBP.</h3>
-
-                    <button class="px-10 py-2 rounded-md bg-[#01C38D] focus:outline-none mt-[30px]">Get Started</button>
+        <div class="relative">
+            <div class="bg-[#2B88E7] absolute p-12 top-14 left-6 rounded-full blur-[50px] md:p-20 md:top-32 md:left-20"></div>
+        
+            <div class="bg-[#08A989] absolute p-8 top-7 left-4 rounded-full blur-[50px] md:p-16 md:top-14 md:left-10"></div>
+        
+            <div class="lg:flex lg:w-[76%] lg:mx-auto sm:flex-col-reverse sm:mx-auto items-center gap-8 px-6 my-8 md:mx-auto md:flex-row md:gap-18 md:px-20 md:my-16 lg:px-32">
+                <!-- <div class="w-72 h-[100vh] md:w-[48rem] md:h-[50rem] md:pb-[80px] sm:mx-auto">
+                </div> -->
+                <img class="lg:w-[80%] lg:h-[70vh] md:w-[80%] md:h-[65vh] mx-auto sm:h-[50vh] sm:w-[70%] sm:mb-[60px]" src="/Image/hero-img.png" alt="Front-View">
+        
+                <div class="lg:text-left md:items-center sm:items-center">
+                    <h1 class="font-extrabold lg:w-[80%] sm:text-[32px] sm:text-center sm:w-[100%] sm:font-bold  lg:leading-[86px] lg:text-left md:font-bold md:leading-[76px] md:text-6xl md:text-center lg:text-6xl">Empowering Your Financial Freedom</h1>
+        
+                    <h3 class="text-lg lg:text-left md:text-lg lg:w-full md:text-center lg:text-lg my-[20px] sm:text-center sm:text-lg ">Buy, sell and exchange cryptocurrencies with 16 fiats including EUR, CHF and GBP.</h3>
+        
+                    <button class="px-6 py-2 mt-4 rounded-md bg-[#01C38D] hover:bg-[#019C71] focus:outline-none md:mt-8 lg:px-10 lg:py-3 sm:items-center font-bold">Get Started</button>
                 </div>
             </div>
         </div>
+        
+        
 
-        <div class="items-center text-center flex-col px-[250px]">
-            <h1 class="text-[50px] font-bold">Licensed and regulated</h1>
-            <div class="flex items-center justify-between gap-[10px] mt-[40px] px-[250px]">
-                <img src="/Image/AMF.png" alt="AMF">
-                <img src="./Image/FIU.png" alt="">
+        <div class="items-center text-center flex-col">
+            <h1 class="lg:text-[50px] sm:text-[40px] md:text-[60px] font-bold">Licensed and regulated</h1>->
+
+            <div class="flex mx-auto items-center lg:flex-wrap lg:gap-4 lg:w-full md:flex-wrap md:gap-4 md:w-full sm:flex-col sm:gap-4 sm:w-full">
+                <img src="/Image/AMF.png" alt="AMF" class="w-48">
+                <img src="./Image/FIU.png" alt="" class="w-48">
             </div>
         </div>
+
+        
     </div>
 
-    <div class="flex  my-[80px] hello mx-auto gap-[40px] w-[65%]  h-[350px] rounded-tl-[100px] rounded-br-[100px] px-[10px] py-[30px]" >
+    <!-- sm:mt-[20px] mt-[40px] -->
 
-        <div class="w-[30%] h-auto py-[150px] ">
-            <img class="w-[100%] h-auto py-[50px]"  src="/Image/pinksect.png" alt="">
-        </div>
+    <div class="flex items-center my-[80px] hello mx-auto gap-[40px] lg:w-[65%] md:w-[90%]  h-[320px] rounded-tl-[100px] rounded-br-[100px] px-[15px]" >
+        
+        <img class="w-[40%] h-[300px]"  src="/Image/pinksect.png" alt="">
+        <!-- <div class="w-[30%] h-auto py-[150px] sm:py-[0px] ">
+        </div> -->
 
         <div class="text-white">
-            <h1 class="font-bold text-5xl ">Invest in what millions will play.</h1>
-            <h3 class="text-3xl font-semibold ">Level-up your portfolio with the most promising trend in crypto.</h3>
+            <h1 class="font-bold text-5xl md:text-3xl md:pb-[20px]">Invest in what millions will play.</h1>
+            <h3 class="text-3xl font-semibold md:py-[50px] md:text-lg">Level-up your portfolio with the most promising trend in crypto.</h3>
             <button class="px-10 cursor-pointer py-[14px] rounded-[20px] text-[#01C38D] text- font-semibold bg-white focus:outline-none mt-[30px]">Get Started</button>
         </div>
 
     </div>
 
     <div class="my-[80px] text-center ">
-        <h1 class="text-[40px] text-center mx-auto w-[50%] font-bold ">SwissBorg is Europe’s leading trusted, secure and reliable crypto app</h1>
+        <h1 class="text-[40px] text-center mx-auto w-[70%] md:w-[70%] md:px-[70px] font-bold ">SwissBorg is Europe’s leading trusted, secure and reliable crypto app</h1>
 
-        <div class="flex items-center justify-between mx-auto my-[50px] w-[60%]">
+        <div class="flex items-center justify-between mx-auto my-[50px] lg:w-[50%] md:w-[80%] border">
 
-            <div class="flex items-center flex-col gap-[35px]">
-                <img class="w-[90px]" src="/Image/SEO-page-Cryptos.svg" alt="">
-                <div class="font-bold text-[25px]">
+            <div class="flex items-center flex-col gap-[35px] ">
+                <img class="w-[45%]" src="/Image/SEO-page-Cryptos.svg" alt="">
+                <div class="font-bold text-[20px] gap-[100px]">
                     <h3>Your funds are safe</h3>
                     <h3>and always accessible</h3>
                 </div>
             </div>
 
             <div class="flex items-center flex-col gap-[35px]">
-                <img class="w-[27%]" src="/Image/Homepage-Secure.svg" alt="">
-                <div class="font-bold text-[25px]">
+                <img class="w-[40%]" src="/Image/Homepage-Secure.svg" alt="">
+                <div class="font-bold text-[20px]">
                     <h3>Protected by the most</h3>
                     <h3>secure cryptographic tech</h3>
                 </div>
             </div>
 
             <div class="flex items-center flex-col gap-[35px]">
-                <img  class="w-[90px]" src="/Image/Homepage-EU Regulated.svg" alt="">
-                <div class="font-bold text-[25px]">
+                <img  class="w-[40%]" src="/Image/Homepage-EU Regulated.svg" alt="">
+                <div class="font-bold text-[20px]">
                     <h3>Licensed in EU</h3>
                     <h3>and regulatory compliant</h3>
                 </div>
@@ -131,7 +135,7 @@
 
         <div class="flex items-center gap-[50px] w-[40%] mx-auto">
             <div class="w-[40rem] h-[25rem]">
-                <img class="w-[100%] h-[85%]" src="/images/middle.avif" alt="">
+                <img class="w-[100%] h-[85%]" src="/Image/bestblockchain.avif" alt="">
             </div>
             <div class="w-[80%]">
                 <h1 class="font-bold text-3xl w-[100%]">Diversify like a pro with Thematics.</h1>
@@ -353,6 +357,16 @@
         </div>
         
     </div>
+
+    <div class="flex items-center my-[80px] bg-gradient-to-r from-gray-100 to-white mx-auto gap-[40px] w-[60%]  h-[300px] rounded-2xl px-[5px] py-[20px]">
+        <!-- <div class="w-[30%] h-auto pt-[35px]">
+        </div> -->
+        <img class="w-[40%] h-[300px]" src="/Image/coinweb.avif" alt="">
+
+        <div class="text-black">
+            <h1 class="font-bold text-3xl">Disclaimer</h1>
+            <h3 class="text-md font-normal py-[20px] ">Investment in crypto-assets is unregulated, may not be suitable for retail investors and the entire amount invested may be lost. It is important to read and understand the risks of this investment, which are explained in the "List of Risks" page.</h3>
+            <button class="px-10 cursor-pointer py-[10px] rounded-full bg-[#01C38D] text-[#fff] text- font-semibold  focus:outline-none mt-[10px]">Go to "List of Risk" Page</button>
     
 
 
@@ -527,17 +541,7 @@
                 <p>By using this website you agree to our Terms of Use. Nothing on this website should be construed as a recommendation for any action. SwissBorg Solutions OÜ is the owner of the license: FVT000326 (<a href="">link</a>) and E2022-034 (link). For more details, please see the <a href="">Terms of Use</a>of the SwissBorg app.</p>
             </div>
         </div>
-
-        <div>
-            <div>
-                <a href="">Terms of Use</a>
-                <a href="">Privacy Policy</a>
-                <a href="">Privacy Policy</a>
-                <a href="">Cookies Policy</a>
-            </div>
-            <p>&copy SBorg SA. All Rights Reserved.</p>
-        </div>
-
-    </footer>
+    </div>
+    
 </body>
 </html>
