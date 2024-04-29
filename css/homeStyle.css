@@ -28,5 +28,37 @@
     background-image: url(/Image/bitcoin.jpeg);
     background-size: cover;
     background-position: center;
-    height: 200px;
+    height: 300px;
+}
+
+.holder {
+    position: relative;
+}
+
+.held {
+    position: relative;
+    z-index: 1; 
+}
+
+.why {
+    background-image: url(/Image/Thematics-Why.avif);
+    background-size: cover;
+    background-position: center;
+    height: 250px;
+}
+.why1 {
+    background-image: url(/Image/Thematics-How.avif);
+    background-size: cover;
+    background-position: center;
+    height: 250px;
+}
+
+.faq.active .res {
+    display: block;
+    transition: .5s;
+    height: 100px;
+}
+
+.faq.active .que i {
+    transform: rotate(180deg);
 }

@@ -815,6 +815,10 @@ video {
   margin-bottom: 30px;
 }
 
+.mb-\[50px\] {
+  margin-bottom: 50px;
+}
+
 .ml-\[-16px\] {
   margin-left: -16px;
 }
@@ -829,6 +833,10 @@ video {
 
 .mt-\[0px\] {
   margin-top: 0px;
+}
+
+.mt-\[100px\] {
+  margin-top: 100px;
 }
 
 .mt-\[10px\] {
@@ -986,8 +994,16 @@ video {
   height: 600px;
 }
 
-.h-\[70\%\] {
-  height: 70%;
+.h-\[700px\] {
+  height: 700px;
+}
+
+.h-\[70vh\] {
+  height: 70vh;
+}
+
+.h-\[80\%\] {
+  height: 80%;
 }
 
 .h-\[85\%\] {
@@ -996,6 +1012,10 @@ video {
 
 .h-auto {
   height: auto;
+}
+
+.h-full {
+  height: 100%;
 }
 
 .w-48 {
@@ -1028,6 +1048,10 @@ video {
 
 .w-\[30\%\] {
   width: 30%;
+}
+
+.w-\[35\%\] {
+  width: 35%;
 }
 
 .w-\[40\%\] {
@@ -1632,6 +1656,14 @@ video {
   justify-items: stretch;
 }
 
+.gap-1 {
+  gap: 0.25rem;
+}
+
+.gap-11 {
+  gap: 2.75rem;
+}
+
 .gap-6 {
   gap: 1.5rem;
 }
@@ -1650,6 +1682,14 @@ video {
 
 .gap-\[120px\] {
   gap: 120px;
+}
+
+.gap-\[12px\] {
+  gap: 12px;
+}
+
+.gap-\[150px\] {
+  gap: 150px;
 }
 
 .gap-\[15px\] {
@@ -1696,20 +1736,16 @@ video {
   gap: 50px;
 }
 
+.gap-\[65px\] {
+  gap: 65px;
+}
+
 .gap-\[70px\] {
   gap: 70px;
 }
 
 .gap-\[8px\] {
   gap: 8px;
-}
-
-.gap-\[12px\] {
-  gap: 12px;
-}
-
-.gap-\[65px\] {
-  gap: 65px;
 }
 
 .space-x-2 > :not([hidden]) ~ :not([hidden]) {
@@ -2192,6 +2228,11 @@ video {
   border-style: none;
 }
 
+.border-black {
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
+}
+
 .bg-\[\#01C38D\] {
   --tw-bg-opacity: 1;
   background-color: rgb(1 195 141 / var(--tw-bg-opacity));
@@ -2205,6 +2246,11 @@ video {
 .bg-\[\#191E29\] {
   --tw-bg-opacity: 1;
   background-color: rgb(25 30 41 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#212734\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(33 39 52 / var(--tw-bg-opacity));
 }
 
 .bg-\[\#2B88E7\] {
@@ -2247,10 +2293,6 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-\[\/Image\/bitcoin\.jpeg\] {
-  background-color: /Image/bitcoin.jpeg;
-}
-
 .bg-\[rgb\(255\2c 0\2c 0\)\] {
   --tw-bg-opacity: 1;
   background-color: rgb(255 0 0 / var(--tw-bg-opacity));
@@ -2266,13 +2308,8 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-\[\#\] {
-  background-color: #;
-}
-
-.bg-\[\#212734\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(33 39 52 / var(--tw-bg-opacity));
+.bg-\[url\(\'\/Image\/bitcoin\.jpeg\'\)\] {
+  background-image: url('/Image/bitcoin.jpeg');
 }
 
 .bg-gradient-to-b {
@@ -2429,6 +2466,14 @@ video {
   padding: 2rem;
 }
 
+.p-\[20px\] {
+  padding: 20px;
+}
+
+.p-\[30px\] {
+  padding: 30px;
+}
+
 .p-\[50px\] {
   padding: 50px;
 }
@@ -2538,6 +2583,11 @@ video {
   padding-right: 6rem;
 }
 
+.px-\[7rem\] {
+  padding-left: 7rem;
+  padding-right: 7rem;
+}
+
 .px-\[8px\] {
   padding-left: 8px;
   padding-right: 8px;
@@ -2618,6 +2668,11 @@ video {
   padding-bottom: 4rem;
 }
 
+.py-\[50px\] {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
 .py-\[5px\] {
   padding-top: 5px;
   padding-bottom: 5px;
@@ -2638,29 +2693,14 @@ video {
   padding-bottom: 8px;
 }
 
-.py-\[\] {
-  padding-top: ;
-  padding-bottom: ;
-}
-
-.py-\[rem\] {
-  padding-top: rem;
-  padding-bottom: rem;
-}
-
-.px-\[rem\] {
-  padding-left: rem;
-  padding-right: rem;
-}
-
-.px-\[7rem\] {
-  padding-left: 7rem;
-  padding-right: 7rem;
-}
-
 .py-\[8rem\] {
   padding-top: 8rem;
   padding-bottom: 8rem;
+}
+
+.py-\[\] {
+  padding-top: ;
+  padding-bottom: ;
 }
 
 .pb-\[12px\] {
@@ -2799,6 +2839,10 @@ video {
   font-size: 20px;
 }
 
+.text-\[22px\] {
+  font-size: 22px;
+}
+
 .text-\[24px\] {
   font-size: 24px;
 }
@@ -2827,6 +2871,10 @@ video {
   font-size: 70px;
 }
 
+.text-\[72px\] {
+  font-size: 72px;
+}
+
 .text-lg {
   font-size: 1.125rem;
   line-height: 1.75rem;
@@ -2840,22 +2888,6 @@ video {
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
-}
-
-.text-\[2px\] {
-  font-size: 2px;
-}
-
-.text-\[22px\] {
-  font-size: 22px;
-}
-
-.text-\[75px\] {
-  font-size: 75px;
-}
-
-.text-\[72px\] {
-  font-size: 72px;
 }
 
 .font-bold {
@@ -3035,10 +3067,6 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.text-\[\] {
-  color: ;
-}
-
 .underline {
   text-decoration-line: underline;
 }
@@ -3087,6 +3115,10 @@ video {
 
 .opacity-0 {
   opacity: 0;
+}
+
+.opacity-85 {
+  opacity: 0.85;
 }
 
 .bg-blend-normal {
@@ -3765,6 +3797,10 @@ video {
 
   .lg\:w-\[65\%\] {
     width: 65%;
+  }
+
+  .lg\:w-\[70\%\] {
+    width: 70%;
   }
 
   .lg\:w-\[76\%\] {
