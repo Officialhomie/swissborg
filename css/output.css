@@ -811,6 +811,10 @@ video {
   margin-bottom: 30px;
 }
 
+.mb-\[40px\] {
+  margin-bottom: 40px;
+}
+
 .mb-\[50px\] {
   margin-bottom: 50px;
 }
@@ -3012,6 +3016,10 @@ video {
   line-height: 2rem;
 }
 
+.leading-\[56px\] {
+  line-height: 56px;
+}
+
 .leading-tight {
   line-height: 1.25;
 }
@@ -3083,6 +3091,14 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-\[\] {
+  color: ;
+}
+
+.text-\[\#\] {
+  color: #;
 }
 
 .underline {
