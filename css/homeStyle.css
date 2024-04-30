@@ -68,3 +68,27 @@
 .faq.active .que i {
     transform: rotate(180deg);
 }
+
+.hover-move-up {
+    transition: transform 0.3s ease;
+}
+
+.hover-move-up:hover {
+    transform: translateY(-10px);
+}
+
+.scale-up {
+    transition: transform 0.5s ease;
+    overflow: hidden;
+}
+
+.scale-up img {
+    transition: transform 0.5s ease;
+}
+
+.scale-up:hover img {
+    transform: scale(1.1); 
+    transition: transform 0.5s ease;
+    border-top-left-radius: 12px;
+    border-top-right-radius: px;
+}
