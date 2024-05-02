@@ -1026,6 +1026,10 @@ video {
   width: 18rem;
 }
 
+.w-\[10\%\] {
+  width: 10%;
+}
+
 .w-\[100\%\] {
   width: 100%;
 }
@@ -1036,6 +1040,10 @@ video {
 
 .w-\[150px\] {
   width: 150px;
+}
+
+.w-\[18\%\] {
+  width: 18%;
 }
 
 .w-\[20\%\] {
@@ -1132,14 +1140,6 @@ video {
 
 .w-full {
   width: 100%;
-}
-
-.w-\[10\%\] {
-  width: 10%;
-}
-
-.w-\[18\%\] {
-  width: 18%;
 }
 
 .flex-shrink {
@@ -2261,6 +2261,11 @@ video {
   background-color: rgb(33 39 52 / var(--tw-bg-opacity));
 }
 
+.bg-\[\#282a2c\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(40 42 44 / var(--tw-bg-opacity));
+}
+
 .bg-\[\#2B88E7\] {
   --tw-bg-opacity: 1;
   background-color: rgb(43 136 231 / var(--tw-bg-opacity));
@@ -2269,6 +2274,11 @@ video {
 .bg-\[\#53DEBD\] {
   --tw-bg-opacity: 1;
   background-color: rgb(83 222 189 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#7182FF\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(113 130 255 / var(--tw-bg-opacity));
 }
 
 .bg-\[\#75B9FF\] {
@@ -2296,6 +2306,11 @@ video {
   background-color: rgb(217 219 221 / var(--tw-bg-opacity));
 }
 
+.bg-\[\#db6a41\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(219 106 65 / var(--tw-bg-opacity));
+}
+
 .bg-\[\#fff\] {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -2314,21 +2329,6 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#282a2c\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(40 42 44 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#7182FF\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(113 130 255 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#db6a41\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(219 106 65 / var(--tw-bg-opacity));
 }
 
 .bg-\[url\(\'\/Image\/bitcoin\.jpeg\'\)\] {
@@ -2514,6 +2514,11 @@ video {
 .px-8 {
   padding-left: 2rem;
   padding-right: 2rem;
+}
+
+.px-\[10px\] {
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .px-\[10rem\] {
@@ -2726,11 +2731,6 @@ video {
   padding-bottom: ;
 }
 
-.px-\[10px\] {
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
 .pb-\[12px\] {
   padding-bottom: 12px;
 }
@@ -2847,6 +2847,10 @@ video {
   font-size: 13px;
 }
 
+.text-\[14px\] {
+  font-size: 14px;
+}
+
 .text-\[15px\] {
   font-size: 15px;
 }
@@ -2916,10 +2920,6 @@ video {
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
-}
-
-.text-\[14px\] {
-  font-size: 14px;
 }
 
 .font-bold {
