@@ -1107,10 +1107,6 @@ video {
   width: 120%;
 }
 
-.w-\[130\%\] {
-  width: 130%;
-}
-
 .w-\[140\%\] {
   width: 140%;
 }
@@ -1895,6 +1891,10 @@ video {
 
 .gap-\[8px\] {
   gap: 8px;
+}
+
+.gap-\[80px\] {
+  gap: 80px;
 }
 
 .space-x-2 > :not([hidden]) ~ :not([hidden]) {
@@ -3052,6 +3052,10 @@ video {
 
 .pt-\[4rem\] {
   padding-top: 4rem;
+}
+
+.pl-\[7rem\] {
+  padding-left: 7rem;
 }
 
 .text-left {
