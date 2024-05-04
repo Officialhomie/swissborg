@@ -1019,6 +1019,10 @@ video {
   height: 25rem;
 }
 
+.h-\[270px\] {
+  height: 270px;
+}
+
 .h-\[30\%\] {
   height: 30%;
 }
@@ -1047,10 +1051,6 @@ video {
   height: 600px;
 }
 
-.h-\[720px\] {
-  height: 720px;
-}
-
 .h-\[85\%\] {
   height: 85%;
 }
@@ -1067,8 +1067,12 @@ video {
   height: 100%;
 }
 
-.h-\[270px\] {
-  height: 270px;
+.h-\[100vh\] {
+  height: 100vh;
+}
+
+.h-\[110vh\] {
+  height: 110vh;
 }
 
 .w-10 {
@@ -1895,10 +1899,6 @@ video {
 
 .gap-\[8px\] {
   gap: 8px;
-}
-
-.gap-\[\] {
-  gap: ;
 }
 
 .space-x-2 > :not([hidden]) ~ :not([hidden]) {
@@ -3290,6 +3290,10 @@ video {
   line-height: 1.25;
 }
 
+.leading-\[40px\] {
+  line-height: 40px;
+}
+
 .text-\[\#01C38D\] {
   --tw-text-opacity: 1;
   color: rgb(1 195 141 / var(--tw-text-opacity));
@@ -3907,10 +3911,6 @@ video {
     height: 50vh;
   }
 
-  .sm\:h-\[700px\] {
-    height: 700px;
-  }
-
   .sm\:w-\[100\%\] {
     width: 100%;
   }
@@ -4043,10 +4043,6 @@ video {
     height: 30%;
   }
 
-  .md\:h-\[300px\] {
-    height: 300px;
-  }
-
   .md\:h-\[30px\] {
     height: 30px;
   }
@@ -4065,6 +4061,14 @@ video {
 
   .md\:h-\[65vh\] {
     height: 65vh;
+  }
+
+  .md\:h-\[1vh\] {
+    height: 1vh;
+  }
+
+  .md\:h-\[150vh\] {
+    height: 150vh;
   }
 
   .md\:w-\[100\%\] {
@@ -4187,16 +4191,8 @@ video {
     gap: 250px;
   }
 
-  .md\:gap-\[50px\] {
-    gap: 50px;
-  }
-
   .md\:gap-\[70px\] {
     gap: 70px;
-  }
-
-  .md\:gap-\[150px\] {
-    gap: 150px;
   }
 
   .md\:border-none {
@@ -4332,6 +4328,10 @@ video {
     display: none;
   }
 
+  .lg\:h-\[130vh\] {
+    height: 130vh;
+  }
+
   .lg\:h-\[50vh\] {
     height: 50vh;
   }
@@ -4342,10 +4342,6 @@ video {
 
   .lg\:h-\[70vh\] {
     height: 70vh;
-  }
-
-  .lg\:h-\[90vh\] {
-    height: 90vh;
   }
 
   .lg\:w-\[100\%\] {
@@ -4396,8 +4392,8 @@ video {
     width: 100%;
   }
 
-  .lg\:w-\[\] {
-    width: ;
+  .lg\:w-\[86\%\] {
+    width: 86%;
   }
 
   .lg\:grid-cols-4 {
@@ -4496,8 +4492,17 @@ video {
     line-height: 1.75rem;
   }
 
+  .lg\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
+  }
+
   .lg\:leading-\[50px\] {
     line-height: 50px;
+  }
+
+  .lg\:leading-\[66px\] {
+    line-height: 66px;
   }
 
   .lg\:leading-\[86px\] {
