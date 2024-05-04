@@ -29,7 +29,25 @@
 }
 
 .yellow {
-    background-image: url(/Image/bitcoin.jpeg);
+    background-image: url(/Image/Card-background-overlay-Golden.avif), linear-gradient(135deg, rgb(218, 162, 65) 100%, rgb(184, 115, 29) 100%);
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+}
+.light-blue {
+    background-image: url(/Image/Card-background-overlay-Best+Blockchains.avif), linear-gradient(283deg, rgb(10, 35, 219) 100%, rgb(61, 150, 255) 100%);
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+}
+.blue {
+    background-image: url(/Image/Card-background-overlay-CryptoBanter.avif), linear-gradient(283deg, rgb(10, 35, 219) 100%, rgb(61, 150, 255) 100%);
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+}
+.purple{
+    background-image: url(/Image/game.avif), linear-gradient(rgb(94, 27, 97) 0%, rgb(81, 26, 84) 100%);
     background-size: cover;
     background-position: center;
     height: 300px;
