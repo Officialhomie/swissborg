@@ -57,6 +57,13 @@
     height: 250px;
 }
 
+.autoinvest {
+    background-image: url(/images/invest-img1.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 250px;
+}
+
 /* .res {
     display: none; transition: max-height 0.3s ease-in-out; max-height: 0; overflow: hidden; 
 } */
