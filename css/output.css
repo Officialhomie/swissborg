@@ -999,6 +999,10 @@ video {
   height: 110vh;
 }
 
+.h-\[110vh\] {
+  height: 110vh;
+}
+
 .h-\[150px\] {
   height: 150px;
 }
@@ -1897,6 +1901,10 @@ video {
   gap: 8px;
 }
 
+.gap-\[90px\] {
+  gap: 90px;
+}
+
 .space-x-2 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
   margin-right: calc(0.5rem * var(--tw-space-x-reverse));
@@ -2535,6 +2543,11 @@ video {
   background-color: rgb(22 163 74 / var(--tw-bg-opacity));
 }
 
+.bg-red-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(239 68 68 / var(--tw-bg-opacity));
+}
+
 .bg-red-600 {
   --tw-bg-opacity: 1;
   background-color: rgb(220 38 38 / var(--tw-bg-opacity));
@@ -2803,6 +2816,11 @@ video {
   padding-right: 30px;
 }
 
+.px-\[3px\] {
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
 .px-\[3rem\] {
   padding-left: 3rem;
   padding-right: 3rem;
@@ -3038,6 +3056,10 @@ video {
   padding-left: 7rem;
 }
 
+.pl-\[8rem\] {
+  padding-left: 8rem;
+}
+
 .pr-\[20px\] {
   padding-right: 20px;
 }
@@ -3176,6 +3198,10 @@ video {
 
 .text-\[18px\] {
   font-size: 18px;
+}
+
+.text-\[19px\] {
+  font-size: 19px;
 }
 
 .text-\[20px\] {
@@ -4067,12 +4093,51 @@ video {
     align-items: center;
   }
 
+  .sm\:justify-center {
+    justify-content: center;
+  }
+
+  .sm\:gap-\[\] {
+    gap: ;
+  }
+
+  .sm\:gap-\[5\] {
+    gap: 5;
+  }
+
+  .sm\:gap-\[50px\] {
+    gap: 50px;
+  }
+
+  .sm\:gap-\[30px\] {
+    gap: 30px;
+  }
+
+  .sm\:px-\[\] {
+    padding-left: ;
+    padding-right: ;
+  }
+
+  .sm\:px-\[1rem\] {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .sm\:px-\[10px\] {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
   .sm\:text-center {
     text-align: center;
   }
 
   .sm\:text-\[32px\] {
     font-size: 32px;
+  }
+
+  .sm\:text-\[60px\] {
+    font-size: 60px;
   }
 
   .sm\:text-lg {
@@ -4085,8 +4150,24 @@ video {
     line-height: 1.25rem;
   }
 
+  .sm\:text-\[20px\] {
+    font-size: 20px;
+  }
+
+  .sm\:text-\[100px\] {
+    font-size: 100px;
+  }
+
+  .sm\:text-\[30px\] {
+    font-size: 30px;
+  }
+
   .sm\:font-bold {
     font-weight: 700;
+  }
+
+  .sm\:text-\[\] {
+    color: ;
   }
 
   .sm\:underline {
@@ -4384,6 +4465,10 @@ video {
     line-height: 1;
   }
 
+  .md\:text-\[60px\] {
+    font-size: 60px;
+  }
+
   .md\:text-base {
     font-size: 1rem;
     line-height: 1.5rem;
@@ -4490,6 +4575,10 @@ video {
 
   .lg\:w-\[50\%\] {
     width: 50%;
+  }
+
+  .lg\:w-\[55\%\] {
+    width: 55%;
   }
 
   .lg\:w-\[60\%\] {
@@ -4664,6 +4753,10 @@ video {
 
   .lg\:leading-\[86px\] {
     line-height: 86px;
+  }
+
+  .lg\:text-\[70pxpx\] {
+    color: 70pxpx;
   }
 }
 

@@ -82,6 +82,14 @@
     height: 250px;
 }
 
+.phone{
+    list-style: numbers;
+}
+
+html,body {
+    overflow-x: hidden;
+}
+
 /* .res {
     display: none; transition: max-height 0.3s ease-in-out; max-height: 0; overflow: hidden; 
 } */
