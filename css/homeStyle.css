@@ -66,13 +66,13 @@
     background-image: url(/Image/Thematics-Why.avif);
     background-size: cover;
     background-position: center;
-    height: 250px;
+    /* height: 250px; */
 }
 .why1 {
     background-image: url(/Image/Thematics-How.avif);
     background-size: cover;
     background-position: center;
-    height: 250px;
+    /* height: 250px; */
 }
 
 .autoinvest {
@@ -120,4 +120,16 @@
     transition: transform 0.5s ease;
     border-top-left-radius: 12px;
     border-top-right-radius: px;
+}
+
+.thematicsActive {
+    background-color: #E5F9F3;
+    color: #01C38D;
+    font-weight: bold;
+}
+
+.swissBorgActive {
+    background-color: #E5F9F3;
+    color: #01C38D;
+    font-weight: bold;
 }
