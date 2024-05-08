@@ -2691,10 +2691,6 @@ video {
      object-fit: scale-down;
 }
 
-.p-12 {
-  padding: 3rem;
-}
-
 .p-2 {
   padding: 0.5rem;
 }
@@ -3584,6 +3580,10 @@ video {
   opacity: 0.85;
 }
 
+.opacity-90 {
+  opacity: 0.9;
+}
+
 .bg-blend-normal {
   background-blend-mode: normal;
 }
@@ -4319,12 +4319,8 @@ video {
     background-image: linear-gradient(to left, var(--tw-gradient-stops));
   }
 
-  .md\:p-16 {
-    padding: 4rem;
-  }
-
-  .md\:p-20 {
-    padding: 5rem;
+  .md\:p-56 {
+    padding: 14rem;
   }
 
   .md\:p-\[25px\] {
@@ -4528,12 +4524,12 @@ video {
     width: 90%;
   }
 
-  .lg\:w-full {
-    width: 100%;
-  }
-
   .lg\:w-\[95\%\] {
     width: 95%;
+  }
+
+  .lg\:w-full {
+    width: 100%;
   }
 
   .lg\:grid-cols-4 {
