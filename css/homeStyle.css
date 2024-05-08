@@ -141,3 +141,7 @@ html,body {
     color: #01C38D;
     font-weight: bold;
 }
+
+.opa {
+    opacity: 1;
+}
