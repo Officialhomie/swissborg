@@ -10,6 +10,19 @@
 </head>
 <body>
     <section>
+        <nav class="flex items-center justify-between px-[3rem] py-[25px]">
+            <div>
+                <img src="" alt="">
+                <a href=""><h1 class="text-2xl md:text-3xl lg:text-4xl font-bold cursor-pointer">SwissBorg</h1></a>
+            </div>
+            <div class="hidden lg:flex items-center gap-8">
+                <a class="text-sm md:text-base lg:text-md cursor-pointer font-semibold  hover:text-[#01C38D] hover:border-b-2 hover:border-[#01C38D]" href="">Invest</a>
+                <a class="text-sm md:text-base lg:text-md cursor-pointer font-semibold  hover:text-[#01C38D] hover:border-b-2 hover:border-[#01C38D]" href="">About Us</a>
+            </div>
+            <h1 class="hidden lg:block text-lg md:text-lg lg:text-xl "><span class="text-lg md:text-lg lg:text-xl"><i class="bi bi-globe"></i></span> EN</h1>
+            <i class="bi bi-list block lg:hidden"></i>
+        </nav>
+
         <div class="flex gap-[45px] items-center py-[10rem] px-[2rem]">
             <div>
                 <h1 class="text-[70px] font-semibold">Automate your investments</h1>
@@ -70,14 +83,226 @@
                 <a href="">You have the power</a>
             </div>
 
-            <div class="flex gap-[45px] items-center px-[4rem] py-[4rem]">
-                <img src="/images/buy-sell-1.avif" alt="" width="50%">
+            <div class="flex gap-[60px] items-center px-[2rem] py-[3rem]">
+                <div class="px-[2rem]">
+                    <h1 class="font-bold text-[30px] py-[25px]">Long term wealth building</h1>
+                    <p class="text-[16px]">Auto-Invest reduces price volatility, leading to a smoother average buying price and potentially higher returns.</p>
+                </div>
+                <img src="/images/longtermwealth.img" alt="" width="45%">
+            </div>
+        </div>
+
+        <div class="flex items-center gap-[80px] justify-center px-[3rem] py-[8rem] bg-[#F6F7F8]">
+            <img src="/images/howitworks-ethereum-img.avif" alt="" width="38%">
+            <div class="pl-[8rem]">
+                <h1 class="text-[38px] font-bold pb-[2rem]">How it works</h1>
+                <p class="text-[20px]">Smaller investments mostly out-perform lump-sum investments in the long-term.</p>
+                <p class="text-[20px] py-[1rem]">With Auto-Invest you gain a better average buying price that reduces your risk & potentially increases the return on Investment.</p>
+                <p class="text-[20px]">*For example, investing in Ethereum weekly for the past 3 years would result in a 132.25% return*</p>
+            </div>
+        </div>
+
+        <!-- Frequently asked quedtions -->
+        <div class="flex flex-col md:flex-row justify-center w-full md:w-[95%] lg:w-[60%] mx-auto gap-[60px] md:gap-[100px]">
+            <h1 class="text-3xl lg:text-[40px] md:w-[20%] text-left font-bold pl-[20px] md:pl-[0px]">Frequently asked questions</h1>
+            <div class="flex flex-col items-center w-[95%] mx-auto md:w-full justify-between">
+
+                <div class="flex flex-col w-full my-[10px] pb-[25px] border-b border-black faq">
+                    <div class="flex justify-between md:gap-[200px] cursor-pointer que">
+                        <h1 class="text-lg font-bold">In short, what is thematic investing?</h1>
+                        <i class="bi bi-chevron-down text-[#01C38D]"></i>
+                    </div>
+
+                    <div class="my-[20px] res hidden">
+                        <p>SwissBorg Thematics offers a unique investment approach, grouping the most promising crypto assets by themes to strengthen your portfolio. With just one tap, you're investing with SwissBorg's experts and our advanced algorithms in your team, ensuring you always have the best-selected tokens and a consistently updated investment.</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col w-full my-[10px] pb-[25px] border-b border-black faq">
+                    <div class="flex justify-between gap-[200px] cursor-pointer que">
+                        <h1 class="text-lg font-bold">What is rebalancing?</h1>
+                        <i class="bi bi-chevron-down text-[#01C38D]"></i>
+                    </div>
+
+                    <div class="my-[20px] hidden">
+                        <p>Your Thematic consists of various tokens/coins, each with a defined target percentage in line with their risk and reward potential. Because of crypto’s volatility, these percentages can easily drift away. To maintain the desired target percentage of each coin, necessary exchanges are therefore made to rebalance asset allocations. Rebalancing automatically takes profit from outperformers & accumulates tokens at lower price points. More <a class="font-semibold text-[#01C38D]" target="_blank" href="https://www.forbes.com/advisor/investing/rebalance-investments/">here</a>.</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col w-full my-[10px] pb-[25px] border-b border-black faq">
+                    <div class="flex justify-between gap-[200px] cursor-pointer que">
+                        <h1 class="text-lg font-bold">What is reallocation?</h1>
+                        <i class="bi bi-chevron-down text-[#01C38D]"></i>
+                    </div>
+
+                    <div class="my-[20px] hidden">
+                        <p>For your portfolio to remain relevant & well diversified in fast-changing markets, SwissBorg reviews continuously the assets within its Thematics. We evaluate new opportunities and change asset composition & allocations periodically to ensure that each Thematic evolves true to its theme & performs at its optimal level.</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col w-full my-[10px] pb-[25px] border-b border-black faq">
+                    <div class="flex justify-between gap-[200px] cursor-pointer que">
+                        <h1 class="text-lg font-bold">Do I really own the tokens/coins?</h1>
+                        <i class="bi bi-chevron-down text-[#01C38D]"></i>
+                    </div>
+
+                    <div class="my-[20px] hidden">
+                        <p>Yes, with Thematics you own all the underlying assets. It is a bundle of tokens, contrary to an ETF or an  index.</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col w-full my-[10px] pb-[25px] border-b border-black faq">
+                    <div class="flex justify-between gap-[200px] cursor-pointer que">
+                        <h1 class="text-lg font-bold">What is the minimum investment amount?</h1>
+                        <i class="bi bi-chevron-down text-[#01C38D]"></i>
+                    </div>
+
+                    <div class="my-[20px] hidden">
+                        <p>The minimum investment amount for the Golden Thematic is 40 EUR or the equivalent in your local currency. The minimum investment amount for the Best Blockchains Thematic and the Gaming Thematic is 50 EUR or the equivalent in your local currency. The minimum investment amount for the Banter Bundle is 250 EUR or the equivalent in your local currency.</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col w-full my-[10px] pb-[25px] border-b border-black faq">
+                    <div class="flex justify-between gap-[200px] cursor-pointer que">
+                        <h1 class="text-lg font-bold">What is the minimum investment period?</h1>
+                        <i class="bi bi-chevron-down text-[#01C38D]"></i>
+                    </div>
+
+                    <div class="my-[20px] hidden">
+                        <p>There is no minimum investment period. You are free to sell your Thematic investment at any time. In the future, you will be able to earn rewards based on your holding duration.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex items-center justify-center gap-[90px] py-[4rem] px-[10rem]">
+            <div class="phone">
+                <h1 class="text-[35px] font-bold py-[2rem]">Automate your crypto investments with SwissBorg</h1>
+                <li class="text-[16px]">Choose the asset you want to invest in</li>
+                <li class="text-[16px] py-[1rem]">Select the frequency of your investments</li>
+                <li class="text-[16px]">Choose the source of funds account</li>
+                <li class="py-[1rem] text-[16px]">Input the recurrent amount</li>
+                <li class="text-[16px]">Confirm. Done!</li>
+                <div class="py-[2rem]">
+                    <p>App is not available in  NG</p>
+                    <button class="bg-[#35d49a] py-[5px] px-[15px] font-bold text-white rounded-lg mt-[10px]">Notify me</button>
+                </div>
+            </div>
+            <div class="rounded">
+                <img src="/images/autoinvest-phone-img.avif" alt="" width="90%">
+            </div>
+        </div>
+    </section>
+
+    <section class="flex flex-col justify-between">
+        <div class="flex justify-between px-[3rem] py-[3rem] items-center">
+            <div class="flex flex-col-reverse-1 gap-[8px]">
+                <img src="/images/cookies-img.svg" alt="">
+                <a href="" class="text-[17px] text-gray-400 font-bold">Manage cookies settings</a>
+            </div>
+            <input type="" placeholder="dropdown" class="px-[20px] py-[5px] rounded-sm w-[25%]" style="border: 1px solid gray">
+        </div>
+        
+        <div class="flex gap-[250px] px-[2rem] py-[2rem] ">
+            <div class="flex gap-[120px] justify-between">
+                <div class="flex flex-col leading-8">
+                    <h1 class="font-bold text-[18px] text-gray-400">SwissBorg app</h1>
+                    <a href="" class="text-gray-400">Buy cryptos</a>
+                    <a href="" class="text-gray-400">Earn cryptos</a>
+                    <a href="" class="text-gray-400">Diversify smartly</a>
+                    <a href="" class="text-gray-400">All cryptos</a>
+                </div>
+                <div class="flex flex-col items-start leading-8">
+                    <h1 class="font-bold text-[18px] text-gray-400 opacity-0">SwissBorg app</h1>
+                    <a href="" class="text-gray-400">Portfolio Visualizer</a>
+                    <a href="" class="text-gray-400">Asset Analysis</a>
+                    <a href="" class="text-gray-400">Supported countries</a>
+                    <a href="" class="text-gray-400">Fees</a>
+                </div>
+            </div>
+
+            <div class="flex flex-col leading-8">
+                <h1 class="font-bold text-[18px] text-gray-400">Learn</h1>
+                <a href="" class="text-gray-400">Blog</a>
+                <a href="" class="text-gray-400">Academy</a>
+            </div>
+            <div class="flex flex-col leading-8">
+                <h1 class="font-bold text-[18px] text-gray-400">Team</h1>
+                <a href="" class="text-gray-400">About SwissBorg</a>
+                <a href="" class="flex gap-[10px] text-gray-400">career <p class="bg-[#8A7CFF] text-[12px] text-white px-[8px] rounded-md">We're hiring</p></a>
+                <a href="" class="text-gray-400">Affiliate Program</a>
+                <a href="" class="text-gray-400">Help Center</a>
+            </div>
+        </div>
+
+        <div class="flex flex-col-reverse-1 gap-[8px] px-[2rem] py-[2rem]">
+            <i class="bi bi-plus px-[3px] py-[1px] bg-red-500 text-white rounded-full text-[19px]"></i>
+            <p class="text-gray-400">Proudly engineered in Switzerland</p>
+        </div>
+
+        <div class="flex px-[2rem] gap-[30px]">
+            <div class="text-white py-[3rem] px-[6rem] text-center rounded-md" style="background-image: linear-gradient(135deg, #09a77d, #12E3BC);">
+                <h1 class="font-bold text-[30px]">Subscribe to our newsletter</h1>
+                <p class="text-[18px] py-[12px]">Receive official updates when you join our mailing list</p>
+                <div class="flex gap-[15px]">
+                    <input type="text" class="px-[16px] w-[130%] rounded-md bg-[#53DEBD] text-white" placeholder="Name(required)">
+                    <input type="text" class="px-[16px] w-[100%] rounded-md bg-[#53DEBD]" placeholder="Email(required)">
+                    <i class="bi bi-chevron-right font-bold bg-white text-[#12E3BC] py-[10px] px-[15px] text-[25px] ml-[-16px]"></i>
+                </div>
+            </div>
+            <div class="py-[3rem] px-[2rem] text-center rounded-md" style="background-image: linear-gradient(135deg, #2e15ce, #8B7DFF);">
                 <div>
-                    <h1 class="font-bold text-[30px] py-[30px]">Buy, sell & exchange always at the best available price</h1>
-                    <p class="text-[16px]">Market volatility often leads to price differences across exchanges. Our Smart Engine takes advantage of this by finding the best execution route every time, meaning you get the best price from multiple exchanges.</p>
+                    <h1 class="font-bold text-[24px] text-white">Be part of our growing global community</h1>
+                    <p class="text-[18px] py-[15px] text-white">Follow and subscribe to our channels</p>
+                </div>
+                <div class="flex flex-row gap-[20px] text-center items-center">
+                    <i class="bi bi-twitter-x bg-white text-[#735EFF] px-[8px] py-[5px] rounded-md"></i>
+                    <i class="bi bi-discord bg-white text-[#735EFF] px-[8px] py-[5px] rounded-md"></i>
+                    <i class="bi bi-youtube bg-white text-[#735EFF] px-[8px] py-[5px] rounded-md"></i>
+                    <i class="bi bi-facebook bg-white text-[#735EFF] px-[8px] py-[5px] rounded-md"></i>
+                    <i class="bi bi-instagram bg-white text-[#735EFF] px-[8px] py-[5px] rounded-md"></i>
+                    <i class="bi bi-linkedin bg-white text-[#735EFF] px-[8px] py-[5px] rounded-md"></i>
+                    <i class="bi bi-telegram bg-white text-[#735EFF] px-[8px] py-[5px] rounded-md"></i>
+                    <i class="bi bi-tiktok bg-white text-[#735EFF] px-[8px] py-[5px] rounded-md"></i>
+                    <i class="bi bi-tiktok bg-white text-[#735EFF] px-[8px] py-[5px] rounded-md"></i>
                 </div>
             </div>
         </div>
     </section>
+
+
+
+
+    <footer class="py-[2rem] bg-[#d9dbdd] mt-[4rem]">
+        <div class="flex justify-between py-[2rem] px-[2rem] text-[13px] gap-[25px]"> 
+            <div class="w-[90%]">
+                <h1 class="font-bold leading-6 text-[#7c818b] pb-[25px]">Engineered in Switzerland</h1>
+                <p class="text-[#7c818b]">SBorg SA</p> 
+                <p class="text-[#7c818b]">Rue du Grand-Chêne 8, 1003 Lausanne Switzerland</p>
+            </div>
+            <div class="w-[85%]">
+                <h1 class="font-bold leading-6 text-[#7c818b] pb-[12px]">Operating the SwissBorg App under the license FVT000326 in Estonia and under the registration E2022-034 in France</h1>
+                <p class="text-[#7c818b]">SwissBorg Solutions OÜ</p> 
+                <p class="text-[#7c818b]">Pärnu mnt. 12, 10148 Tallinn, Estonia</p>
+            </div>
+            <div class="w-[90%]">
+                <h1 class="font-bold leading-6 text-[#7c818b] pb-[12px]">SwissBorg Solutions OÜ is a partner of Modulr Finance B.V., a company registered in the Netherlands with company number 81852401, which is authorised and regulated by the Dutch Central Bank (DNB) as an Electronic Money Institution (Firm Reference Number: R182870) for the issuance of electronic money and payment services.</h1>
+                <p class="text-[#7c818b]">Your account and related payment services are provided by Modulr Finance B.V. Your funds will be held in one or more segregated accounts and safeguarded in line with the Financial Supervision Act (Wet op het Financieel Toezicht, Wft) – for more information please see <a href="">here</a>.</p> 
+            </div>
+            <div class="w-[86%]">
+                <p class="text-[#7c818b]">By using this website you agree to our Terms of Use. Nothing on this website should be construed as a recommendation for any action. SwissBorg Solutions OÜ is the owner of the license: FVT000326 (<a href="" class="text-[#09a77d]">link</a>) and E2022-034 (link). For more details, please see the <a href="" class="text-[#09a77d]">Terms of Use</a> of the SwissBorg app.</p>
+            </div>
+        </div>
+
+        <div class="flex justify-between pt-[4rem] px-[2rem] text-[12px]">
+            <div class="py-[2rem] flex gap-[20px] text-[#09a77d]">
+                <a href="">Terms of Use</a>
+                <a href="">Privacy Policy</a>
+                <a href="">Cookies Policy</a>
+                <a href="">Brand kit</a>
+            </div>
+            <p class="px-[6rem] text-[#7c818b]">&copy SBorg SA. All Rights Reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>

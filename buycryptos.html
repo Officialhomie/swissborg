@@ -6,15 +6,29 @@
     <title>SwissBorg.io</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="/css/output.css" rel="stylesheet">
+    <link href="/css/homeStyle.css" rel="stylesheet">
 </head>
 <body>
     <section>
-        <div class="flex gap-[50px] items-center px-[3rem] py-[6rem]">
+        <nav class="flex items-center justify-between px-[3rem] py-[25px]">
             <div>
-                <h1 class="font-bold text-[70px] font-sans leading-tight">Go from Fiat to Crypto in an instant!</h1>
-                <p class="text-[20px] py-[40px]">Connect to Binance, HitBTC, LMAX, Kraken, Bitfinex, Orca and Phoenix exchanges and get the best liquidity and rates in seconds.</p>
+                <img src="" alt="">
+                <a href=""><h1 class="text-2xl md:text-3xl lg:text-4xl font-bold cursor-pointer">SwissBorg</h1></a>
             </div>
-            <img src="/images/hero-image.avif" alt="" width="55%">
+            <div class="hidden lg:flex items-center gap-8">
+                <a class="text-sm md:text-base lg:text-md cursor-pointer hover:text-[#01C38D] hover:border-b-2 hover:border-[#01C38D]" href="">Invest</a>
+                <a class="text-sm md:text-base lg:text-md cursor-pointer hover:text-[#01C38D] hover:border-b-2 hover:border-[#01C38D]" href="">About Us</a>
+            </div>
+            <h1 class="hidden lg:block text-lg md:text-lg lg:text-xl "><span class="text-lg md:text-lg lg:text-xl"><i class="bi bi-globe"></i></span> EN</h1>
+            <i class="bi bi-list block lg:hidden"></i>
+        </nav>
+
+        <div class="lg:flex md:flex-row sm:flex-col lg:gap-[70px] sm:gap-[30px] md:gap-[65px] items-center md:justify-center px-[3rem] py-[8rem] md:px[5rem] sm:[6rem]">
+            <div>
+                <h1 class="font-bold lg:text-[70pxpx] sm:text-[100px] md:text-[60px] lg:text-left md:text-center sm:text-center font-sans leading-tight">Go from Fiat to Crypto in an instant!</h1>
+                <p class="text-[20px] py-[40px] lg:text-left md:text-center sm:text-center sm:text-[30px]">Connect to Binance, HitBTC, LMAX, Kraken, Bitfinex, Orca and Phoenix exchanges and get the best liquidity and rates in seconds.</p>
+            </div>
+            <img src="/images/buyhero-img.avif" class="md:w-[60%] lg:w-[55%] sm:w-[50%] md:mx-auto sm:mx-auto" alt="">
         </div>
 
         <div class="flex flex-col px-[10rem] py-[3rem] items-center">
@@ -31,6 +45,27 @@
                 <div>
                     <h1 class="font-bold text-[30px] py-[30px]">Buy, sell & exchange always at the best available price</h1>
                     <p class="text-[16px]">Market volatility often leads to price differences across exchanges. Our Smart Engine takes advantage of this by finding the best execution route every time, meaning you get the best price from multiple exchanges.</p>
+                </div>
+            </div>
+            <div class="flex gap-[45px] items-center px-[4rem] py-[4rem]">
+                <img src="/images/united-trading-img.avif" alt="" width="50%">
+                <div>
+                    <h1 class="font-bold text-[30px] py-[30px]">Access 5,133 unique crypto to fiat trading pairs</h1>
+                    <p class="text-[16px]">Trade any fiat or crypto pair, even if it doesn’t exist on any exchange. EUR to BORG, or CHF to PAX Gold and more! We do all the conversions for you and find the best route and price.</p>
+                </div>
+            </div>
+            <div class="flex gap-[45px] items-center px-[4rem] py-[4rem]">
+                <img src="/images/transparent-img.avif" alt="" width="50%">
+                <div>
+                    <h1 class="font-bold text-[30px] py-[30px]">Get a fully transparent exchange reporte</h1>
+                    <p class="text-[16px]">With the Smart Exchange Report, you will be able to review and keep track of every exchange. Review all the details at each step of your exchange.</p>
+                </div>
+            </div>
+            <div class="flex gap-[45px] items-center px-[4rem] py-[4rem]">
+                <img src="/images/hidden-fees-img.avif" alt="" width="50%">
+                <div>
+                    <h1 class="font-bold text-[30px] py-[30px]">Enjoy zero spreads and no inflated exchange rates</h1>
+                    <p class="text-[16px]">While other apps claim “zero fees” but hide them in the exchange rate or spread, we always offer the best possible price without taking a cut. Instead, we charge a small transparent fee that we reinvest into the ecosystem.</p>
                 </div>
             </div>
         </div>
@@ -140,15 +175,15 @@
                     <p class="text-[18px] py-[15px] text-white">Follow and subscribe to our channels</p>
                 </div>
                 <div class="flex flex-row gap-[20px] text-center items-center">
-                    <i class="bi bi-twitter-x bg-white text-black px-[8px] py-[5px] rounded-md"></i>
-                    <i class="bi bi-discord bg-white text-black px-[8px] py-[5px] rounded-md"></i>
-                    <i class="bi bi-youtube bg-white text-black px-[8px] py-[5px] rounded-md"></i>
-                    <i class="bi bi-facebook bg-white text-black px-[8px] py-[5px] rounded-md"></i>
-                    <i class="bi bi-instagram bg-white text-black px-[8px] py-[5px] rounded-md"></i>
-                    <i class="bi bi-linkedin bg-white text-black px-[8px] py-[5px] rounded-md"></i>
-                    <i class="bi bi-telegram bg-white text-black px-[8px] py-[5px] rounded-md"></i>
-                    <i class="bi bi-tiktok bg-white text-black px-[8px] py-[5px] rounded-md"></i>
-                    <i class="bi bi-tiktok bg-white text-black px-[8px] py-[5px] rounded-md"></i>
+                    <i class="bi bi-twitter-x bg-white text-[#735EFF] px-[8px] py-[5px] rounded-md"></i>
+                    <i class="bi bi-discord bg-white text-[#735EFF] px-[8px] py-[5px] rounded-md"></i>
+                    <i class="bi bi-youtube bg-white text-[#735EFF] px-[8px] py-[5px] rounded-md"></i>
+                    <i class="bi bi-facebook bg-white text-[#735EFF] px-[8px] py-[5px] rounded-md"></i>
+                    <i class="bi bi-instagram bg-white text-[#735EFF] px-[8px] py-[5px] rounded-md"></i>
+                    <i class="bi bi-linkedin bg-white text-[#735EFF] px-[8px] py-[5px] rounded-md"></i>
+                    <i class="bi bi-telegram bg-white text-[#735EFF] px-[8px] py-[5px] rounded-md"></i>
+                    <i class="bi bi-tiktok bg-white text-[#735EFF] px-[8px] py-[5px] rounded-md"></i>
+                    <i class="bi bi-tiktok bg-white text-[#735EFF] px-[8px] py-[5px] rounded-md"></i>
                 </div>
             </div>
         </div>
