@@ -12,12 +12,75 @@ questions.forEach(question => {
     });
 });
 
+
+
+
+
+
+
+
+
+// NAVBAR ICONS 
+document.addEventListener("DOMContentLoaded", function() {
+    const menuIcon = document.getElementById("menuIcon");
+    const closeIcon = document.getElementById("closeIcon");
+    
+    // Hide the closeIcon initially
+    closeIcon.classList.add("hidden");
+    
+    // Add click event listener to menuIcon
+    menuIcon.addEventListener("click", function() {
+        menuIcon.classList.add("hidden");
+        closeIcon.classList.remove("hidden");
+    });
+    
+    // Add click event listener to closeIcon
+    closeIcon.addEventListener("click", function() {
+        closeIcon.classList.add("hidden");
+        menuIcon.classList.remove("hidden");
+    });
+});
+
+
+// MENU DISPLAY 
+const menuIcon = document.getElementById("menuIcon");
+const closeIcon = document.getElementById("closeIcon");
+const menuDisplay = document.getElementById("menuDisplay")
+
+menuIcon.addEventListener("click", function() {
+    menuDisplay.classList.toggle("hidden");
+})
+
+closeIcon.addEventListener("click", function() {
+    menuDisplay.classList.add("hidden");
+})
+
+
+
+
+
+// invest display
+const toggleDrop = document.getElementById("toggleDrop");
+const toggleDrop2 = document.getElementById("toggleDrop2");
+const investContent = document.getElementById("investContent");
+const aboutContent = document.getElementById("aboutContent");
+
+toggleDrop.addEventListener("click", function() {
+    investContent.classList.toggle("hidden");
+});
+toggleDrop2.addEventListener("click", function() {
+    aboutContent.classList.toggle("hidden");
+});
+
+
+
+
+
 // TWO BUTTONS
 document.addEventListener("DOMContentLoaded", function() {
     const thematicsButton = document.getElementById("thematicsButton");
     const swissBorgButton = document.getElementById("swissBorgButton");
 
-    // Add the thematicsActive class to the Thematics button initially
     thematicsButton.classList.add("thematicsActive");
 
     thematicsButton.addEventListener("click", function() {
@@ -31,20 +94,29 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-    const thematicsButton = document.getElementById('thematicsButton');
-    const swissBorgButton = document.getElementById('swissBorgButton');
-    const thematicsDiv = document.getElementById('thematicsDiv');
-    const swissBorgDiv = document.getElementById('swissBorgDiv');
+const thematicsButton = document.getElementById('thematicsButton');
+const swissBorgButton = document.getElementById('swissBorgButton');
+const thematicsDiv = document.getElementById('thematicsDiv');
+const swissBorgDiv = document.getElementById('swissBorgDiv');
 
-    thematicsButton.addEventListener('click', () => {
-        thematicsDiv.style.display = 'flex';
-        swissBorgDiv.style.display = 'none';
-    });
+thematicsButton.addEventListener('click', () => {
+    thematicsDiv.style.display = 'flex';
+    swissBorgDiv.style.display = 'none';
+});
 
-    swissBorgButton.addEventListener('click', () => {
-        swissBorgDiv.style.display = 'flex';
-        thematicsDiv.style.display = 'none';
-    });
+swissBorgButton.addEventListener('click', () => {
+    swissBorgDiv.style.display = 'flex';
+    thematicsDiv.style.display = 'none';
+});
+
+
+
+
+
+
+
+
+
 
 
 // three buttons
@@ -81,17 +153,25 @@ function showContent(content) {
     content.style.display = 'flex';
 }
 
-// Add click event listeners to the buttons
 smartEngineBtn.addEventListener('click', () => showContent(smartEngineContent));
 portfolioAnalyticsBtn.addEventListener('click', () => showContent(portfolioAnalyticsContent));
 hourlyAssetAnalysisBtn.addEventListener('click', () => showContent(hourlyAssetAnalysisContent));
 
-// Show Smart Engine content by default
 showContent(smartEngineContent);
 
 
 
 
+const chevronIcon = document.getElementById("chevronIcon");
+const chevronIcon2 = document.getElementById("chevronIcon2");
 
-
+// toggle rotation in on website
+function toggleRotation() {
+    chevronIcon.classList.toggle("rotate-180");
+    toggleDrop.classList.toggle("bg-[#E6F9F4]");
+}
+function toggleRotation2() {
+    chevronIcon2.classList.toggle("rotate-180");
+    toggleDrop2.classList.toggle("bg-[#E6F9F4]");
+}
 
