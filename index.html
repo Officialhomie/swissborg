@@ -11,7 +11,7 @@
 </head>
 <body>
     <div class="bg-[#191E29] h-full pb-[30px] text-white" >
-        <nav class="flex items-center justify-between w-[95%] lg:w-[70%] mx-auto pt-[20px]">
+        <nav class=" top flex items-center justify-between w-[95%] lg:w-[70%] mx-auto pt-[20px]">
             <div>
                 <img src="" alt="">
                 <a href=""><h1 class="text-2xl md:text-3xl lg:text-4xl font-bold cursor-pointer">SwissBorg</h1></a>
@@ -25,20 +25,172 @@
             <h1 class="hidden lg:block text-lg md:text-lg lg:text-xl "><span class="text-lg md:text-lg lg:text-xl"><i class="bi bi-globe"></i></span> EN</h1>
   
 
-            <i class="bi bi-list block lg:hidden text-3xl text-[#019C71]"></i>
+            <i id="menuIcon" class="bi bi-list block lg:hidden text-3xl text-[#019C71] cursor-pointer"></i>
         </nav>
+        
+        <!-- menu button  -->
+        <div id="menuDisplay" class="overflow-y-scroll fixed z-indexed hidden h-[100vh] bg-white top-[0] w-full  p-[10px]">
+            
+            <div class="flex items-center justify-between mb-[20px]">
+                <div class="flex items-center">
+                    <img class="w-14" src="/images/swissapp-img.svg" alt="">
+                    <h1 class="font-bold text-3xl text-black">Swissborg</h1>
+                </div>
+                <i id="closeIcon" class="bi bi-x-lg hidden lg:hidden text-xl text-[#019c71] cursor-pointer"></i>            
+            </div>
+            <div class="border-b">
+                <div class="flex items-center justify-between cursor-pointer  p-[1rem]" id="toggleDrop" onclick="toggleRotation()">
+                    <h1 class="text-black text-xl font-semibold">Invest</h1>
+                    <i class="bi bi-chevron-down text-[#019c71] text-xl" id="chevronIcon"></i>
+                </div>
+    
+                <div class="hidden my-[10px] overflow-y-auto p-[1rem]" id="investContent">
+                    <a class="high" href="">
+                        <div class="flex items-center justify-between mb-3">
+                            <div class="flex items-center justify-between gap-[7px]">
+                                <img class="w-12" src="/Image/smart-engine-icon.svg" alt="">
+                                <div class="flex flex-col ">
+                                    <h1 class="text-black font-medium mb-[4px]">Buy Cryptos</h1>
+                                    <p class="text-[#aaa] text-sm">Exchange instantly at the best price</p>
+                                </div>
+                            </div>
+                            <i class="bi bi-chevron-right text-[#019c71] text-md"></i>
+                        </div>
+                    </a>
+                    <a class="high" href="">
+                        <div class="flex items-center justify-between mb-3">
+                            <div class="flex items-center justify-between gap-[7px]">
+                                <img class="w-12" src="/Image/earn.svg" alt="">
+                                <div class="flex flex-col">
+                                    <h1 class="text-black font-medium mb-[4px]">Earn Cryptos</h1>
+                                    <p class="text-[#aaa] text-sm">Generate passive income 24/7</p>
+                                </div>
+                            </div>
+                            <i class="bi bi-chevron-right text-[#019c71] text-md"></i>
+                        </div>
+                    </a>
+                    <a class="high" href="http://127.0.0.1:5501/diversify.html">
+                        <div class="flex items-center justify-between mb-3">
+                            <div class="flex items-center justify-between gap-[7px]">
+                                <img class="w-12" src="/Image/navbar-invest-Thematics.svg" alt="">
+                                <div class="flex flex-col">
+                                    <h1 class="text-black font-medium mb-[4px]">Diversify with Thematics</h1>
+                                    <p class="text-[#aaa] text-sm">Crypto bundles to invest in entire sectors</p>
+                                </div>
+                            </div>
+                            <i class="bi bi-chevron-right text-[#019c71] text-md"></i>
+                        </div>
+                    </a>
+                    <a class="high" href="http://127.0.0.1:5501/cardFunding.html">
+                        <div class="flex items-center justify-between mb-3">
+                            <div class="flex items-center justify-between gap-[7px]">
+                                <img class="w-12" src="/Image/Card Deposit.svg" alt="">
+                                <div class="flex flex-col">
+                                    <h1 class="text-black font-medium mb-[4px]">Card Funding</h1>
+                                    <p class="text-[#aaa] text-sm">Top up your fiat account using your credit and debit card</p>
+                                </div>
+                            </div>
+                            <i class="bi bi-chevron-right text-[#019c71] text-md"></i>
+                        </div>
+                    </a>
+                    <a class="high" href="http://127.0.0.1:5501/allcryptos.html">
+                        <div class="flex items-center justify-between mb-3">
+                            <div class="flex items-center justify-between gap-[7px]">
+                                <img class="w-12" src="/Image/Navigation-All_cryptos.svg" alt="">
+                                <div class="flex flex-col">
+                                    <h1 class="text-black font-medium mb-[4px]">All Cryptos</h1>
+                                    <p class="text-[#aaa] text-sm">More than 50 curated crypto assets</p>
+                                </div>
+                            </div>
+                            <i class="bi bi-chevron-right text-[#019c71] text-md"></i>
+                        </div>
+                    </a>
+                    <a class="high" href="http://127.0.0.1:5501/assetAnalysis.html">
+                        <div class="flex items-center justify-between mb-3">
+                            <div class="flex items-center justify-between gap-[7px]">
+                                <img class="w-12" src="/Image/Navigation-Asset_Analysis.svg" alt="">
+                                <div class="flex flex-col">
+                                    <h1 class="text-black font-medium mb-[4px]">Asset Analysis</h1>
+                                    <p class="text-[#aaa] text-sm">Live analysis of all cryptos</p>
+                                </div>
+                            </div>
+                            <i class="bi bi-chevron-right text-[#019c71] text-md"></i>
+                        </div>
+                    </a>
+                    <a class="high" href="http://127.0.0.1:5501/portfolio.html">
+                        <div class="flex items-center justify-between mb-3">
+                            <div class="flex items-center justify-between gap-[7px]">
+                                <img class="w-12" src="/Image/navbar-invest-Portfolio Analytics.svg" alt="">
+                                <div class="flex flex-col">
+                                    <h1 class="text-black font-medium mb-[4px]">Portfolio Visualizer</h1>
+                                    <p class="text-[#aaa] text-sm">Live monitoring of your portfolio</p>
+                                </div>
+                            </div>
+                            <i class="bi bi-chevron-right text-[#019c71] text-md"></i>
+                        </div>
+                    </a>
+                    <a class="high" href="http://127.0.0.1:5501/automate.html">
+                        <div class="flex items-center justify-between mb-3">
+                            <div class="flex items-center justify-between gap-[7px]">
+                                <img class="w-12" src="/Image/icon-navigation-AutoInvest.svg" alt="">
+                                <div class="flex flex-col">
+                                    <h1 class="text-black font-medium mb-[4px]">Auto Invest</h1>
+                                    <p class="text-[#aaa] text-sm">Automate Your Crypto Investment with Swissborg</p>
+                                </div>
+                            </div>
+                            <i class="bi bi-chevron-right text-[#019c71] text-md"></i>
+                        </div>
+                    </a>
+                    <a class="high" href="http://127.0.0.1:5501/investwithalpha.html">
+                        <div class="flex items-center justify-between mb-3">
+                            <div class="flex items-center justify-between gap-[7px]">
+                                <img class="w-12" src="/Image/navigation-alpha.svg" alt="">
+                                <div class="flex flex-col">
+                                    <h1 class="text-black font-medium mb-[4px]">Invest through Alpha <span>New</span></h1>
+                                    <p class="text-[#aaa] text-sm">Discover the next emerging projects</p>
+                                </div>
+                            </div>
+                            <i class="bi bi-chevron-right text-[#019c71] text-md"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+    
+            <div class="border-b ">
+                <div class="flex items-center justify-between cursor-pointer p-[1rem]" id="toggleDrop2" onclick="toggleRotation2()">
+                    <h1 class="text-black text-xl font-semibold">About Us</h1>
+                    <i class="bi bi-chevron-down text-[#019c71] text-xl" id="chevronIcon2"></i>
+                </div>
+    
+                <div class="hidden my-[20px] overflow-y-scroll p-[1rem]" id="aboutContent">
+                    <a class="high" href="">
+                        <div class="flex items-center justify-between mb-3">
+                            <div class="flex items-center justify-between gap-[7px]">
+                                <img class="w-12" src="/Image/smart-engine-icon.svg" alt="">
+                                <div class="flex flex-col">
+                                    <h1 class="text-black font-medium mb-[10px]">Buy Cryptos</h1>
+                                    <p class="text-[#aaa] text-sm">Exchange instantly at the best price</p>
+                                </div>
+                            </div>
+                            <i class="bi bi-chevron-right text-[#019c71] text-md"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
 
-        <div class="relative">
-            <div class="bg-[#2B88E7] absolute p-8 top-14 left-6 rounded-full blur-[50px] md:p-56 md:top-32 md:left-20"></div>
-        
-            <div class="bg-[#08A989] absolute p-8 top-7 left-4 rounded-full blur-[50px] md:p-56 md:top-14 md:left-10"></div>
-        
-            <div class="lg:flex w-full lg:w-[95%]  flex-col-reverse items-center gap-24 px-4 my-8 mx-auto md:flex-row md:gap-18 md:px-20 md:my-16 lg:px-32 justify-center">
 
-                <img class="opacity-90 lg:w-[80%] lg:h-[70vh] md:w-[70%] justify-center md:h-[80vh] mx-auto h-[50vh] w-[100%] sm:mb-[60px]" src="/Image/hero-img.png" alt="Front-View">
+        <div class="relative flex flex-column">
+            <div class="bg-[#2B88E7] absolute p-44 top-[420px] left-6 rounded-full blur-[50px] md:p-56 md:top-32 md:left-20"></div>
         
-                <div class="lg:text-left items-center pt-[40px] lg:pt-0 justify-center">
-                    <h1 class="font-semibold text-center lg:w-[80%] sm:text-[32px] w-[100%]  lg:leading-[56px] lg:text-left md:font-bold leading-[45px]  md:leading-[56px] text-[37px] md:text-center lg:text-6xl">Empowering Your Financial Freedom</h1>
+            <div class="bg-[#08A989] absolute p-44 top-[550px] left-4 rounded-full blur-[50px] md:p-56 md:top-14 md:left-10"></div>
+        
+            <div class="flex lg:flex w-full lg:w-[95%]  flex-col-reverse items-center gap-24 px-4 my-8 mx-auto md:flex-row md:gap-14 md:px-20 md:my-16 lg:px-32 justify-center">
+
+                <img class="opacity-95 w-full sm:w-[60%] md:w-[70%] lg:w-[50%] mx-auto" src="/Image/hero-img.png" alt="Front-View">
+                        
+                <div class="lg:text-left items-center pt-[40px] lg:pt-0 justify-center lg:w-[70%]">
+                    <h1 class="font-semibold text-center md:text-left lg:w-[80%] sm:text-[32px] w-[100%]  lg:leading-[56px] lg:text-left md:font-bold leading-[45px]  md:leading-[56px] text-[33px]  lg:text-6xl">Empowering Your Financial Freedom</h1>
         
                     <h3 class="text-lg text-center md:text-lg lg:w-full md:text-left lg:text-lg my-[20px] sm:text-center sm:text-lg ">Buy, sell and exchange cryptocurrencies with 16 fiats including EUR, CHF and GBP.</h3>
         
@@ -46,6 +198,8 @@
                 </div>
             </div>
         </div>
+
+
         
         
 
@@ -60,6 +214,8 @@
 
         
     </div>
+
+
 
     <div class="flex flex-col sm:flex-row md:flex-row items-center w-[90%] py-[30px] my-[80px] hello mx-auto gap-[5px]  md:gap-[70px] h-full rounded-tl-[70px] rounded-br-[70px] px-[15px]" >
         
@@ -102,7 +258,7 @@
             </div>
         </div>
     </div>
-    
+
 
     <div class="my-[120px]">
         <h1 data-aos="fade-up" class="w-full mx-auto text-2xl md:text-4xl text-center font-bold">Built by investors, for investors</h1>
@@ -110,7 +266,7 @@
         <div class="flex flex-col md:flex-row md:items-center md:justify-center items-left justify-between mx-auto my-[50px] w-[90%]">
             <div class="flex md:flex-col md:justify-center items-center gap-[15px]">
                 <h1 class="text-green-500 md:text-5xl">1</h1>
-                <h3 class=" text-[15px] md:text-xl md:text-center md:w-[70%] font-medium">Total user cryptoassets value</h3>
+                <h3 class="text-[15px] md:text-xl md:text-center md:w-[70%] font-medium">Total user cryptoassets value</h3>
             </div>
             <div class="flex md:flex-col items-center gap-[15px]">
                 <h1 class="text-green-500 md:text-5xl">2</h1>
@@ -126,8 +282,8 @@
     <div class="my-[120px]">
         <h1 data-aos="fade-up" class="w-[80%] mx-auto text-3xl text-center font-bold">Invest and grow your crypto portfolio</h1>
         <div class="flex items-center justify-center w-[80%] md:w-[45%] mx-auto">
-            <button id="thematicsButton" class="button px-10 py-2 rounded-md bg-[#fff] focus:outline-none mt-[30px]">Thematics</button>
-            <button id="swissBorgButton" class="button px-10 py-2 rounded-md bg-[#fff] focus:outline-none mt-[30px]">SwissBorg Earn</button>
+            <button id="thematicsButton" class="button px-5 md:px-10 py-2 rounded-md bg-[#fff] focus:outline-none mt-[30px] text-sm md:text-lg">Thematics</button>
+            <button id="swissBorgButton" class="button px-5 md:px-10 py-2 rounded-md bg-[#fff] focus:outline-none mt-[30px] text-sm md:text-lg">SwissBorg Earn</button>
         </div>        
 
         <div id="thematicsDiv" class="flex flex-col md:flex-row items-center justify-center gap-[20px] w-[90%] mx-auto">
@@ -158,10 +314,10 @@
         <div class="text-center my-[120px]">
             <h1 data-aos="fade-up" class="w-[80%] mx-auto text-3xl text-center font-bold">Invest with the best tools</h1>
 
-            <div class="flex items-center justify-center w-[96%] mx-auto mt-[30px]">
-                <button id="smartEngineBtn" class="px-6 py-2 rounded-md  focus:outline-none text-sm">Smart Engine</button>
-                <button id="portfolioAnalyticsBtn" class="px-6 py-2 rounded-md  focus:outline-none text-sm">Portfolio Analytics</button>
-                <button id="hourlyAssetAnalysisBtn" class="px-6 py-2 rounded-md focus:outline-none text-sm">Hourly Asset Analysis</button>
+            <div class="flex items-center justify-center w-[100%] mx-auto mt-[30px]">
+                <button id="smartEngineBtn" class="px-2 md:px-6 py-2 rounded-md  focus:outline-none text-sm md:text-lg">Smart Engine</button>
+                <button id="portfolioAnalyticsBtn" class="px-2 md:px-6 py-2 rounded-md  focus:outline-none text-sm md:text-lg">Portfolio Analytics</button>
+                <button id="hourlyAssetAnalysisBtn" class="px-2 md:px-6 py-2 rounded-md focus:outline-none text-sm md:text-lg">Hourly Asset Analysis</button>
             </div>
         </div>
 
@@ -203,7 +359,7 @@
     </div>
     
     <a class="my-[60px]" href="#">
-        <div class="flex flex-col md:flex-row items-center my-[120px] bg-gradient-to-b md:bg-gradient-to-l from-white to-gray-100 mx-auto w-[90%] gap-[30px] h-[47rem] sm:h-[44rem] md:h-[30px] rounded-2xl px-[5px] py-[20px]">
+        <div class="flex flex-col md:flex-row items-center my-[120px] bg-gradient-to-b md:bg-gradient-to-l from-white to-gray-100 mx-auto w-[90%] gap-[30px] h- rounded-2xl px-[5px] py-[20px]">
             <div class="w-[90%] md:w-[30%]">
                 <img class="w-[100%] h-auto" src="/Image/coinweb.avif" alt="">
             </div>
@@ -221,38 +377,72 @@
     <div class="flex flex-col text-center my-[60px]">
         <h1 data-aos="fade-up" class="w-[80%] mx-auto text-3xl md:text-4xl text-center font-bold">Top rates on your favourite crypto</h1>
 
-        <div class="flex flex-wrap gap-[25px] my-[100px] mx-auto w-[75%]">
-            <div class="flex flex-col items-center justify-between shadow-custom px-[50px] py-[15px] rounded-xl  w-[80px] leading-10">
+        <div class="flex flex-row overflow-x-auto gap-[25px] my-[100px] mx-auto w-[95%] px-[30px] py-[20px]">
+            
+            <div class="flex flex-col items-center justify-between shadow-custom px-[50px] py-[15px] rounded-xl w-[100%]  lg:w-[45%] leading-10 item">
                 <img  class="h-[100px]" src="/Image/bnb.svg" alt="">
                 <h1 class="text-xl py-[10px]">BNB</h1>
                 <h1 class="text-xl font font-semibold">1.93% APY</h1>
             </div>
-            <div class="flex flex-col items-center justify-between shadow-custom px-[50px] py-[15px] rounded-xl  w-[80px] leading-10">
+            <div class="flex flex-col items-center justify-between shadow-custom px-[50px] py-[15px] rounded-xl w-[100%]  lg:w-[45%] leading-10 item">
                 <img  class="h-[100px]" src="/Image/icon-ETH.svg" alt="">
-                <h1 class="text-xl py-[10px]">BNB</h1>
+                <h1 class="text-xl py-[10px]">ETH</h1>
                 <h1 class="text-xl font font-semibold">3.12% APY</h1>
             </div>
-            <div class="flex flex-col items-center justify-between shadow-custom px-[50px] py-[15px] rounded-xl  w-[80px] leading-10">
+            <div class="flex flex-col items-center justify-between shadow-custom px-[50px] py-[15px] rounded-xl w-[100%]  lg:w-[45%] leading-10 item">
                 <img  class="h-[100px]" src="/Image/DAI.svg" alt="">
-                <h1 class="text-xl py-[10px]">BNB</h1>
+                <h1 class="text-xl py-[10px]">DAI</h1>
                 <h1 class="text-xl font font-semibold">10.90% APY</h1>
             </div>
-            <div class="flex flex-col items-center justify-between shadow-custom px-[50px] py-[15px] rounded-xl  w-[80px] leading-10">
+            <div class="flex flex-col items-center justify-between shadow-custom px-[50px] py-[15px] rounded-xl w-[100%]  lg:w-[45%]leading-10 item">
                 <img  class="h-[100px]" src="/Image/MATIC.svg" alt="">
-                <h1 class="text-xl py-[10px]">BNB</h1>
+                <h1 class="text-xl py-[10px]">MATIC</h1>
                 <h1 class="text-xl font font-semibold">4.03% APY</h1>
             </div>
-            <div class="flex flex-col items-center justify-between shadow-custom px-[50px] py-[15px] rounded-xl  w-[80px] leading-10">
+            <div class="flex flex-col items-center justify-between shadow-custom px-[50px] py-[15px] rounded-xl w-[100%]  lg:w-[45%] leading-10 item">
                 <img  class="h-[100px]" src="/Image/asset-crypto-AVAX.svg" alt="">
-                <h1 class="text-xl py-[10px]">BNB</h1>
+                <h1 class="text-xl py-[10px]">AVAX</h1>
                 <h1 class="text-xl font font-semibold">6.93% APY</h1>
             </div>
-            <div class="flex flex-col items-center justify-between shadow-custom px-[50px] py-[15px] rounded-xl  w-[80px] leading-10">
+            <div class="flex flex-col items-center justify-between shadow-custom px-[50px] py-[15px] rounded-xl w-[100%]  lg:w-[45%] leading-10 item">
                 <img  class="h-[100px]" src="/Image/asset-crypto-polkaDOT.svg" alt="">
-                <h1 class="text-xl py-[10px]">BNB</h1>
+                <h1 class="text-xl py-[10px]">DOT</h1>
                 <h1 class="text-xl font font-semibold">12.27% APY</h1>
             </div>
-        </div>
+
+
+
+            <div class="flex flex-col items-center justify-between shadow-custom px-[50px] py-[15px] rounded-xl w-[100%]  lg:w-[45%] leading-10 item">
+                <img  class="h-[100px]" src="/Image/bnb.svg" alt="">
+                <h1 class="text-xl py-[10px]">BNB</h1>
+                <h1 class="text-xl font font-semibold">1.93% APY</h1>
+            </div>
+            <div class="flex flex-col items-center justify-between shadow-custom px-[50px] py-[15px] rounded-xl w-[100%]  lg:w-[45%] leading-10 item">
+                <img  class="h-[100px]" src="/Image/icon-ETH.svg" alt="">
+                <h1 class="text-xl py-[10px]">ETH</h1>
+                <h1 class="text-xl font font-semibold">3.12% APY</h1>
+            </div>
+            <div class="flex flex-col items-center justify-between shadow-custom px-[50px] py-[15px] rounded-xl w-[100%]  lg:w-[45%] leading-10 item">
+                <img  class="h-[100px]" src="/Image/DAI.svg" alt="">
+                <h1 class="text-xl py-[10px]">DAI</h1>
+                <h1 class="text-xl font font-semibold">10.90% APY</h1>
+            </div>
+            <div class="flex flex-col items-center justify-between shadow-custom px-[50px] py-[15px] rounded-xl w-[100%]  lg:w-[45%] leading-10 item">
+                <img  class="h-[100px]" src="/Image/MATIC.svg" alt="">
+                <h1 class="text-xl py-[10px]">MATIC</h1>
+                <h1 class="text-xl font font-semibold">4.03% APY</h1>
+            </div>
+            <div class="flex flex-col items-center justify-between shadow-custom px-[50px] py-[15px] rounded-xl w-[100%]  lg:w-[45%] leading-10 item">
+                <img  class="h-[100px]" src="/Image/asset-crypto-AVAX.svg" alt="">
+                <h1 class="text-xl py-[10px]">AVAX</h1>
+                <h1 class="text-xl font font-semibold">6.93% APY</h1>
+            </div>
+            <div class="flex flex-col items-center justify-between shadow-custom px-[50px] py-[15px] rounded-xl w-[100%]  lg:w-[45%] leading-10 item">
+                <img  class="h-[100px]" src="/Image/asset-crypto-polkaDOT.svg" alt="">
+                <h1 class="text-xl py-[10px]">DOT</h1>
+                <h1 class="text-xl font font-semibold">12.27% APY</h1>
+            </div>
+        </div> 
 
         <P class="font-light text-[13px] mt-[0px] text-[#aaa]">*Average rates calculated using Genesis Premium rates over the past 30 days.</P>
     </div>
@@ -316,18 +506,17 @@
         
         <div class="flex flex-col md:flex-row items-center w-full md:w-[90%] mx-auto gap-[40px] md:gap-[10px] m">
             <div class="flex items-center shadow-custom px-[10px] py-[15px] w-[90%] h-[150px] gap-[15px] transition-transform transform tilt-up hover:translate-y-[-5px]">
-                <div class="rounded-full w-[40%] md:w-[60%] mb-[40px] md:mb-[80px]">
+                <div class="rounded-full w-[40%] md:w-[60%] mb-[40px] md:mb-[60px]">
                     <img class="w-[100%] h-[100%]" src="/Image/white-man.avif" alt="">
                 </div>
                 <div>
                     <p class="text-sm text-[#bbb] w-[100%] mb-[30px] md:mb-[15px]">"They have an app where you can directly buy crypto and cash out as well, a BIG portal, that doesn’t have margins for premium holders…"</p>
-
                     <h4 class="font-bold text-[#01C38D]">@boxmining</h4>
                 </div>
             </div>
 
             <div class="flex items-center shadow-custom px-[10px] py-[15px] w-[90%] h-[150px] gap-[15px] transition-transform transform tilt-up hover:translate-y-[-5px]">
-                <div class="rounded-full w-[33%] md:w-[60%] mb-[40px] md:mb-[80px]">
+                <div class="rounded-full w-[33%] md:w-[60%] mb-[40px] md:mb-[60px]">
                     <img class="w-[100%] h-[100%]" src="/Image/yellow-man.avif" alt="">
                 </div>
                 <div>
@@ -350,19 +539,19 @@
         </div>
     </div>
 
-    <div class="flex flex-col md:flex-row items-center justify-center my-[70px] md:w-[90%] mx-auto gap-[30px]">
-        <img class="w-[300px] h-auto" src="/Image/logos-press-cointelegraph.svg" alt="">
-        <img class="w-[300px] h-auto" src="/Image/logos-press-cision.svg" alt="">
-        <img class="w-[300px] h-auto" src="/Image/logos-press-fintech-times.svg" alt="">
-        <img class="w-[300px] h-auto" src="/Image/logos-press-city-am.svg" alt="">
-        <img class="w-[300px] h-auto" src="/Image/logos-press-btc-manager.svg" alt="">
-        <img class="w-[300px] h-auto" src="/Image/logos-press-be-in-cryptoot.svg" alt="">
+    <div class="flex flex-col md:flex-row items-center justify-center my-[70px] md:w-[90%] mx-auto gap-3 md:gap-[30px]">
+        <img class="w-[200px] lg:w-[300px] h-auto" src="/Image/logos-press-cointelegraph.svg" alt="">
+        <img class="w-[200px] lg:w-[300px] h-auto" src="/Image/logos-press-cision.svg" alt="">
+        <img class="w-[200px] lg:w-[300px] h-auto" src="/Image/logos-press-fintech-times.svg" alt="">
+        <img class="w-[200px] lg:w-[300px] h-auto" src="/Image/logos-press-city-am.svg" alt="">
+        <img class="w-[200px] lg:w-[300px] h-auto" src="/Image/logos-press-btc-manager.svg" alt="">
+        <img class="w-[200px] lg:w-[300px] h-auto" src="/Image/logos-press-be-in-cryptoot.svg" alt="">
     </div>
 
     <div class="my-[100px]">
         <h1 class="w-[90%] mx-auto text-3xl text-center font-bold">Trending SwissBorg articles</h1>
 
-        <div class="flex flex-col md:flex-row justify-center items-center gap-[30px] w-[90%] mx-auto my-[50px]">
+        <div class="flex flex-col md:flex-row justify-center items-center gap-[30px] w-[90%] lg:w-[70%] mx-auto my-[50px]">
             <a href="" class="flex flex-col items-left shadow-custom rounded-bl-xl rounded-br-xl hover-move-up">
                 <div class="scale-up rounded-tl-xl rounded-tr-xl">
                     <img src="/Image/Aethir.avif" alt="" class="w-full h-auto rounded-tl-xl rounded-tr-xl">
@@ -426,9 +615,9 @@
         <div class="flex flex-col justify-between md:flex-row gap-[20px] md:gap-[200px] px-[2rem] py-[2rem] w-full">
             <div class="flex flex-col md:flex-row md:items-center gap-[20px] md:gap-[100px] justify-between">
                 <div class="flex flex-col md:w-[50%]  gap-[20px] leading-8">
-                    <div class="flex items-center w-full  md:border-none  justify-between gap-[300px] border-b border-black">
-                        <h1 class="font-bold text-[18px] text-gray-400">SwissBorg app</h1>
-                        <i class="bi bi-chevron-down md:hidden"></i>
+                    <div class="flex items-center w-full  md:border-none  justify-between gap-[50px] border-b border-black">
+                        <h1 class="font-bold text-[18px] w-full text-gray-400">SwissBorg app</h1>
+                        <i class="bi bi-chevron-down block md:hidden"></i>
                     </div>
 
                     <div class="flex flex-col">
@@ -448,7 +637,7 @@
                 </div>
             </div>
 
-            <div class="flex justify-between gap-[100px]">
+            <div class="flex flex-col md:flex-wrap justify-between gap-[100px]">
                 <div class="flex flex-col leading-8">
                     <div>
                         <h1 class="font-bold text-[18px] text-gray-400">Learn</h1>
@@ -458,6 +647,7 @@
                         <a href="" class="text-gray-400">Academy</a>
                     </div>
                 </div>
+
                 <div class="flex flex-col leading-8">
                     <div>
                         <h1 class="font-bold text-[18px] text-gray-400">Team</h1>
@@ -473,9 +663,9 @@
             </div>
         </div>
 
-        <div class="flex items-center flex-col-reverse-1 gap-[8px] px-[2rem] py-[2rem]">
-            <img class="w-10 rounded-full" src="/Image/swit.png" alt="SwitzerlandImg">
-            <p class="text-gray-400">Proudly engineered in Switzerland</p>
+        <div class="flex items-center flex-col-reverse-1 gap-[8px] px-[1rem] py-[1rem]">
+            <img class="w-8 rounded-full" src="/Image/swit.png" alt="SwitzerlandImg">
+            <p class="text-gray-400 text-sm">Proudly engineered in Switzerland</p>
         </div>
 
         <div class="flex flex-col lg:flex-row  md:w-full  gap-[30px]">
@@ -516,7 +706,7 @@
 
 
     <footer class="py-[2rem] bg-[#d9dbdd] mt-[4rem] w-full">
-        <div class="mx-auto w-full md:w-[90%]">
+        <div class="mx-auto w-full md:w-[70%]">
             <div class="flex flex-col md:flex-row justify-between py-[2rem] px-[2rem] text-[13px] gap-[25px]"> 
                 <div class="w-full">
                     <h1 class="font-bold leading-6 text-[#7c818b] pb-[25px]">Engineered in Switzerland</h1>

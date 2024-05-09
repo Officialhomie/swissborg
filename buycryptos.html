@@ -10,22 +10,174 @@
 </head>
 <body>
     <section>
-        <nav class="flex items-center justify-between w-[95%] lg:w-[70%] mx-auto pt-[20px]">
-            <div>
-                <img src="" alt="">
-                <a href=""><h1 class="text-2xl md:text-3xl lg:text-4xl font-bold cursor-pointer">SwissBorg</h1></a>
-            </div>
+        <div class="relative bg-gradient-to-b from-gray-800 to-gray-900 h-[110vh] md:h-[160vh] lg:h-[130vh]  text-white " >
+            <nav class=" top flex items-center justify-between w-[95%] lg:w-[70%] mx-auto pt-[20px]">
+                <div>
+                    <img src="" alt="">
+                    <a href=""><h1 class="text-2xl md:text-3xl lg:text-4xl font-bold cursor-pointer">SwissBorg</h1></a>
+                </div>
+            
+                <div class="hidden lg:flex items-center gap-8">
+                    <a class="text-sm md:text-base lg:text-md cursor-pointer font-semibold  hover:text-[#01C38D] hover:border-b-2 hover:border-[#01C38D]" href="">Invest</a>
+                    <a class="text-sm md:text-base lg:text-md cursor-pointer font-semibold  hover:text-[#01C38D] hover:border-b-2 hover:border-[#01C38D]" href="">About Us</a>
+                </div>
+            
+                <h1 class="hidden lg:block text-lg md:text-lg lg:text-xl "><span class="text-lg md:text-lg lg:text-xl"><i class="bi bi-globe"></i></span> EN</h1>
+      
+    
+                <i id="menuIcon" class="bi bi-list block lg:hidden text-3xl text-[#019C71] cursor-pointer"></i>
+            </nav>
+            
+            <!-- menu button  -->
+            <div id="menuDisplay" class="overflow-y-scroll fixed z-indexed hidden h-[100vh] bg-white top-[0] w-full  p-[10px]">
+                
+                <div class="flex items-center justify-between mb-[20px]">
+                    <div class="flex items-center">
+                        <img class="w-14" src="/images/swissapp-img.svg" alt="">
+                        <h1 class="font-bold text-3xl text-black">Swissborg</h1>
+                    </div>
+                    <i id="closeIcon" class="bi bi-x-lg hidden lg:hidden text-xl text-[#019c71] cursor-pointer"></i>            
+                </div>
+                <div class="border-b">
+                    <div class="flex items-center justify-between cursor-pointer  p-[1rem]" id="toggleDrop" onclick="toggleRotation()">
+                        <h1 class="text-black text-xl font-semibold">Invest</h1>
+                        <i class="bi bi-chevron-down text-[#019c71] text-xl" id="chevronIcon"></i>
+                    </div>
         
-            <div class="hidden lg:flex items-center gap-8">
-                <a class="text-sm md:text-base lg:text-md cursor-pointer font-semibold  hover:text-[#01C38D] hover:border-b-2 hover:border-[#01C38D]" href="">Invest</a>
-                <a class="text-sm md:text-base lg:text-md cursor-pointer font-semibold  hover:text-[#01C38D] hover:border-b-2 hover:border-[#01C38D]" href="">About Us</a>
-            </div>
+                    <div class="hidden my-[10px] overflow-y-auto p-[1rem]" id="investContent">
+                        <a class="high" href="">
+                            <div class="flex items-center justify-between mb-3">
+                                <div class="flex items-center justify-between gap-[7px]">
+                                    <img class="w-12" src="/Image/smart-engine-icon.svg" alt="">
+                                    <div class="flex flex-col ">
+                                        <h1 class="text-black font-medium mb-[4px]">Buy Cryptos</h1>
+                                        <p class="text-[#aaa] text-sm">Exchange instantly at the best price</p>
+                                    </div>
+                                </div>
+                                <i class="bi bi-chevron-right text-[#019c71] text-md"></i>
+                            </div>
+                        </a>
+                        <a class="high" href="">
+                            <div class="flex items-center justify-between mb-3">
+                                <div class="flex items-center justify-between gap-[7px]">
+                                    <img class="w-12" src="/Image/earn.svg" alt="">
+                                    <div class="flex flex-col">
+                                        <h1 class="text-black font-medium mb-[4px]">Earn Cryptos</h1>
+                                        <p class="text-[#aaa] text-sm">Generate passive income 24/7</p>
+                                    </div>
+                                </div>
+                                <i class="bi bi-chevron-right text-[#019c71] text-md"></i>
+                            </div>
+                        </a>
+                        <a class="high" href="http://127.0.0.1:5501/diversify.html">
+                            <div class="flex items-center justify-between mb-3">
+                                <div class="flex items-center justify-between gap-[7px]">
+                                    <img class="w-12" src="/Image/navbar-invest-Thematics.svg" alt="">
+                                    <div class="flex flex-col">
+                                        <h1 class="text-black font-medium mb-[4px]">Diversify with Thematics</h1>
+                                        <p class="text-[#aaa] text-sm">Crypto bundles to invest in entire sectors</p>
+                                    </div>
+                                </div>
+                                <i class="bi bi-chevron-right text-[#019c71] text-md"></i>
+                            </div>
+                        </a>
+                        <a class="high" href="http://127.0.0.1:5501/cardFunding.html">
+                            <div class="flex items-center justify-between mb-3">
+                                <div class="flex items-center justify-between gap-[7px]">
+                                    <img class="w-12" src="/Image/Card Deposit.svg" alt="">
+                                    <div class="flex flex-col">
+                                        <h1 class="text-black font-medium mb-[4px]">Card Funding</h1>
+                                        <p class="text-[#aaa] text-sm">Top up your fiat account using your credit and debit card</p>
+                                    </div>
+                                </div>
+                                <i class="bi bi-chevron-right text-[#019c71] text-md"></i>
+                            </div>
+                        </a>
+                        <a class="high" href="http://127.0.0.1:5501/allcryptos.html">
+                            <div class="flex items-center justify-between mb-3">
+                                <div class="flex items-center justify-between gap-[7px]">
+                                    <img class="w-12" src="/Image/Navigation-All_cryptos.svg" alt="">
+                                    <div class="flex flex-col">
+                                        <h1 class="text-black font-medium mb-[4px]">All Cryptos</h1>
+                                        <p class="text-[#aaa] text-sm">More than 50 curated crypto assets</p>
+                                    </div>
+                                </div>
+                                <i class="bi bi-chevron-right text-[#019c71] text-md"></i>
+                            </div>
+                        </a>
+                        <a class="high" href="http://127.0.0.1:5501/assetAnalysis.html">
+                            <div class="flex items-center justify-between mb-3">
+                                <div class="flex items-center justify-between gap-[7px]">
+                                    <img class="w-12" src="/Image/Navigation-Asset_Analysis.svg" alt="">
+                                    <div class="flex flex-col">
+                                        <h1 class="text-black font-medium mb-[4px]">Asset Analysis</h1>
+                                        <p class="text-[#aaa] text-sm">Live analysis of all cryptos</p>
+                                    </div>
+                                </div>
+                                <i class="bi bi-chevron-right text-[#019c71] text-md"></i>
+                            </div>
+                        </a>
+                        <a class="high" href="http://127.0.0.1:5501/portfolio.html">
+                            <div class="flex items-center justify-between mb-3">
+                                <div class="flex items-center justify-between gap-[7px]">
+                                    <img class="w-12" src="/Image/navbar-invest-Portfolio Analytics.svg" alt="">
+                                    <div class="flex flex-col">
+                                        <h1 class="text-black font-medium mb-[4px]">Portfolio Visualizer</h1>
+                                        <p class="text-[#aaa] text-sm">Live monitoring of your portfolio</p>
+                                    </div>
+                                </div>
+                                <i class="bi bi-chevron-right text-[#019c71] text-md"></i>
+                            </div>
+                        </a>
+                        <a class="high" href="http://127.0.0.1:5501/automate.html">
+                            <div class="flex items-center justify-between mb-3">
+                                <div class="flex items-center justify-between gap-[7px]">
+                                    <img class="w-12" src="/Image/icon-navigation-AutoInvest.svg" alt="">
+                                    <div class="flex flex-col">
+                                        <h1 class="text-black font-medium mb-[4px]">Auto Invest</h1>
+                                        <p class="text-[#aaa] text-sm">Automate Your Crypto Investment with Swissborg</p>
+                                    </div>
+                                </div>
+                                <i class="bi bi-chevron-right text-[#019c71] text-md"></i>
+                            </div>
+                        </a>
+                        <a class="high" href="http://127.0.0.1:5501/investwithalpha.html">
+                            <div class="flex items-center justify-between mb-3">
+                                <div class="flex items-center justify-between gap-[7px]">
+                                    <img class="w-12" src="/Image/navigation-alpha.svg" alt="">
+                                    <div class="flex flex-col">
+                                        <h1 class="text-black font-medium mb-[4px]">Invest through Alpha <span>New</span></h1>
+                                        <p class="text-[#aaa] text-sm">Discover the next emerging projects</p>
+                                    </div>
+                                </div>
+                                <i class="bi bi-chevron-right text-[#019c71] text-md"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
         
-            <h1 class="hidden lg:block text-lg md:text-lg lg:text-xl "><span class="text-lg md:text-lg lg:text-xl"><i class="bi bi-globe"></i></span> EN</h1>
-  
-
-            <i class="bi bi-list block lg:hidden text-3xl text-[#019C71]"></i>
-        </nav>
+                <div class="border-b ">
+                    <div class="flex items-center justify-between cursor-pointer p-[1rem]" id="toggleDrop2" onclick="toggleRotation2()">
+                        <h1 class="text-black text-xl font-semibold">About Us</h1>
+                        <i class="bi bi-chevron-down text-[#019c71] text-xl" id="chevronIcon2"></i>
+                    </div>
+        
+                    <div class="hidden my-[20px] overflow-y-scroll p-[1rem]" id="aboutContent">
+                        <a class="high" href="">
+                            <div class="flex items-center justify-between mb-3">
+                                <div class="flex items-center justify-between gap-[7px]">
+                                    <img class="w-12" src="/Image/smart-engine-icon.svg" alt="">
+                                    <div class="flex flex-col">
+                                        <h1 class="text-black font-medium mb-[10px]">Buy Cryptos</h1>
+                                        <p class="text-[#aaa] text-sm">Exchange instantly at the best price</p>
+                                    </div>
+                                </div>
+                                <i class="bi bi-chevron-right text-[#019c71] text-md"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
 
         <div class="lg:flex md:flex-row sm:flex-col lg:gap-[70px] sm:gap-[30px] md:gap-[65px] items-center md:justify-center w-[90%] mx-auto py-[8rem] md:px[5rem]">
             <div>
