@@ -11,22 +11,24 @@
 </head>
 <body>
     <div class="bg-[#191E29] h-full pb-[30px] text-white" >
-        <nav class=" top flex items-center justify-between w-[95%] lg:w-[70%] mx-auto pt-[20px]">
+        <nav class=" top flex items-center justify-between w-[95%] mx-auto pt-[20px]">
             <div>
                 <img src="" alt="">
                 <a href=""><h1 class="text-2xl md:text-3xl lg:text-4xl font-bold cursor-pointer">SwissBorg</h1></a>
             </div>
         
-            <div class="hidden lg:flex items-center gap-8">
-                <a class="text-sm md:text-base lg:text-md cursor-pointer font-semibold  hover:text-[#01C38D] hover:border-b-2 hover:border-[#01C38D]" href="">Invest</a>
-                <a class="text-sm md:text-base lg:text-md cursor-pointer font-semibold  hover:text-[#01C38D] hover:border-b-2 hover:border-[#01C38D]" href="">About Us</a>
+            <div class="hidden md:flex items-center gap-8">
+                <a class="invest text-sm md:text-base lg:text-md cursor-pointer font-semibold  hover:text-[#01C38D] hover:border-b-2 hover:border-[#01C38D]">Invest</a>
+                <a class="about text-sm md:text-base lg:text-md cursor-pointer font-semibold  hover:text-[#01C38D] hover:border-b-2 hover:border-[#01C38D]">About Us</a>
             </div>
         
-            <h1 class="hidden lg:block text-lg md:text-lg lg:text-xl "><span class="text-lg md:text-lg lg:text-xl"><i class="bi bi-globe"></i></span> EN</h1>
+            <h1 class="hidden md:block text-lg md:text-lg lg:text-xl "><span class="text-lg md:text-lg lg:text-xl"><i class="bi bi-globe"></i></span> EN</h1>
   
 
-            <i id="menuIcon" class="bi bi-list block lg:hidden text-3xl text-[#019C71] cursor-pointer"></i>
+            <i id="menuIcon" class="bi bi-list block md:hidden text-3xl text-[#019C71] cursor-pointer"></i>
         </nav>
+
+
         
         <!-- menu button  -->
         <div id="menuDisplay" class="overflow-y-scroll fixed z-indexed hidden h-[100vh] bg-white top-[0] w-full  p-[10px]">
@@ -36,7 +38,7 @@
                     <img class="w-14" src="/images/swissapp-img.svg" alt="">
                     <h1 class="font-bold text-3xl text-black">Swissborg</h1>
                 </div>
-                <i id="closeIcon" class="bi bi-x-lg hidden lg:hidden text-xl text-[#019c71] cursor-pointer"></i>            
+                <i id="closeIcon" class="bi bi-x-lg hidden md:hidden text-xl text-[#019c71] cursor-pointer"></i>            
             </div>
             <div class="border-b">
                 <div class="flex items-center justify-between cursor-pointer  p-[1rem]" id="toggleDrop" onclick="toggleRotation()">
@@ -163,13 +165,25 @@
                 </div>
     
                 <div class="hidden my-[20px] overflow-y-scroll p-[1rem]" id="aboutContent">
-                    <a class="high" href="">
+                    <a class="high" href="http://127.0.0.1:5501/abouttml">
                         <div class="flex items-center justify-between mb-3">
                             <div class="flex items-center justify-between gap-[7px]">
-                                <img class="w-12" src="/Image/smart-engine-icon.svg" alt="">
+                                <img class="w-12" src="/Image/swissborg-app.svg" alt="">
                                 <div class="flex flex-col">
-                                    <h1 class="text-black font-medium mb-[10px]">Buy Cryptos</h1>
-                                    <p class="text-[#aaa] text-sm">Exchange instantly at the best price</p>
+                                    <h1 class="text-black font-medium mb-[10px]">About swissborg</h1>
+                                    <p class="text-[#aaa] text-sm">Learn more about Swissborg</p>
+                                </div>
+                            </div>
+                            <i class="bi bi-chevron-right text-[#019c71] text-md"></i>
+                        </div>
+                    </a>
+                    <a class="high" href="http://127.0.0.1:5501/affilate.html">
+                        <div class="flex items-center justify-between mb-3">
+                            <div class="flex items-center justify-between gap-[7px]">
+                                <img class="w-12" src="/Image/community-icon.svg" alt="">
+                                <div class="flex flex-col">
+                                    <h1 class="text-black font-medium mb-[10px]">Become an affilate for swissborg</h1>
+                                    <p class="text-[#aaa] text-sm">Join 100+ affilates worldwide</p>
                                 </div>
                             </div>
                             <i class="bi bi-chevron-right text-[#019c71] text-md"></i>
@@ -187,10 +201,10 @@
         
             <div class="flex lg:flex w-full lg:w-[95%]  flex-col-reverse items-center gap-24 px-4 my-8 mx-auto md:flex-row md:gap-14 md:px-20 md:my-16 lg:px-32 justify-center">
 
-                <img class="opacity-95 w-full sm:w-[60%] md:w-[70%] lg:w-[50%] mx-auto" src="/Image/hero-img.png" alt="Front-View">
+                <img class="opacity-95 w-full sm:w-[60%] md:w-[65%] lg:w-[50%] mx-auto" src="/Image/hero-img.png" alt="Front-View">
                         
-                <div class="lg:text-left items-center pt-[40px] lg:pt-0 justify-center lg:w-[70%]">
-                    <h1 class="font-semibold text-center md:text-left lg:w-[80%] sm:text-[32px] w-[100%]  lg:leading-[56px] lg:text-left md:font-bold leading-[45px]  md:leading-[56px] text-[33px]  lg:text-6xl">Empowering Your Financial Freedom</h1>
+                <div class="lg:text-left items-center pt-[40px] lg:pt-0 justify-center lg:w-[90%]">
+                    <h1 class="font-semibold text-center md:text-left lg:w-[100%] sm:text-[32px] w-[100%]  lg:leading-[66px] lg:text-left md:font-bold leading-[45px]  md:leading-[56px] text-[33px]  lg:text-6xl">Empowering Your Financial Freedom</h1>
         
                     <h3 class="text-lg text-center md:text-lg lg:w-full md:text-left lg:text-lg my-[20px] sm:text-center sm:text-lg ">Buy, sell and exchange cryptocurrencies with 16 fiats including EUR, CHF and GBP.</h3>
         
