@@ -9,23 +9,32 @@
     <link href="/css/homeStyle.css" rel="stylesheet">
 </head>
 <body>
-    <div class="relative bg-gradient-to-b from-gray-800 to-gray-900 h-[110vh] md:h-[160vh] lg:h-[130vh]  text-white " >
-        <nav class=" top flex items-center justify-between w-[95%] lg:w-[95%] mx-auto pt-[20px]">
+    <div class="relative bg-gradient-to-b from-gray-800 to-gray-900 h-full pb-[30px] text-white " >
+        <nav class=" top flex items-center justify-between w-[95%] mx-auto pt-[20px]">
             <div>
                 <img src="" alt="">
                 <a href=""><h1 class="text-2xl md:text-3xl lg:text-4xl font-bold cursor-pointer">SwissBorg</h1></a>
             </div>
         
-            <div class="hidden lg:flex items-center gap-8">
-                <a class="text-sm md:text-base lg:text-md cursor-pointer font-semibold  hover:text-[#01C38D] hover:border-b-2 hover:border-[#01C38D]" href="">Invest</a>
-                <a class="text-sm md:text-base lg:text-md cursor-pointer font-semibold  hover:text-[#01C38D] hover:border-b-2 hover:border-[#01C38D]" href="">About Us</a>
+            <div class="hidden md:flex items-center gap-8">
+                <a id="invest" class=" text-sm md:text-base lg:text-md cursor-pointer font-semibold  hover:text-[#01C38D] hover:border-b-2 hover:border-[#01C38D]">Invest</a>
+                <a id="about" class=" text-sm md:text-base lg:text-md cursor-pointer font-semibold  hover:text-[#01C38D] hover:border-b-2 hover:border-[#01C38D]">About Us</a>
             </div>
         
-            <h1 class="hidden lg:block text-lg md:text-lg lg:text-xl "><span class="text-lg md:text-lg lg:text-xl"><i class="bi bi-globe"></i></span> EN</h1>
+            <h1 class="hidden md:block text-lg md:text-lg lg:text-xl "><span class="text-lg md:text-lg lg:text-xl"><i class="bi bi-globe"></i></span> EN</h1>
   
 
-            <i id="menuIcon" class="bi bi-list block lg:hidden text-3xl text-[#019C71] cursor-pointer"></i>
+            <i id="menuIcon" class="bi bi-list block md:hidden text-3xl text-[#019C71] cursor-pointer"></i>
         </nav>
+
+        <!-- THE TWO CONTAINER  -->
+        <div id="container" class="  absolute z-50  right-[20%] top-[10%] w-[65%] mx-auto border shadow-custom bg-white rounded-xl hidden">
+
+        </div>
+
+        <div id="container1" class=" absolute z-50  right-[20%] top-[10%] w-[65%] mx-auto border shadow-custom bg-white rounded-xl hidden">
+
+        </div>
         
         <!-- menu button  -->
         <div id="menuDisplay" class="overflow-y-scroll fixed z-indexed hidden h-[100vh] bg-white top-[0] w-full  p-[10px]">
@@ -192,9 +201,6 @@
         </div> 
     </div>
 
-    <div class=" container absolute z-50  right-[20%] top-[10%] w-[65%] mx-auto border border-[#01C38D] bg-white rounded-xl hidden">
-
-    </div>
     
     <div class="my-[100px]">
         <h1 class="text-center text-3xl md:text-5xl lg:text-5xl font-bold">Why Choose Thematic Investing</h1>
@@ -484,109 +490,110 @@
         <img class="border-2 rounded-[30px]" src="/Image/Thematic screen-EN.avif" alt="">
     </div>
  
-    <!-- section before the footer  -->
-    <section class="flex flex-col justify-between w-full lg:w-[90%] mx-auto">
-        <div class="flex items-start flex-col md:flex-row justify-between px-[3rem] py-[3rem] gap-[20px]">
-            <div class="flex items-start gap-[8px] md:w-[50%]">
-                <img src="/images/cookies-img.svg" alt="">
-                <a href="" class="text-[17px] text-gray-400 font-bold">Manage cookies settings</a>
+        <!-- SECTION BEFORE FOOTER  -->
+        <section class="flex flex-col justify-between w-full lg:w-[90%] mx-auto">
+            <div class="flex items-start flex-col md:flex-row justify-between px-[3rem] py-[3rem] gap-[20px]">
+                <div class="flex items-start gap-[8px] md:w-[50%]">
+                    <img src="/images/cookies-img.svg" alt="">
+                    <a href="" class="text-[17px] text-gray-400 font-bold">Manage cookies settings</a>
+                </div>
+                <input type="" placeholder="dropdown" class="px-[20px] py-[5px] rounded-sm w-[100%] md:w-[30%]" style="border: 1px solid gray">
             </div>
-            <input type="" placeholder="dropdown" class="px-[20px] py-[5px] rounded-sm w-[100%] md:w-[30%]" style="border: 1px solid gray">
-        </div>
+            
+            <div class="flex flex-col items-center justify-between md:flex-row gap-[20px] md:gap-[100px] px-[2rem] py-[2rem] w-full">
+                <div class="flex flex-col sm:flex-row md:flex-row items-start md:items-center gap-0 sm:gap-[20px] md:gap-[50px] justify-between border-b border-black sm:border-none pb-[15px] sm:pb-0 w-full">
+                    <div class="flex flex-col w-full md:w-[50%]  gap-[20px] leading-8">
+                        <div class="flex items-center w-full  justify-between gap-[50px] ">
+                            <h1 class="font-bold text-[18px] w-full text-gray-400">SwissBorg app</h1>
+                            <i class="bi bi-chevron-down block  sm:hidden  cursor-pointer py-1 px-3 border rounded-full"></i>
+                        </div>
+
+                        <div class="flex flex-col">
+                            <a href="" class="text-gray-400">Buy cryptos</a>
+                            <a href="" class="text-gray-400">Earn cryptos</a>
+                            <a href="" class="text-gray-400">Diversify smartly</a>
+                            <a href="" class="text-gray-400">All cryptos</a>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col items-start leading-8 md:w-[50%] ">
+                        <h1 class="font-bold text-[18px] text-gray-400 hidden sm:block opacity-0">SwissBorg app</h1>
+                        <a href="" class="text-gray-400">Portfolio Visualizer</a>
+                        <a href="" class="text-gray-400">Asset Analysis</a>
+                        <a href="" class="text-gray-400">Supported countries</a>
+                        <a href="" class="text-gray-400">Fees</a>
+                    </div>
+                </div>
+
+                <div class="flex flex-col sm:flex-row md:flex-row justify-between gap-[100px] w-full">
+                    <div class="flex flex-col leading-8 border-b border-black sm:border-none pb-[15px] sm:pb-0">
+                        <div class="flex items-center w-full  justify-between gap-[50px] ">
+                            <h1 class="font-bold text-[18px] text-gray-400">Learn</h1>
+                            <i class="bi bi-chevron-down block  sm:hidden cursor-pointer py-1 px-3 border rounded-full"></i>
+                        </div>
+                        <div>
+                            <a href="" class="text-gray-400">Blog</a>
+                            <a href="" class="text-gray-400">Academy</a>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col leading-8 border-b border-black sm:border-none pb-[15px] sm:pb-0">
+                        <div class="flex items-center w-full  justify-between gap-[50px] ">
+                            <h1 class="font-bold text-[18px] text-gray-400">Team</h1>
+                            <i class="bi bi-chevron-down block  sm:hidden  cursor-pointer py-1 px-3 border rounded-full"></i>
+                        </div>
         
-        <div class="flex flex-col justify-between md:flex-row gap-[20px] md:gap-[200px] px-[2rem] py-[2rem] w-full">
-            <div class="flex flex-col md:flex-row md:items-center gap-[20px] md:gap-[100px] justify-between">
-                <div class="flex flex-col md:w-[50%]  gap-[20px] leading-8">
-                    <div class="flex items-center w-full  md:border-none  justify-between gap-[50px] border-b border-black">
-                        <h1 class="font-bold text-[18px] w-full text-gray-400">SwissBorg app</h1>
-                        <i class="bi bi-chevron-down block md:hidden"></i>
+                        <div class="flex flex-col">
+                            <a href="" class="text-gray-400">About SwissBorg</a>
+                            <a href="" class="flex gap-[10px] text-gray-400">career <p class="bg-[#8A7CFF] text-[12px] text-white px-[8px] rounded-md">We're hiring</p></a>
+                            <a href="" class="text-gray-400">Affiliate Program</a>
+                            <a href="" class="text-gray-400">Help Center</a>
+                        </div>
                     </div>
-
-                    <div class="flex flex-col">
-                        <a href="" class="text-gray-400">Buy cryptos</a>
-                        <a href="" class="text-gray-400">Earn cryptos</a>
-                        <a href="" class="text-gray-400">Diversify smartly</a>
-                        <a href="" class="text-gray-400">All cryptos</a>
-                    </div>
-                </div>
-
-                <div class="flex flex-col items-start leading-8 md:w-[50%]">
-                    <h1 class="font-bold text-[18px] text-gray-400 opacity-0">SwissBorg app</h1>
-                    <a href="" class="text-gray-400">Portfolio Visualizer</a>
-                    <a href="" class="text-gray-400">Asset Analysis</a>
-                    <a href="" class="text-gray-400">Supported countries</a>
-                    <a href="" class="text-gray-400">Fees</a>
                 </div>
             </div>
 
-            <div class="flex flex-col md:flex-wrap justify-between gap-[100px]">
-                <div class="flex flex-col leading-8">
+            <div class="flex items-center flex-col-reverse-1 gap-[8px] px-[1rem] py-[1rem]">
+                <img class="w-8 rounded-full" src="/Image/swit.png" alt="SwitzerlandImg">
+                <p class="text-gray-400 text-sm">Proudly engineered in Switzerland</p>
+            </div>
+
+            <div class="flex flex-col lg:flex-row  md:w-full  gap-[30px]">
+                <div class="text-white p-[20px] md:py-[3rem] w-[95%] md:w-[95%] h-[250px] md:h-[270px] mx-auto text-center rounded-md" style="background-image: linear-gradient(135deg, #09a77d, #12E3BC);">
+                    <h1 class="font-bold w-full text-left text-lg">Subscribe to our newsletter</h1>
+
+                    <p class="text-md py-[12px] text-left">Receive official updates when you join our mailing list</p>
+                    <div class="flex flex-col gap-[20px]">
+                        <input type="text" class="px-[16px] py-3 lg:w-[100%] rounded-md bg-[#53DEBD] text-white w-full" placeholder="Name(required)">
+                        <div class="flex">
+                            <input type="text" class="px-[16px] py-2 w-[100%] rounded-md bg-[#53DEBD]" placeholder="Email(required)">
+                            <i class="bi bi-chevron-right font-bold bg-white text-[#12E3BC] py-[8px] px-[15px] text-[25px] ml-[-16px] rounded-tr-lg rounded-br-lg"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-white p-[20px] md:py-[3rem] w-[95%] h-[270px] mx-auto text-center rounded-md" style="background-image: linear-gradient(135deg, #2e15ce, #8B7DFF);">
                     <div>
-                        <h1 class="font-bold text-[18px] text-gray-400">Learn</h1>
+                        <h1 class="font-bold w-full text-left text-lg">Be part of our growing global community</h1>
+                        <p class="text-md py-[12px] text-left">Follow and subscribe to our channels</p>
                     </div>
-                    <div>
-                        <a href="" class="text-gray-400">Blog</a>
-                        <a href="" class="text-gray-400">Academy</a>
-                    </div>
-                </div>
-
-                <div class="flex flex-col leading-8">
-                    <div>
-                        <h1 class="font-bold text-[18px] text-gray-400">Team</h1>
-                    </div>
-    
-                    <div class="flex flex-col">
-                        <a href="" class="text-gray-400">About SwissBorg</a>
-                        <a href="" class="flex gap-[10px] text-gray-400">career <p class="bg-[#8A7CFF] text-[12px] text-white px-[8px] rounded-md">We're hiring</p></a>
-                        <a href="" class="text-gray-400">Affiliate Program</a>
-                        <a href="" class="text-gray-400">Help Center</a>
+                    <div class="flex flex-row gap-[20px] text-center items-center">
+                        <i class="bi bi-twitter-x bg-white text-black px-[8px] py-[5px] rounded-md"></i>
+                        <i class="bi bi-discord bg-white text-black px-[8px] py-[5px] rounded-md"></i>
+                        <i class="bi bi-youtube bg-white text-black px-[8px] py-[5px] rounded-md"></i>
+                        <i class="bi bi-facebook bg-white text-black px-[8px] py-[5px] rounded-md"></i>
+                        <i class="bi bi-instagram bg-white text-black px-[8px] py-[5px] rounded-md"></i>
+                        <i class="bi bi-linkedin bg-white text-black px-[8px] py-[5px] rounded-md"></i>
+                        <i class="bi bi-telegram bg-white text-black px-[8px] py-[5px] rounded-md"></i>
+                        <i class="bi bi-tiktok bg-white text-black px-[8px] py-[5px] rounded-md"></i>
+                        <i class="bi bi-tiktok bg-white text-black px-[8px] py-[5px] rounded-md"></i>
                     </div>
                 </div>
             </div>
-        </div>
-
-        <div class="flex items-center flex-col-reverse-1 gap-[8px] px-[1rem] py-[1rem]">
-            <img class="w-8 rounded-full" src="/Image/swit.png" alt="SwitzerlandImg">
-            <p class="text-gray-400 text-sm">Proudly engineered in Switzerland</p>
-        </div>
-
-        <div class="flex flex-col lg:flex-row  md:w-full  gap-[30px]">
-            <div class="text-white p-[20px] md:py-[3rem] w-[95%] md:w-[95%] h-[250px] md:h-[270px] mx-auto text-center rounded-md" style="background-image: linear-gradient(135deg, #09a77d, #12E3BC);">
-                <h1 class="font-bold w-full text-left text-lg">Subscribe to our newsletter</h1>
-
-                <p class="text-md py-[12px] text-left">Receive official updates when you join our mailing list</p>
-                <div class="flex flex-col gap-[20px]">
-                    <input type="text" class="px-[16px] py-3 lg:w-[100%] rounded-md bg-[#53DEBD] text-white w-full" placeholder="Name(required)">
-                    <div class="flex">
-                        <input type="text" class="px-[16px] py-2 w-[100%] rounded-md bg-[#53DEBD]" placeholder="Email(required)">
-                        <i class="bi bi-chevron-right font-bold bg-white text-[#12E3BC] py-[8px] px-[15px] text-[25px] ml-[-16px] rounded-tr-lg rounded-br-lg"></i>
-                    </div>
-                </div>
-            </div>
-
-            <div class="text-white p-[20px] md:py-[3rem] w-[95%] h-[270px] mx-auto text-center rounded-md" style="background-image: linear-gradient(135deg, #2e15ce, #8B7DFF);">
-                <div>
-                    <h1 class="font-bold w-full text-left text-lg">Be part of our growing global community</h1>
-                    <p class="text-md py-[12px] text-left">Follow and subscribe to our channels</p>
-                </div>
-                <div class="flex flex-row gap-[20px] text-center items-center">
-                    <i class="bi bi-twitter-x bg-white text-black px-[8px] py-[5px] rounded-md"></i>
-                    <i class="bi bi-discord bg-white text-black px-[8px] py-[5px] rounded-md"></i>
-                    <i class="bi bi-youtube bg-white text-black px-[8px] py-[5px] rounded-md"></i>
-                    <i class="bi bi-facebook bg-white text-black px-[8px] py-[5px] rounded-md"></i>
-                    <i class="bi bi-instagram bg-white text-black px-[8px] py-[5px] rounded-md"></i>
-                    <i class="bi bi-linkedin bg-white text-black px-[8px] py-[5px] rounded-md"></i>
-                    <i class="bi bi-telegram bg-white text-black px-[8px] py-[5px] rounded-md"></i>
-                    <i class="bi bi-tiktok bg-white text-black px-[8px] py-[5px] rounded-md"></i>
-                    <i class="bi bi-tiktok bg-white text-black px-[8px] py-[5px] rounded-md"></i>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
 
 
-
-
+        <!-- FOOTER -->
     <footer class="py-[2rem] bg-[#d9dbdd] mt-[4rem] w-full">
         <div class="mx-auto w-full md:w-[70%]">
             <div class="flex flex-col md:flex-row justify-between py-[2rem] px-[2rem] text-[13px] gap-[25px]"> 
@@ -620,8 +627,13 @@
             </div>
         </div>
     </footer>
+    
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 
+    <script src="/JS/mySwissborg.js"></script>
     <script src="/JS/swissborg.js"></script>
-
 </body>
 </html>
