@@ -9,512 +9,296 @@
     <link href="/css/homeStyle.css" rel="stylesheet">
 </head>
 <body>
-    <div >
-        <div class="relative bg-gradient-to-b from-gray-800 to-gray-900 h-[110vh] md:h-[160vh] lg:h-[130vh]  text-white " >
-            <nav class=" top flex items-center justify-between w-[95%] lg:w-[70%] mx-auto pt-[20px]">
-                <div>
-                    <img src="" alt="">
-                    <a href=""><h1 class="text-2xl md:text-3xl lg:text-4xl font-bold cursor-pointer">SwissBorg</h1></a>
-                </div>
-            
-                <div class="hidden lg:flex items-center gap-8">
-                    <a class="text-sm md:text-base lg:text-md cursor-pointer font-semibold  hover:text-[#01C38D] hover:border-b-2 hover:border-[#01C38D]" href="">Invest</a>
-                    <a class="text-sm md:text-base lg:text-md cursor-pointer font-semibold  hover:text-[#01C38D] hover:border-b-2 hover:border-[#01C38D]" href="">About Us</a>
-                </div>
-            
-                <h1 class="hidden lg:block text-lg md:text-lg lg:text-xl "><span class="text-lg md:text-lg lg:text-xl"><i class="bi bi-globe"></i></span> EN</h1>
-      
+    <nav id="navbar" class=" fixed z-50 top-0  flex items-center justify-between w-full mx-auto p-[10px] bg-white shadow-custom">
+        <div class="flex items-center">
+            <img class="w-14" src="/images/swissapp-img.svg" alt="">
+            <a href=""><h1 class="text-2xl md:text-2xl lg:text-4xl font-bold cursor-pointer">SwissBorg</h1></a>
+        </div>
     
-                <i id="menuIcon" class="bi bi-list block lg:hidden text-3xl text-[#019C71] cursor-pointer"></i>
-            </nav>
-            
-            <!-- menu button  -->
-            <div id="menuDisplay" class="overflow-y-scroll fixed z-indexed hidden h-[100vh] bg-white top-[0] w-full  p-[10px]">
-                
-                <div class="flex items-center justify-between mb-[20px]">
-                    <div class="flex items-center">
-                        <img class="w-14" src="/images/swissapp-img.svg" alt="">
-                        <h1 class="font-bold text-3xl text-black">Swissborg</h1>
-                    </div>
-                    <i id="closeIcon" class="bi bi-x-lg hidden lg:hidden text-xl text-[#019c71] cursor-pointer"></i>            
-                </div>
-                <div class="border-b">
-                    <div class="flex items-center justify-between cursor-pointer  p-[1rem]" id="toggleDrop" onclick="toggleRotation()">
-                        <h1 class="text-black text-xl font-semibold">Invest</h1>
-                        <i class="bi bi-chevron-down text-[#019c71] text-xl" id="chevronIcon"></i>
-                    </div>
+        <div id="checker" class="hidden md:flex items-center gap-8">
+            <a id="invest" class=" text-sm md:text-base lg:text-md cursor-pointer font-semibold  hover:text-[#01C38D] hover:border-b-2 hover:border-[#01C38D]">Invest</a>
+            <a id="about" class=" text-sm md:text-base lg:text-md cursor-pointer font-semibold  hover:text-[#01C38D] hover:border-b-2 hover:border-[#01C38D]">About Us</a>
+        </div>
+    
+        <h1 class="hidden md:block text-lg md:text-lg lg:text-xl "><span class="text-lg md:text-lg lg:text-xl"><i class="bi bi-globe"></i></span> EN</h1>
+
+
+        <i id="menuIcon" class="bi bi-list block md:hidden text-3xl text-[#019C71] cursor-pointer"></i>
+    </nav>
+
+    <!-- THE TWO CONTAINER  -->
+    <div id="container" class="  absolute z-50  right-[20%] top-[10%] w-[65%] mx-auto border shadow-custom bg-white rounded-xl hidden">
+
+    </div>
+
+    <div id="container1" class=" absolute z-50  right-[20%] top-[10%] w-[65%] mx-auto border shadow-custom bg-white rounded-xl hidden">
+
+    </div>
+
+    
+    <!-- menu button  -->
+    <div id="menuDisplay" class="overflow-y-scroll fixed z-indexed hidden h-[100vh] bg-white top-[0] w-full  p-[10px]">
         
-                    <div class="hidden my-[10px] overflow-y-auto p-[1rem]" id="investContent">
-                        <a class="high" href="">
-                            <div class="flex items-center justify-between mb-3">
-                                <div class="flex items-center justify-between gap-[7px]">
-                                    <img class="w-12" src="/Image/smart-engine-icon.svg" alt="">
-                                    <div class="flex flex-col ">
-                                        <h1 class="text-black font-medium mb-[4px]">Buy Cryptos</h1>
-                                        <p class="text-[#aaa] text-sm">Exchange instantly at the best price</p>
-                                    </div>
-                                </div>
-                                <i class="bi bi-chevron-right text-[#019c71] text-md"></i>
+        <div class="flex items-center justify-between mb-[20px]">
+            <div class="flex items-center">
+                <img class="w-14" src="/images/swissapp-img.svg" alt="">
+                <h1 class="font-bold text-3xl text-black">Swissborg</h1>
+            </div>
+            <i id="closeIcon" class="bi bi-x-lg hidden md:hidden text-xl text-[#019c71] cursor-pointer"></i>            
+        </div>
+        <div class="border-b">
+            <div class="flex items-center justify-between cursor-pointer  p-[1rem]" id="toggleDrop" onclick="toggleRotation()">
+                <h1 class="text-black text-xl font-semibold">Invest</h1>
+                <i class="bi bi-chevron-down text-[#019c71] text-xl" id="chevronIcon"></i>
+            </div>
+
+            <div class="hidden my-[10px] overflow-y-auto p-[1rem]" id="investContent">
+                <a class="high" href="">
+                    <div class="flex items-center justify-between mb-3">
+                        <div class="flex items-center justify-between gap-[7px]">
+                            <img class="w-12" src="/Image/smart-engine-icon.svg" alt="">
+                            <div class="flex flex-col ">
+                                <h1 class="text-black font-medium mb-[4px]">Buy Cryptos</h1>
+                                <p class="text-[#aaa] text-sm">Exchange instantly at the best price</p>
                             </div>
-                        </a>
-                        <a class="high" href="">
-                            <div class="flex items-center justify-between mb-3">
-                                <div class="flex items-center justify-between gap-[7px]">
-                                    <img class="w-12" src="/Image/earn.svg" alt="">
-                                    <div class="flex flex-col">
-                                        <h1 class="text-black font-medium mb-[4px]">Earn Cryptos</h1>
-                                        <p class="text-[#aaa] text-sm">Generate passive income 24/7</p>
-                                    </div>
-                                </div>
-                                <i class="bi bi-chevron-right text-[#019c71] text-md"></i>
-                            </div>
-                        </a>
-                        <a class="high" href="http://127.0.0.1:5501/diversify.html">
-                            <div class="flex items-center justify-between mb-3">
-                                <div class="flex items-center justify-between gap-[7px]">
-                                    <img class="w-12" src="/Image/navbar-invest-Thematics.svg" alt="">
-                                    <div class="flex flex-col">
-                                        <h1 class="text-black font-medium mb-[4px]">Diversify with Thematics</h1>
-                                        <p class="text-[#aaa] text-sm">Crypto bundles to invest in entire sectors</p>
-                                    </div>
-                                </div>
-                                <i class="bi bi-chevron-right text-[#019c71] text-md"></i>
-                            </div>
-                        </a>
-                        <a class="high" href="http://127.0.0.1:5501/cardFunding.html">
-                            <div class="flex items-center justify-between mb-3">
-                                <div class="flex items-center justify-between gap-[7px]">
-                                    <img class="w-12" src="/Image/Card Deposit.svg" alt="">
-                                    <div class="flex flex-col">
-                                        <h1 class="text-black font-medium mb-[4px]">Card Funding</h1>
-                                        <p class="text-[#aaa] text-sm">Top up your fiat account using your credit and debit card</p>
-                                    </div>
-                                </div>
-                                <i class="bi bi-chevron-right text-[#019c71] text-md"></i>
-                            </div>
-                        </a>
-                        <a class="high" href="http://127.0.0.1:5501/allcryptos.html">
-                            <div class="flex items-center justify-between mb-3">
-                                <div class="flex items-center justify-between gap-[7px]">
-                                    <img class="w-12" src="/Image/Navigation-All_cryptos.svg" alt="">
-                                    <div class="flex flex-col">
-                                        <h1 class="text-black font-medium mb-[4px]">All Cryptos</h1>
-                                        <p class="text-[#aaa] text-sm">More than 50 curated crypto assets</p>
-                                    </div>
-                                </div>
-                                <i class="bi bi-chevron-right text-[#019c71] text-md"></i>
-                            </div>
-                        </a>
-                        <a class="high" href="http://127.0.0.1:5501/assetAnalysis.html">
-                            <div class="flex items-center justify-between mb-3">
-                                <div class="flex items-center justify-between gap-[7px]">
-                                    <img class="w-12" src="/Image/Navigation-Asset_Analysis.svg" alt="">
-                                    <div class="flex flex-col">
-                                        <h1 class="text-black font-medium mb-[4px]">Asset Analysis</h1>
-                                        <p class="text-[#aaa] text-sm">Live analysis of all cryptos</p>
-                                    </div>
-                                </div>
-                                <i class="bi bi-chevron-right text-[#019c71] text-md"></i>
-                            </div>
-                        </a>
-                        <a class="high" href="http://127.0.0.1:5501/portfolio.html">
-                            <div class="flex items-center justify-between mb-3">
-                                <div class="flex items-center justify-between gap-[7px]">
-                                    <img class="w-12" src="/Image/navbar-invest-Portfolio Analytics.svg" alt="">
-                                    <div class="flex flex-col">
-                                        <h1 class="text-black font-medium mb-[4px]">Portfolio Visualizer</h1>
-                                        <p class="text-[#aaa] text-sm">Live monitoring of your portfolio</p>
-                                    </div>
-                                </div>
-                                <i class="bi bi-chevron-right text-[#019c71] text-md"></i>
-                            </div>
-                        </a>
-                        <a class="high" href="http://127.0.0.1:5501/automate.html">
-                            <div class="flex items-center justify-between mb-3">
-                                <div class="flex items-center justify-between gap-[7px]">
-                                    <img class="w-12" src="/Image/icon-navigation-AutoInvest.svg" alt="">
-                                    <div class="flex flex-col">
-                                        <h1 class="text-black font-medium mb-[4px]">Auto Invest</h1>
-                                        <p class="text-[#aaa] text-sm">Automate Your Crypto Investment with Swissborg</p>
-                                    </div>
-                                </div>
-                                <i class="bi bi-chevron-right text-[#019c71] text-md"></i>
-                            </div>
-                        </a>
-                        <a class="high" href="http://127.0.0.1:5501/investwithalpha.html">
-                            <div class="flex items-center justify-between mb-3">
-                                <div class="flex items-center justify-between gap-[7px]">
-                                    <img class="w-12" src="/Image/navigation-alpha.svg" alt="">
-                                    <div class="flex flex-col">
-                                        <h1 class="text-black font-medium mb-[4px]">Invest through Alpha <span>New</span></h1>
-                                        <p class="text-[#aaa] text-sm">Discover the next emerging projects</p>
-                                    </div>
-                                </div>
-                                <i class="bi bi-chevron-right text-[#019c71] text-md"></i>
-                            </div>
-                        </a>
+                        </div>
+                        <i class="bi bi-chevron-right text-[#019c71] text-md"></i>
                     </div>
-                </div>
-        
-                <div class="border-b ">
-                    <div class="flex items-center justify-between cursor-pointer p-[1rem]" id="toggleDrop2" onclick="toggleRotation2()">
-                        <h1 class="text-black text-xl font-semibold">About Us</h1>
-                        <i class="bi bi-chevron-down text-[#019c71] text-xl" id="chevronIcon2"></i>
-                    </div>
-        
-                    <div class="hidden my-[20px] overflow-y-scroll p-[1rem]" id="aboutContent">
-                        <a class="high" href="">
-                            <div class="flex items-center justify-between mb-3">
-                                <div class="flex items-center justify-between gap-[7px]">
-                                    <img class="w-12" src="/Image/smart-engine-icon.svg" alt="">
-                                    <div class="flex flex-col">
-                                        <h1 class="text-black font-medium mb-[10px]">Buy Cryptos</h1>
-                                        <p class="text-[#aaa] text-sm">Exchange instantly at the best price</p>
-                                    </div>
-                                </div>
-                                <i class="bi bi-chevron-right text-[#019c71] text-md"></i>
+                </a>
+                <a class="high" href="">
+                    <div class="flex items-center justify-between mb-3">
+                        <div class="flex items-center justify-between gap-[7px]">
+                            <img class="w-12" src="/Image/earn.svg" alt="">
+                            <div class="flex flex-col">
+                                <h1 class="text-black font-medium mb-[4px]">Earn Cryptos</h1>
+                                <p class="text-[#aaa] text-sm">Generate passive income 24/7</p>
                             </div>
-                        </a>
+                        </div>
+                        <i class="bi bi-chevron-right text-[#019c71] text-md"></i>
                     </div>
-                </div>
+                </a>
+                <a class="high" href="http://127.0.0.1:5501/diversify.html">
+                    <div class="flex items-center justify-between mb-3">
+                        <div class="flex items-center justify-between gap-[7px]">
+                            <img class="w-12" src="/Image/navbar-invest-Thematics.svg" alt="">
+                            <div class="flex flex-col">
+                                <h1 class="text-black font-medium mb-[4px]">Diversify with Thematics</h1>
+                                <p class="text-[#aaa] text-sm">Crypto bundles to invest in entire sectors</p>
+                            </div>
+                        </div>
+                        <i class="bi bi-chevron-right text-[#019c71] text-md"></i>
+                    </div>
+                </a>
+                <a class="high" href="http://127.0.0.1:5501/cardFunding.html">
+                    <div class="flex items-center justify-between mb-3">
+                        <div class="flex items-center justify-between gap-[7px]">
+                            <img class="w-12" src="/Image/Card Deposit.svg" alt="">
+                            <div class="flex flex-col">
+                                <h1 class="text-black font-medium mb-[4px]">Card Funding</h1>
+                                <p class="text-[#aaa] text-sm">Top up your fiat account using your credit and debit card</p>
+                            </div>
+                        </div>
+                        <i class="bi bi-chevron-right text-[#019c71] text-md"></i>
+                    </div>
+                </a>
+                <a class="high" href="http://127.0.0.1:5501/allcryptos.html">
+                    <div class="flex items-center justify-between mb-3">
+                        <div class="flex items-center justify-between gap-[7px]">
+                            <img class="w-12" src="/Image/Navigation-All_cryptos.svg" alt="">
+                            <div class="flex flex-col">
+                                <h1 class="text-black font-medium mb-[4px]">All Cryptos</h1>
+                                <p class="text-[#aaa] text-sm">More than 50 curated crypto assets</p>
+                            </div>
+                        </div>
+                        <i class="bi bi-chevron-right text-[#019c71] text-md"></i>
+                    </div>
+                </a>
+                <a class="high" href="http://127.0.0.1:5501/assetAnalysis.html">
+                    <div class="flex items-center justify-between mb-3">
+                        <div class="flex items-center justify-between gap-[7px]">
+                            <img class="w-12" src="/Image/Navigation-Asset_Analysis.svg" alt="">
+                            <div class="flex flex-col">
+                                <h1 class="text-black font-medium mb-[4px]">Asset Analysis</h1>
+                                <p class="text-[#aaa] text-sm">Live analysis of all cryptos</p>
+                            </div>
+                        </div>
+                        <i class="bi bi-chevron-right text-[#019c71] text-md"></i>
+                    </div>
+                </a>
+                <a class="high" href="http://127.0.0.1:5501/portfolio.html">
+                    <div class="flex items-center justify-between mb-3">
+                        <div class="flex items-center justify-between gap-[7px]">
+                            <img class="w-12" src="/Image/navbar-invest-Portfolio Analytics.svg" alt="">
+                            <div class="flex flex-col">
+                                <h1 class="text-black font-medium mb-[4px]">Portfolio Visualizer</h1>
+                                <p class="text-[#aaa] text-sm">Live monitoring of your portfolio</p>
+                            </div>
+                        </div>
+                        <i class="bi bi-chevron-right text-[#019c71] text-md"></i>
+                    </div>
+                </a>
+                <a class="high" href="http://127.0.0.1:5501/automate.html">
+                    <div class="flex items-center justify-between mb-3">
+                        <div class="flex items-center justify-between gap-[7px]">
+                            <img class="w-12" src="/Image/icon-navigation-AutoInvest.svg" alt="">
+                            <div class="flex flex-col">
+                                <h1 class="text-black font-medium mb-[4px]">Auto Invest</h1>
+                                <p class="text-[#aaa] text-sm">Automate Your Crypto Investment with Swissborg</p>
+                            </div>
+                        </div>
+                        <i class="bi bi-chevron-right text-[#019c71] text-md"></i>
+                    </div>
+                </a>
+                <a class="high" href="http://127.0.0.1:5501/investwithalpha.html">
+                    <div class="flex items-center justify-between mb-3">
+                        <div class="flex items-center justify-between gap-[7px]">
+                            <img class="w-12" src="/Image/navigation-alpha.svg" alt="">
+                            <div class="flex flex-col">
+                                <h1 class="text-black font-medium mb-[4px]">Invest through Alpha <span>New</span></h1>
+                                <p class="text-[#aaa] text-sm">Discover the next emerging projects</p>
+                            </div>
+                        </div>
+                        <i class="bi bi-chevron-right text-[#019c71] text-md"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="border-b ">
+            <div class="flex items-center justify-between cursor-pointer p-[1rem]" id="toggleDrop2" onclick="toggleRotation2()">
+                <h1 class="text-black text-xl font-semibold">About Us</h1>
+                <i class="bi bi-chevron-down text-[#019c71] text-xl" id="chevronIcon2"></i>
+            </div>
+
+            <div class="hidden my-[20px] overflow-y-scroll p-[1rem]" id="aboutContent">
+                <a class="high" href="http://127.0.0.1:5501/abouttml">
+                    <div class="flex items-center justify-between mb-3">
+                        <div class="flex items-center justify-between gap-[7px]">
+                            <img class="w-12" src="/Image/swissborg-app.svg" alt="">
+                            <div class="flex flex-col">
+                                <h1 class="text-black font-medium mb-[10px]">About swissborg</h1>
+                                <p class="text-[#aaa] text-sm">Learn more about Swissborg</p>
+                            </div>
+                        </div>
+                        <i class="bi bi-chevron-right text-[#019c71] text-md"></i>
+                    </div>
+                </a>
+                <a class="high" href="http://127.0.0.1:5501/affilate.html">
+                    <div class="flex items-center justify-between mb-3">
+                        <div class="flex items-center justify-between gap-[7px]">
+                            <img class="w-12" src="/Image/community-icon.svg" alt="">
+                            <div class="flex flex-col">
+                                <h1 class="text-black font-medium mb-[10px]">Become an affilate for swissborg</h1>
+                                <p class="text-[#aaa] text-sm">Join 100+ affilates worldwide</p>
+                            </div>
+                        </div>
+                        <i class="bi bi-chevron-right text-[#019c71] text-md"></i>
+                    </div>
+                </a>
             </div>
         </div>
     </div>
+ 
 
-    <div class="lg:flex lg:w-[76%] lg:mx-auto sm:flex-col-reverse sm:mx-auto items-center gap-8 px-6 my-8 md:mx-auto md:flex-row md:gap-18 md:px-20 md:my-16 lg:px-32">
+    <!-- first div  -->
+    <div class="flex flex-col lg:flex-row w-full mx-auto  sm:mx-auto items-center gap-8 px-[1rem] md:px-[3rem] lg:px-[4rem] my-28">
         
-        <div class="lg:text-left md:items-center sm:items-center w-[70%]">
-            <h1 class="font-extrabold lg:w-[80%] sm:text-[32px] sm:text-center sm:w-[100%] sm:font-bold  lg:leading-[86px] lg:text-left md:font-bold md:leading-[76px] md:text-6xl md:text-center lg:text-6xl">Earn crypto your way with SwissBorg Earn</h1>
+        <div class="lg:text-left md:items-center items-center w-full">
+            <h1 class="font-semibold text-3xl md:text-6xl text-center lg:text-left md:leading-[66px] lg:w-full mx-auto">Earn crypto your way with SwissBorg Earn</h1>
             
-            <h3 class="text-lg lg:text-left md:text-lg lg:w-[75%] md:text-center lg:text-lg my-[20px] sm:text-center sm:text-lg  ">Investors aren’t one-size-fits-all, so why is your yield? Generate the right yield for you with SwissBorg Earn.</h3>
+            <h3 class=" font-normal text-sm md:text-lg my-[10px] text-center lg:text-left lg:w-full mx-auto">Investors aren’t one-size-fits-all, so why is your yield? Generate the right yield for you with SwissBorg Earn.</h3>
             
-            <div class="flex flex-col items-center justify-center w-[50%] h-[30%] mx-auto">
+            <!-- <div class="flex flex-col items-center justify-center w-[50%] h-[30%] mx-auto">
                 <p class="font-semibold text-left">App is not available in NG</p>
                 <button class="px-6 py-2 rounded-md mt-2 bg-[#01C38D] hover:bg-[#019C71] focus:outline-none md:mt-6 lg:px-10 lg:py-3 sm:items-center font-bold text-white">Notify Me</button>
+            </div> -->
+            <div class="flex flex-col sm:flex-row items-center w-full md:w-[50%] lg:flex-col mx-auto lg:mt-[15px] justify-center gap-10">
+                <p class="font-semibold text-left text-md">App is not available in NG</p>
+                <button class="px-6 py-2 rounded-md bg-[#01C38D] hover:bg-[#019C71] focus:outline-none lg:px-10 lg:py-3 sm:items-center font-bold text-white">Notify Me</button>
             </div>
         </div>
 
-        <img class="lg:w-[40%] lg:h-[50vh] md:w-[60%] md:h-[50vh] mx-auto sm:h-[50vh] sm:w-[60%] sm:mb-[60px]" src="/Image/earn-page-hero.avif" alt="Front-View">
+        <img class="w-full md:w-[50%] lg:w-[50%]" src="/Image/earn-page-hero.avif" alt="Front-View">
     </div>
 
-    <div class="flex items-center justify-center gap-[200px] w-[70%] h-[350px]  mx-auto">
-        <div class=" flex flex-col items-center">
-            <img class="w-24 h-24" src="Image/EarnPageV2-Daily Yield.svg" alt="">
-            <h1 class="mt-[10px] text-2xl font-semibold">Daily Yield Payouts</h1>
+        <!-- THREE SECTION DIVS -->
+    <div class="flex flex-col sm:flex-row md:flex-row items-center justify-center gap-[10px] md:gap-[50px] lg:gap-[100px] w-[90%] h-[350px]  mx-auto">
+        <div class=" flex sm:flex-col md:flex-col items-center w-full gap-3">
+            <img class="w-20 md:w-24 h-24" src="Image/EarnPageV2-Daily Yield.svg" alt="">
+            <h1 class="mt-[10px] text-center text-lg md:text-2xl font-bold">Daily Yield Payouts</h1>
         </div>
-        <div class=" flex flex-col items-center">
-            <img class="w-24 h-24" src="/Image/EarnPageV2-Compound Yield.svg" alt="">
-            <h1 class="mt-[10px] text-2xl font-semibold">Compounded Yield</h1>
+        <div class=" flex sm:flex-col md:flex-col items-center w-full gap-3">
+            <img class="w-20 md:w-24 h-24" src="/Image/EarnPageV2-Compound Yield.svg" alt="">
+            <h1 class="mt-[10px] text-center text-lg md:text-2xl font-bold">Compounded Yield</h1>
         </div>
-        <div class=" flex flex-col items-center">
-            <img class="w-24 h-24" src="/Image/EarnPageV2-Refund.svg" alt="">
-            <h1 class="mt-[10px] text-2xl font-semibold">24 Hour Withdrawal</h1>
+        <div class=" flex sm:flex-col md:flex-col items-center w-full gap-3">
+            <img class="w-20 md:w-24 h-24" src="/Image/EarnPageV2-Refund.svg" alt="">
+            <h1 class="mt-[10px] text-center text-lg md:text-2xl font-bold">24 Hour Withdrawal</h1>
         </div>
     </div>
 
+    <!-- YOUTUBE EMBED  -->
     <div>
-        <h1 class="text-[40px] text-center mx-auto w-[50%] mt-[100px] mb-[50px] font-bold">The SwissBorg app makes it easy for you to earn a yield every day.</h1>
+        <h1 class="text-[20px] text-center mx-auto w-[95%] lg:w-[50%] mt-[100px] mb-[50px] font-bold">The SwissBorg app makes it easy for you to earn a yield every day.</h1>
         <iframe class="mx-auto rounded-2xl" width="900" height="500" src="https://www.youtube.com/embed/AJZN2kb1aV4?si=jqKDlWZ8fwgUNJ2c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
     
-    <!-- <div class="w-[70%] mx-auto">
-        <table class="border border-collapse">
-            <thead>
-                <tr>
-                    <th class="border">
-                        <div class="flex flex-col items-center">
-                            <img src="" alt="">
-                            <p></p>
-                        </div>
-                    </th>
-                    <th class="border">                    
-                        <div class="flex flex-col items-center">
-                            <img src="/Image/icon-tier 1-Standard.svg" alt="">
-                            <p>Standard</p>
-                        </div>
-                    </th>
-                    <th class="border">
-                        <div class="flex flex-col items-center">
-                            <img src="/Image/icon-tier 2-Explorer.svg" alt="">
-                            <p>Explorer</p>
-                        </div>
-                    </th>
-                    <th class="border">
-                        <div class="flex flex-col items-center">
-                            <img src="/Image/icon-tier 3-Community.svg" alt="">
-                            <p>Community</p>
-                        </div>
-                    </th>
-                    <th class="border">
-                        <div class="flex flex-col items-center">
-                            <img src="/Image/icon-tier 4-Pioneer.svg" alt="">
-                            <p>Pioneer</p>
-                        </div>
-                    </th>
-                    <th class="border">
-                        <div class="flex flex-col items-center">
-                            <img src="/Image/icon-tier 5-Generation.svg" alt="">
-                            <p>Generation</p>
-                        </div>
-                    </th>
-                    <th class="border">                    
-                        <div class=" flex flex-col items-center">
-                            <img src="/Image/icon-tier 6-Genesis.svg" alt="">
-                            <p>Genesis</p>
-                        </div>
-                    </th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="border">
-                        <div>
-                            <img src="/Image/asset-crypto-polkaDOT.svg" alt="">
-                            <p>DOT Staking</p>
-                        </div>
-                    </td>
-                    <td class="border">Row 1, Column 2</td>
-                    <td class="border">Row 1, Column 3</td>
-                    <td class="border">Row 1, Column 4</td>
-                    <td class="border">Row 1, Column 5</td>
-                    <td class="border">Row 1, Column 6</td>
-                    <td class="border">Row 1, Column 7</td>
-                </tr>
 
-                <tr>
-                    <td class="border">Row 1, Column 1</td>
-                    <td class="border">Row 1, Column 2</td>
-                    <td class="border">Row 1, Column 3</td>
-                    <td class="border">Row 1, Column 4</td>
-                    <td class="border">Row 1, Column 5</td>
-                    <td class="border">Row 1, Column 6</td>
-                    <td class="border">Row 1, Column 7</td>
-                </tr>
-                <tr>
-                    <td class="border">Row 1, Column 1</td>
-                    <td class="border">Row 1, Column 2</td>
-                    <td class="border">Row 1, Column 3</td>
-                    <td class="border">Row 1, Column 4</td>
-                    <td class="border">Row 1, Column 5</td>
-                    <td class="border">Row 1, Column 6</td>
-                    <td class="border">Row 1, Column 7</td>
-                </tr>
-                <tr>
-                    <td class="border">Row 1, Column 1</td>
-                    <td class="border">Row 1, Column 2</td>
-                    <td class="border">Row 1, Column 3</td>
-                    <td class="border">Row 1, Column 4</td>
-                    <td class="border">Row 1, Column 5</td>
-                    <td class="border">Row 1, Column 6</td>
-                    <td class="border">Row 1, Column 7</td>
-                </tr>
-                <tr>
-                    <td class="border">Row 1, Column 1</td>
-                    <td class="border">Row 1, Column 2</td>
-                    <td class="border">Row 1, Column 3</td>
-                    <td class="border">Row 1, Column 4</td>
-                    <td class="border">Row 1, Column 5</td>
-                    <td class="border">Row 1, Column 6</td>
-                    <td class="border">Row 1, Column 7</td>
-                </tr>
-                <tr>
-                    <td class="border">Row 1, Column 1</td>
-                    <td class="border">Row 1, Column 2</td>
-                    <td class="border">Row 1, Column 3</td>
-                    <td class="border">Row 1, Column 4</td>
-                    <td class="border">Row 1, Column 5</td>
-                    <td class="border">Row 1, Column 6</td>
-                    <td class="border">Row 1, Column 7</td>
-                </tr>
-                <tr>
-                    <td class="border">Row 1, Column 1</td>
-                    <td class="border">Row 1, Column 2</td>
-                    <td class="border">Row 1, Column 3</td>
-                    <td class="border">Row 1, Column 4</td>
-                    <td class="border">Row 1, Column 5</td>
-                    <td class="border">Row 1, Column 6</td>
-                    <td class="border">Row 1, Column 7</td>
-                </tr>
-                <tr>
-                    <td class="border">Row 1, Column 1</td>
-                    <td class="border">Row 1, Column 2</td>
-                    <td class="border">Row 1, Column 3</td>
-                    <td class="border">Row 1, Column 4</td>
-                    <td class="border">Row 1, Column 5</td>
-                    <td class="border">Row 1, Column 6</td>
-                    <td class="border">Row 1, Column 7</td>
-                </tr>
-                <tr>
-                    <td class="border">Row 1, Column 1</td>
-                    <td class="border">Row 1, Column 2</td>
-                    <td class="border">Row 1, Column 3</td>
-                    <td class="border">Row 1, Column 4</td>
-                    <td class="border">Row 1, Column 5</td>
-                    <td class="border">Row 1, Column 6</td>
-                    <td class="border">Row 1, Column 7</td>
-                </tr>
-                <tr>
-                    <td class="border">Row 1, Column 1</td>
-                    <td class="border">Row 1, Column 2</td>
-                    <td class="border">Row 1, Column 3</td>
-                    <td class="border">Row 1, Column 4</td>
-                    <td class="border">Row 1, Column 5</td>
-                    <td class="border">Row 1, Column 6</td>
-                    <td class="border">Row 1, Column 7</td>
-                </tr>
-                <tr>
-                    <td class="border">Row 1, Column 1</td>
-                    <td class="border">Row 1, Column 2</td>
-                    <td class="border">Row 1, Column 3</td>
-                    <td class="border">Row 1, Column 4</td>
-                    <td class="border">Row 1, Column 5</td>
-                    <td class="border">Row 1, Column 6</td>
-                    <td class="border">Row 1, Column 7</td>
-                </tr>
-                <tr>
-                    <td class="border">Row 1, Column 1</td>
-                    <td class="border">Row 1, Column 2</td>
-                    <td class="border">Row 1, Column 3</td>
-                    <td class="border">Row 1, Column 4</td>
-                    <td class="border">Row 1, Column 5</td>
-                    <td class="border">Row 1, Column 6</td>
-                    <td class="border">Row 1, Column 7</td>
-                </tr>
-                <tr>
-                    <td class="border">Row 1, Column 1</td>
-                    <td class="border">Row 1, Column 2</td>
-                    <td class="border">Row 1, Column 3</td>
-                    <td class="border">Row 1, Column 4</td>
-                    <td class="border">Row 1, Column 5</td>
-                    <td class="border">Row 1, Column 6</td>
-                    <td class="border">Row 1, Column 7</td>
-                </tr>
-                <tr>
-                    <td class="border">Row 1, Column 1</td>
-                    <td class="border">Row 1, Column 2</td>
-                    <td class="border">Row 1, Column 3</td>
-                    <td class="border">Row 1, Column 4</td>
-                    <td class="border">Row 1, Column 5</td>
-                    <td class="border">Row 1, Column 6</td>
-                    <td class="border">Row 1, Column 7</td>
-                </tr>
-                <tr>
-                    <td class="border">Row 1, Column 1</td>
-                    <td class="border">Row 1, Column 2</td>
-                    <td class="border">Row 1, Column 3</td>
-                    <td class="border">Row 1, Column 4</td>
-                    <td class="border">Row 1, Column 5</td>
-                    <td class="border">Row 1, Column 6</td>
-                    <td class="border">Row 1, Column 7</td>
-                </tr>
-                <tr>
-                    <td class="border">Row 1, Column 1</td>
-                    <td class="border">Row 1, Column 2</td>
-                    <td class="border">Row 1, Column 3</td>
-                    <td class="border">Row 1, Column 4</td>
-                    <td class="border">Row 1, Column 5</td>
-                    <td class="border">Row 1, Column 6</td>
-                    <td class="border">Row 1, Column 7</td>
-                </tr>
-                <tr>
-                    <td class="border">Row 1, Column 1</td>
-                    <td class="border">Row 1, Column 2</td>
-                    <td class="border">Row 1, Column 3</td>
-                    <td class="border">Row 1, Column 4</td>
-                    <td class="border">Row 1, Column 5</td>
-                    <td class="border">Row 1, Column 6</td>
-                    <td class="border">Row 1, Column 7</td>
-                </tr>
-                <tr>
-                    <td class="border">Row 1, Column 1</td>
-                    <td class="border">Row 1, Column 2</td>
-                    <td class="border">Row 1, Column 3</td>
-                    <td class="border">Row 1, Column 4</td>
-                    <td class="border">Row 1, Column 5</td>
-                    <td class="border">Row 1, Column 6</td>
-                    <td class="border">Row 1, Column 7</td>
-                </tr>
-                <tr>
-                    <td class="border">Row 1, Column 1</td>
-                    <td class="border">Row 1, Column 2</td>
-                    <td class="border">Row 1, Column 3</td>
-                    <td class="border">Row 1, Column 4</td>
-                    <td class="border">Row 1, Column 5</td>
-                    <td class="border">Row 1, Column 6</td>
-                    <td class="border">Row 1, Column 7</td>
-                </tr>
-                <tr>
-                    <td class="border">Row 1, Column 1</td>
-                    <td class="border">Row 1, Column 2</td>
-                    <td class="border">Row 1, Column 3</td>
-                    <td class="border">Row 1, Column 4</td>
-                    <td class="border">Row 1, Column 5</td>
-                    <td class="border">Row 1, Column 6</td>
-                    <td class="border">Row 1, Column 7</td>
-                </tr>
-                <tr>
-                    <td class="border">Row 1, Column 1</td>
-                    <td class="border">Row 1, Column 2</td>
-                    <td class="border">Row 1, Column 3</td>
-                    <td class="border">Row 1, Column 4</td>
-                    <td class="border">Row 1, Column 5</td>
-                    <td class="border">Row 1, Column 6</td>
-                    <td class="border">Row 1, Column 7</td>
-                </tr>
-            </tbody>
-        </table>
-    </div> -->
-    
-    <div class="flex items-center gap-[50px] w-[45%] mx-auto my-[70px]">
+    <div class="flex flex-col-reverse md:flex-row items-center justify-center w-[90%] lg:w-[70%] gap-8 md:gap-18 lg:gap-14 mb-[40px] lg:mb-[20px]  mx-auto">
         <div class="w-[100%]">
-            <h1 class="font-bold text-4xl w-[100%] leading-[56px] mb-[40px]">The simple way to manage your risk appetite</h1>
-            <p class="my-[10px] text-md font-semibold w-[100%] ">Every strategy for every crypto asset has a Cyborg mood (Core, Adventurous, Brave) that grades its risks so you can make smart investing decisions.</p>
+            <h1 class="font-medium lg:font-bold text-2xl md:text-3xl">The simple way to manage your risk appetite</h1>
+            <p class="my-[10px] text-sm md:text-md font-normal md:font-medium w-[100%]">Every strategy for every crypto asset has a Cyborg mood (Core, Adventurous, Brave) that grades its risks so you can make smart investing decisions.</p>
         </div>
 
-        <div class="w-[40rem] h-[25rem]">
+        <div class="w-full">
             <img class="w-[100%] h-[85%]" src="/Image/EarnPage-CyborgMood-EN.avif" alt="">
         </div>
     </div>
 
-    <div class="flex items-center gap-[50px] w-[45%] mx-auto my-[70px]">
-        <div class="w-[40rem] h-[25rem]">
+    <div class="flex flex-col-reverse md:flex-row items-center justify-center w-[90%] lg:w-[70%] gap-8 md:gap-18 lg:gap-14 mt-[70px] lg:mt-[20px] mx-auto">
+        <div class="w-full">
             <img class="w-[100%] h-[85%]" src="/Image/EarnPage-APY-EN.avif" alt="">
         </div>
 
         <div class="w-[100%]">
-            <h1 class="font-bold text-4xl w-[100%] leading-[56px] mb-[40px]">See your potential earnings at a glance</h1>
-            <p class="my-[10px] text-md font-semibold w-[100%] ">Investing isn’t just about managing risk, though - it’s about balancing risk and returns. SwissBorg Earn makes this simple with estimated annual yields visible at a glance.</p>
+            <h1 class="font-medium lg:font-bold text-2xl md:text-3xl">See your potential earnings at a glance</h1>
+            <p class="my-[20px] text-sm md:text-md font-normal md:font-medium w-[100%]">Investing isn’t just about managing risk, though it’s about balancing risk and returns. SwissBorg Earn makes this simple with estimated annual yields visible at a glance.</p>
         </div>
 
     </div>
 
-    <div class="flex justify-center gap-[100px] w-[70%] mx-auto my-[80px] ">
-        <div class=" flex flex-col text-center">
-            <h1 class="text-4xl text-[#01C38D] text-center w-[70%] mx-auto">$<span>0.41</span>B</h1>
-            <p class="w-[80%] mx-auto">Total value of assets in Earn Wallets</p>
-        </div>
-        <div class=" flex flex-col text-center">
-            <h1 class="text-4xl text-[#01C38D] text-center w-[70%] mx-auto"><span>11.4</span>K+</h1>
-            <p class="w-[80%] mx-auto">Total number of active Earn Wallets</p>
-        </div>
-        <div class=" flex flex-col text-center">
-            <h1 class="text-4xl text-[#01C38D] w-[70%] mx-auto">$<span>9.02</span>M</h1>
-            <p class="w-[80%] mx-auto">Total value earned by users in crypto</p>
+    <div class="bg-[#F6F7F8] h-full px-[10px] py-[60px]">
+
+        <div class="flex flex-col md:flex-row md:justify-center lg:flex-row items-center gap-[50px] w-full lg:w-[70%]  my-[80px] mx-auto">
+            <div class="flex flex-row md:flex-col items-center md:text-center justify-between lg:text-center gap-auto">
+                <h1 class="text-4xl text-[#01C38D] text-left md:text-center lg:text-center w-full lg:w-[70%] mx-auto font-semibold">$<span>0.41</span>B</h1>
+                <p class="w-full lg:w-[90%] mx-auto text-left font-semibold md:text-center lg:text-center md:mt-3">Total value of assets in Earn Wallets</p>
+            </div>
+            <div class="flex flex-row md:flex-col items-center md:text-center justify-between lg:text-center gap-auto">
+                <h1 class="text-4xl text-[#01C38D] text-left md:text-center lg:text-center w-full lg:w-[70%] mx-auto font-semibold"><span>11.4</span>K+</h1>
+                <p class="w-full lg:w-[90%] mx-auto text-left font-semibold md:text-center lg:text-center md:mt-3">Total number of active Earn Wallets</p>
+            </div>
+            <div class="flex flex-row md:flex-col items-center md:text-center justify-between lg:text-center gap-auto">
+                <h1 class="text-4xl text-[#01C38D] text-left md:text-center lg:text-center w-full lg:w-[70%] mx-auto font-semibold">$<span>9.02</span>M</h1>
+                <p class="w-full lg:w-[90%] mx-auto text-left font-semibold md:text-center lg:text-center md:mt-3">Total value earned by users in crypto</p>
+            </div>
         </div>
     </div>
+
+
 
     <div class="my-[100px]">
-        <div class="lg:flex lg:w-[76%] lg:mx-auto sm:flex-col-reverse sm:mx-auto items-center gap-6 px-6 my-8 md:mx-auto md:flex-row md:gap-18 md:px-20 md:my-16 lg:px-32">
+        <div class="flex flex-col w-[95%] lg:flex lg:w-[70%] mx-auto items-center gap-8  lg:gap-14 px-3 my-8 md:flex-row md:gap-18 md:px-10 md:my-16">
 
-            <div class="lg:text-left md:items-center sm:items-center">
-                <h1 class="font-bold lg:w-[70%] sm:text-[32px] sm:text-center sm:w-[100%] sm:font-bold  lg:leading-[50px] lg:text-left md:font-bold md:leading-[76px] md:text-6xl md:text-center lg:text-4xl">Start earning now with SwissBorg Earn</h1>
+            <div class="lg:text-left md:items-center sm:items-start w-full">
+                <h1 class="font-bold lg:w-[90%] sm:text-3xl text-xl sm:text-left sm:w-[100%] sm:font-bold  lg:leading-[46px] lg:text-left md:font-bold md:leading-[46px] md:text-3xl md:text-left lg:text-3xl">Start earning now with SwissBorg Earn</h1>
     
-                <div class="flex flex-col w-[80%]">
-                    <p class="text-sm text-gray-500 font-semibold lg:text-left md:text-lg lg:w-full md:text-center lg:text-md my-[10px] sm:text-center sm:text-lg "><span>1.</span> Choose the asset and strategy that suits you.</p>
+                <div class="flex flex-col w-full lg:w-[70%] ">
+                    <p class="text-sm font-semibold lg:text-left md:text-[15px] lg:w-full md:text-left lg:text-[15px] my-[10px] sm:text-left sm:text-[15px] text-[#a1a1a1]"><span>1.</span> Choose the asset and strategy that suits you.</p>
         
-                    <p class="text-sm text-gray-500 font-semibold lg:text-left md:text-lg lg:w-full md:text-center lg:text-md my-[10px] sm:text-center sm:text-lg "><span>2.</span>Enter the amount and accept the terms of use by swiping the button.</p>
+                    <p class="text-sm font-semibold lg:text-left md:text-[15px] lg:w-full md:text-left lg:text-[15px] my-[10px] sm:text-left sm:text-[15px] text-[#a1a1a1]"><span>2.</span>Enter the amount and accept the terms of use by swiping the button.</p>
         
-                    <p class="text-sm text-gray-500 font-semibold lg:text-left md:text-lg lg:w-full md:text-center lg:text-md my-[10px] sm:text-center sm:text-lg "><span>3.</span>Check to see you’ve entered the correct sum, click top up and start earning.
+                    <p class="text-sm font-semibold lg:text-left md:text-[15px] lg:w-full md:text-left lg:text-[15px] my-[10px] sm:text-left sm:text-[15px] text-[#a1a1a1]"><span>3.</span>Check to see you’ve entered the correct sum, click top up and start earning.
                     <div class="flex flex-col items-center justify-center w-[50%] h-[30%]">
                         <p class="font-semibold text-gray-500 text-left">App is not available in NG</p>
                         <button class="px-6 py-2 rounded-md mt-2 bg-[#01C38D] hover:bg-[#019C71] focus:outline-none md:mt-6 lg:px-10 lg:py-3 sm:items-center font-bold text-white">Notify Me</button>
@@ -523,74 +307,75 @@
     
             </div>
 
-            <img class="rounded-2xl" src="/Image/EarnPage-Screen-EN.avif" alt="">
+            <img class="md:w-96 lg:w-60 rounded-[35px] border shadow-custom" src="/Image/EarnPage-Screen-EN.avif" alt="">
         </div>
+    </div>
 
-        <div class="flex  justify-center w-full mx-auto gap-[150px]">
-            <h1 class="text-[40px] w-[20%]  font-bold">FAQ</h1>
+    <div class="flex flex-col md:flex-row justify-center w-[90%] md:w-[80%] lg:w-[70%] mx-auto gap-[60px] md:gap-[100px]">
+        <h1 class="text-3xl lg:text-[40px] md:w-[20%] text-left font-bold pl-[20px] md:pl-[0px]">FAQ</h1>
 
 
-            <div class="flex flex-col items-center w-[35%] justify-between">
+        <div class="flex flex-col items-center w-[95%] mx-auto md:w-full justify-between">
 
-                <div class="flex flex-col w-full my-[10px] pb-[25px] border-b border-black faq">
-                    <div class="flex justify-between gap-[200px] cursor-pointer que">
-                        <h1 class="text-lg font-bold">How is SwissBorg Earn different from Smart Yield?</h1>
-                        <i class="bi bi-chevron-down text-[#01C38D]"></i>
-                    </div>
-
-                    <div class="my-[20px] res hidden">
-                        <p>SwissBorg Thematics offers a unique investment approach, grouping the most promising crypto assets by themes to strengthen your portfolio. With just one tap, you're investing with SwissBorg's experts and our advanced algorithms in your team, ensuring you always have the best-selected tokens and a consistently updated investment.</p>
-                    </div>
+            <div class="flex flex-col w-full my-[10px] pb-[10px] lg:pb-[20px] border-b border-black faq">
+                <div class="flex justify-between md:gap-[100px] cursor-pointer que" onclick="toggleRotation()">
+                    <h1 class="text-sm md:text-md lg:text-xl font-bold">How is SwissBorg Earn different from Smart Yield?</h1>
+                    <i class="bi bi-chevron-down text-[#01C38D]" id="chevronIcon"></i>
                 </div>
 
-                <div class="flex flex-col w-full my-[10px] pb-[25px] border-b border-black faq">
-                    <div class="flex justify-between gap-[200px] cursor-pointer que">
-                        <h1 class="text-lg font-bold">How will I know the risk level of different strategies?</h1>
-                        <i class="bi bi-chevron-down text-[#01C38D]"></i>
-                    </div>
+                <div class=" my-[10px] md:my-[20px] res hidden">
+                    <p class="font-normal text-sm md:text-md  text-[a1a1a1]">SwissBorg Thematics offers a unique investment approach, grouping the most promising crypto assets by themes to strengthen your portfolio. With just one tap, you're investing with SwissBorg's experts and our advanced algorithms in your team, ensuring you always have the best-selected tokens and a consistently updated investment.</p>
+                </div>
+            </div>
 
-                    <div class="my-[20px] hidden">
-                        <p>Your Thematic consists of various tokens/coins, each with a defined target percentage in line with their risk and reward potential. Because of crypto’s volatility, these percentages can easily drift away. To maintain the desired target percentage of each coin, necessary exchanges are therefore made to rebalance asset allocations. Rebalancing automatically takes profit from outperformers & accumulates tokens at lower price points. More <a class="font-semibold text-[#01C38D]" target="_blank" href="https://www.forbes.com/advisor/investing/rebalance-investments/">here</a>.</p>
-                    </div>
+            <div class="flex flex-col w-full my-[10px] pb-[10px] lg:pb-[20px] border-b border-black faq">
+                <div class="flex justify-between md:gap-[100px] cursor-pointer que" onclick="toggleRotation()">
+                    <h1 class="text-sm md:text-md lg:text-xl font-bold">How will I know the risk level of different strategies?</h1>
+                    <i class="bi bi-chevron-down text-[#01C38D]" id="chevronIcon"></i>
                 </div>
 
-                <div class="flex flex-col w-full my-[10px] pb-[25px] border-b border-black faq">
-                    <div class="flex justify-between gap-[200px] cursor-pointer que">
-                        <h1 class="text-lg font-bold">Where can I learn more about different yielding strategies?</h1>
-                        <i class="bi bi-chevron-down text-[#01C38D]"></i>
-                    </div>
+                <div class=" my-[10px] md:my-[20px] res hidden">
+                    <p class="font-normal text-sm md:text-md  text-[a1a1a1]">Your Thematic consists of various tokens/coins, each with a defined target percentage in line with their risk and reward potential. Because of crypto’s volatility, these percentages can easily drift away. To maintain the desired target percentage of each coin, necessary exchanges are therefore made to rebalance asset allocations. Rebalancing automatically takes profit from outperformers & accumulates tokens at lower price points. More <a class="font-semibold text-[#01C38D]" target="_blank" href="https://www.forbes.com/advisor/investing/rebalance-investments/">here</a>.</p>
+                </div>
+            </div>
 
-                    <div class="my-[20px] hidden">
-                        <p>For your portfolio to remain relevant & well diversified in fast-changing markets, SwissBorg reviews continuously the assets within its Thematics. We evaluate new opportunities and change asset composition & allocations periodically to ensure that each Thematic evolves true to its theme & performs at its optimal level.</p>
-                    </div>
+            <div class="flex flex-col w-full my-[10px] pb-[10px] lg:pb-[20px] border-b border-black faq">
+                <div class="flex justify-between md:gap-[100px] cursor-pointer que" onclick="toggleRotation()">
+                    <h1 class="text-sm md:text-md lg:text-xl font-bold">Where can I learn more about different yielding strategies?</h1>
+                    <i class="bi bi-chevron-down text-[#01C38D]" id="chevronIcon"></i>
                 </div>
 
-                <div class="flex flex-col w-full my-[10px] pb-[25px] border-b border-black faq">
-                    <div class="flex justify-between gap-[200px] cursor-pointer que">
-                        <h1 class="text-lg font-bold">Are the low-risk yielding strategies safe?</h1>
-                        <i class="bi bi-chevron-down text-[#01C38D]"></i>
-                    </div>
+                <div class=" my-[10px] md:my-[20px] res hidden">
+                    <p class="font-normal text-sm md:text-md  text-[a1a1a1]">For your portfolio to remain relevant & well diversified in fast-changing markets, SwissBorg reviews continuously the assets within its Thematics. We evaluate new opportunities and change asset composition & allocations periodically to ensure that each Thematic evolves true to its theme & performs at its optimal level.</p>
+                </div>
+            </div>
 
-                    <div class="my-[20px] hidden">
-                        <p>Yes, with Thematics you own all the underlying assets. It is a bundle of tokens, contrary to an ETF or an  index.</p>
-                    </div>
+            <div class="flex flex-col w-full my-[10px] pb-[10px] lg:pb-[20px] border-b border-black faq">
+                <div class="flex justify-between md:gap-[100px] cursor-pointer que" onclick="toggleRotation()">
+                    <h1 class="text-sm md:text-md lg:text-xl font-bold">Are the low-risk yielding strategies safe?</h1>
+                    <i class="bi bi-chevron-down text-[#01C38D]" id="chevronIcon"></i>
                 </div>
 
-                <div class="flex flex-col w-full my-[10px] pb-[25px] border-b border-black faq">
-                    <div class="flex justify-between gap-[200px] cursor-pointer que">
-                        <h1 class="text-lg font-bold">Is there a minimum investment period?</h1>
-                        <i class="bi bi-chevron-down text-[#01C38D]"></i>
-                    </div>
+                <div class=" my-[10px] md:my-[20px] res hidden">
+                    <p class="font-normal text-sm md:text-md  text-[a1a1a1]">Yes, with Thematics you own all the underlying assets. It is a bundle of tokens, contrary to an ETF or an  index.</p>
+                </div>
+            </div>
 
-                    <div class="my-[20px] hidden">
-                        <p>The minimum investment amount for the Golden Thematic is 40 EUR or the equivalent in your local currency. The minimum investment amount for the Best Blockchains Thematic and the Gaming Thematic is 50 EUR or the equivalent in your local currency. The minimum investment amount for the Banter Bundle is 250 EUR or the equivalent in your local currency.</p>
-                    </div>
+            <div class="flex flex-col w-full my-[10px] pb-[10px] lg:pb-[20px] border-b border-black faq">
+                <div class="flex justify-between md:gap-[100px] cursor-pointer que" onclick="toggleRotation()">
+                    <h1 class="text-sm md:text-md lg:text-xl font-bold">Is there a minimum investment period?</h1>
+                    <i class="bi bi-chevron-down text-[#01C38D]"></i>
+                </div>
+
+                <div class=" my-[10px] md:my-[20px] res hidden">
+                    <p class="font-normal text-sm md:text-md  text-[a1a1a1]">The minimum investment amount for the Golden Thematic is 40 EUR or the equivalent in your local currency. The minimum investment amount for the Best Blockchains Thematic and the Gaming Thematic is 50 EUR or the equivalent in your local currency. The minimum investment amount for the Banter Bundle is 250 EUR or the equivalent in your local currency.</p>
                 </div>
             </div>
         </div>
+    </div>
 
-
-        <section class="flex flex-col justify-between w-full lg:w-[70%] mx-auto">
+    <!-- SECTION BEFORE FOOTER  -->
+        <section class="flex flex-col justify-between w-full lg:w-[90%] mx-auto">
             <div class="flex items-start flex-col md:flex-row justify-between px-[3rem] py-[3rem] gap-[20px]">
                 <div class="flex items-start gap-[8px] md:w-[50%]">
                     <img src="/images/cookies-img.svg" alt="">
@@ -599,14 +384,14 @@
                 <input type="" placeholder="dropdown" class="px-[20px] py-[5px] rounded-sm w-[100%] md:w-[30%]" style="border: 1px solid gray">
             </div>
             
-            <div class="flex flex-col justify-between md:flex-row gap-[20px] md:gap-[200px] px-[2rem] py-[2rem] w-full">
-                <div class="flex flex-col md:flex-row md:items-center gap-[20px] md:gap-[100px] justify-between">
-                    <div class="flex flex-col md:w-[50%]  gap-[20px] leading-8">
-                        <div class="flex items-center w-full  md:border-none  justify-between gap-[300px] border-b border-black">
-                            <h1 class="font-bold text-[18px] text-gray-400">SwissBorg app</h1>
-                            <i class="bi bi-chevron-down md:hidden"></i>
+            <div class="flex flex-col items-center justify-between md:flex-row gap-[20px] md:gap-[100px] px-[2rem] py-[2rem] w-full">
+                <div class="flex flex-col sm:flex-row md:flex-row items-start md:items-center gap-0 sm:gap-[20px] md:gap-[50px] justify-between border-b border-black sm:border-none pb-[15px] sm:pb-0 w-full">
+                    <div class="flex flex-col w-full md:w-[50%]  gap-[20px] leading-8">
+                        <div class="flex items-center w-full  justify-between gap-[50px] ">
+                            <h1 class="font-bold text-[18px] w-full text-gray-400">SwissBorg app</h1>
+                            <i class="bi bi-chevron-down block  sm:hidden  cursor-pointer py-1 px-3 border rounded-full"></i>
                         </div>
-    
+
                         <div class="flex flex-col">
                             <a href="" class="text-gray-400">Buy cryptos</a>
                             <a href="" class="text-gray-400">Earn cryptos</a>
@@ -614,29 +399,32 @@
                             <a href="" class="text-gray-400">All cryptos</a>
                         </div>
                     </div>
-    
-                    <div class="flex flex-col items-start leading-8 md:w-[50%]">
-                        <h1 class="font-bold text-[18px] text-gray-400 opacity-0">SwissBorg app</h1>
+
+                    <div class="flex flex-col items-start leading-8 md:w-[50%] ">
+                        <h1 class="font-bold text-[18px] text-gray-400 hidden sm:block opacity-0">SwissBorg app</h1>
                         <a href="" class="text-gray-400">Portfolio Visualizer</a>
                         <a href="" class="text-gray-400">Asset Analysis</a>
                         <a href="" class="text-gray-400">Supported countries</a>
                         <a href="" class="text-gray-400">Fees</a>
                     </div>
                 </div>
-    
-                <div class="flex justify-between gap-[100px]">
-                    <div class="flex flex-col leading-8">
-                        <div>
+
+                <div class="flex flex-col sm:flex-row md:flex-row justify-between gap-[100px] w-full">
+                    <div class="flex flex-col leading-8 border-b border-black sm:border-none pb-[15px] sm:pb-0">
+                        <div class="flex items-center w-full  justify-between gap-[50px] ">
                             <h1 class="font-bold text-[18px] text-gray-400">Learn</h1>
+                            <i class="bi bi-chevron-down block  sm:hidden cursor-pointer py-1 px-3 border rounded-full"></i>
                         </div>
                         <div>
                             <a href="" class="text-gray-400">Blog</a>
                             <a href="" class="text-gray-400">Academy</a>
                         </div>
                     </div>
-                    <div class="flex flex-col leading-8">
-                        <div>
+
+                    <div class="flex flex-col leading-8 border-b border-black sm:border-none pb-[15px] sm:pb-0">
+                        <div class="flex items-center w-full  justify-between gap-[50px] ">
                             <h1 class="font-bold text-[18px] text-gray-400">Team</h1>
+                            <i class="bi bi-chevron-down block  sm:hidden  cursor-pointer py-1 px-3 border rounded-full"></i>
                         </div>
         
                         <div class="flex flex-col">
@@ -648,16 +436,16 @@
                     </div>
                 </div>
             </div>
-    
-            <div class="flex items-center flex-col-reverse-1 gap-[8px] px-[2rem] py-[2rem]">
-                <img class="w-10 rounded-full" src="/Image/swit.png" alt="SwitzerlandImg">
-                <p class="text-gray-400">Proudly engineered in Switzerland</p>
+
+            <div class="flex items-center flex-col-reverse-1 gap-[8px] px-[1rem] py-[1rem]">
+                <img class="w-8 rounded-full" src="/Image/swit.png" alt="SwitzerlandImg">
+                <p class="text-gray-400 text-sm">Proudly engineered in Switzerland</p>
             </div>
-    
+
             <div class="flex flex-col lg:flex-row  md:w-full  gap-[30px]">
                 <div class="text-white p-[20px] md:py-[3rem] w-[95%] md:w-[95%] h-[250px] md:h-[270px] mx-auto text-center rounded-md" style="background-image: linear-gradient(135deg, #09a77d, #12E3BC);">
                     <h1 class="font-bold w-full text-left text-lg">Subscribe to our newsletter</h1>
-    
+
                     <p class="text-md py-[12px] text-left">Receive official updates when you join our mailing list</p>
                     <div class="flex flex-col gap-[20px]">
                         <input type="text" class="px-[16px] py-3 lg:w-[100%] rounded-md bg-[#53DEBD] text-white w-full" placeholder="Name(required)">
@@ -667,32 +455,30 @@
                         </div>
                     </div>
                 </div>
-    
+
                 <div class="text-white p-[20px] md:py-[3rem] w-[95%] h-[270px] mx-auto text-center rounded-md" style="background-image: linear-gradient(135deg, #2e15ce, #8B7DFF);">
                     <div>
                         <h1 class="font-bold w-full text-left text-lg">Be part of our growing global community</h1>
                         <p class="text-md py-[12px] text-left">Follow and subscribe to our channels</p>
                     </div>
                     <div class="flex flex-row gap-[20px] text-center items-center">
-                        <i class="bi bi-twitter-x bg-white px-[8px] py-[5px] rounded-md"></i>
-                        <i class="bi bi-discord bg-white px-[8px] py-[5px] rounded-md"></i>
-                        <i class="bi bi-youtube bg-white px-[8px] py-[5px] rounded-md"></i>
-                        <i class="bi bi-facebook bg-white px-[8px] py-[5px] rounded-md"></i>
-                        <i class="bi bi-instagram bg-white px-[8px] py-[5px] rounded-md"></i>
-                        <i class="bi bi-linkedin bg-white px-[8px] py-[5px] rounded-md"></i>
-                        <i class="bi bi-telegram bg-white px-[8px] py-[5px] rounded-md"></i>
-                        <i class="bi bi-tiktok bg-white px-[8px] py-[5px] rounded-md"></i>
-                        <i class="bi bi-tiktok bg-white px-[8px] py-[5px] rounded-md"></i>
+                        <i class="bi bi-twitter-x bg-white text-black px-[8px] py-[5px] rounded-md"></i>
+                        <i class="bi bi-discord bg-white text-black px-[8px] py-[5px] rounded-md"></i>
+                        <i class="bi bi-youtube bg-white text-black px-[8px] py-[5px] rounded-md"></i>
+                        <i class="bi bi-facebook bg-white text-black px-[8px] py-[5px] rounded-md"></i>
+                        <i class="bi bi-instagram bg-white text-black px-[8px] py-[5px] rounded-md"></i>
+                        <i class="bi bi-linkedin bg-white text-black px-[8px] py-[5px] rounded-md"></i>
+                        <i class="bi bi-telegram bg-white text-black px-[8px] py-[5px] rounded-md"></i>
+                        <i class="bi bi-tiktok bg-white text-black px-[8px] py-[5px] rounded-md"></i>
+                        <i class="bi bi-tiktok bg-white text-black px-[8px] py-[5px] rounded-md"></i>
                     </div>
                 </div>
             </div>
         </section>
-    
-    
-    
-    
+
+        <!-- FOOTER -->
         <footer class="py-[2rem] bg-[#d9dbdd] mt-[4rem] w-full">
-            <div class="mx-auto w-full md:w-[70%]">
+            <div class="mx-auto w-full md:w-[95%]">
                 <div class="flex flex-col md:flex-row justify-between py-[2rem] px-[2rem] text-[13px] gap-[25px]"> 
                     <div class="w-full">
                         <h1 class="font-bold leading-6 text-[#7c818b] pb-[25px]">Engineered in Switzerland</h1>
@@ -724,6 +510,14 @@
                 </div>
             </div>
         </footer>
-    </div>
-    </body>
+
+
+        
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+          AOS.init();
+        </script>
+        <script src="/JS/mySwissborg.js"></script>
+        <script src="/JS/swissborg.js"></script>
+</body>
 </html>
