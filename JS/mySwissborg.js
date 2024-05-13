@@ -199,3 +199,143 @@ function toggleRotation2() {
     chevronIcon2.classList.toggle("rotate-180");
     toggleDrop2.classList.toggle("bg-[#E6F9F4]");
 }
+
+
+
+// window.addEventListener('scroll', function() {
+//     const navbar = document.getElementById('navbar');
+//     const scrollTop = window.scrollY || window.pageYOffset;
+
+//     // Check if scroll position is below 120vh
+//     if (scrollTop >= 120 * window.innerHeight / 100) {
+//         navbar.classList.remove('glass-effect'); // Remove glass effect class
+//         navbar.style.backgroundColor = '#fff'; // Set background color to white
+//     } else {
+//         navbar.classList.add('glass-effect'); // Add glass effect class
+//         navbar.style.backgroundColor = 'transparent'; // Set background color to transparent
+//     }
+// });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// NAVBAR ICONS 
+document.addEventListener("DOMContentLoaded", () => {
+    const menuIcon = document.querySelector("#menuIcon");
+    const closeIcon = document.querySelector("#closeIcon");
+
+    // Error handling in case the elements are not found
+    if (!menuIcon || !closeIcon) {
+        console.error("Menu icon or close icon not found");
+        return;
+    }
+
+    // Hide the closeIcon initially
+    closeIcon.classList.add("hidden");
+
+    // Toggle between menuIcon and closeIcon on click
+    menuIcon.addEventListener("click", () => {
+        menuIcon.classList.add("hidden");
+        closeIcon.classList.remove("hidden");
+    });
+
+    closeIcon.addEventListener("click", () => {
+        closeIcon.classList.add("hidden");
+        menuIcon.classList.remove("hidden");
+    });
+});
+
+
+// MENU DISPLAY 
+function getElementById(id) {
+    const element = document.getElementById(id);
+    if (!element) {
+        console.error(`Element with ID '${id}' not found`);
+    }
+    return element;
+}
+
+// Select menuIcon, closeIcon, and menuDisplay elements
+const menuIcon = getElementById("menuIcon");
+const closeIcon = getElementById("closeIcon");
+const menuDisplay = getElementById("menuDisplay");
+
+// Add event listeners only if elements are found
+if (menuIcon && closeIcon && menuDisplay) {
+    // Event listener for menuIcon
+    menuIcon.addEventListener("click", () => {
+        menuDisplay.classList.toggle("hidden");
+    });
+
+    // Event listener for closeIcon
+    closeIcon.addEventListener("click", () => {
+        menuDisplay.classList.add("hidden");
+    });
+} else {
+    // Handle the case where any required element is missing
+    console.error("One or more required elements not found. Event listeners not added.");
+}
+
+
+// Function to safely select an element by its ID
+function getElementById(id) {
+    const element = document.getElementById(id);
+    if (!element) {
+        console.error(`Element with ID '${id}' not found`);
+    }
+    return element;
+}
+
+// Select elements and add event listeners
+const toggleDrop = getElementById("toggleDrop");
+const toggleDrop2 = getElementById("toggleDrop2");
+const investContent = getElementById("investContent");
+const aboutContent = getElementById("aboutContent");
+
+// Add event listeners only if elements are found
+if (toggleDrop && investContent) {
+    toggleDrop.addEventListener("click", () => {
+        investContent.classList.toggle("hidden");
+    });
+} else {
+    console.error("One or more required elements for toggling investment content are missing.");
+}
+
+if (toggleDrop2 && aboutContent) {
+    toggleDrop2.addEventListener("click", () => {
+        aboutContent.classList.toggle("hidden");
+    });
+} else {
+    console.error("One or more required elements for toggling about content are missing.");
+}
+
+
+window.addEventListener('scroll', function() {
+    const navbar = document.getElementById('navbar');
+    const busStop1 = document.getElementById('busStop-1');
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+    
+    // Change background color of nav based on scroll position
+    if (scrollTop < busStop1.offsetTop) {
+        navbar.style.backgroundColor = 'transparent';
+    } else if (scrollTop >= busStop1.offsetTop) {
+        navbar.style.backgroundColor = '#fff'; // Change to red when scrolling to section 2
+    } else {
+        return;
+    }
+});

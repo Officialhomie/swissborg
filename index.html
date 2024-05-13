@@ -11,32 +11,32 @@
 </head>
 <body>
     <div class="bg-[#191E29] h-full pb-[30px] text-white" >
-        <nav class=" top flex items-center justify-between w-[95%] mx-auto pt-[20px]">
-            <div>
-                <img src="" alt="">
-                <a href=""><h1 class="text-2xl md:text-3xl lg:text-4xl font-bold cursor-pointer">SwissBorg</h1></a>
+        <nav id="navbar" class="glass-effect fixed z-50 top-0 flex items-center justify-between w-full mx-auto p-[10px]">
+            <div class="flex items-center">
+                <img class="w-14" src="/images/swissapp-img.svg" alt="">
+                <a href=""><h1 class="text-2xl md:text-2xl lg:text-4xl font-bold cursor-pointer">SwissBorg</h1></a>
             </div>
         
-            <div class="hidden md:flex items-center gap-8">
+            <div id="checker" class="hidden md:flex items-center gap-8">
                 <a id="invest" class=" text-sm md:text-base lg:text-md cursor-pointer font-semibold  hover:text-[#01C38D] hover:border-b-2 hover:border-[#01C38D]">Invest</a>
                 <a id="about" class=" text-sm md:text-base lg:text-md cursor-pointer font-semibold  hover:text-[#01C38D] hover:border-b-2 hover:border-[#01C38D]">About Us</a>
             </div>
         
             <h1 class="hidden md:block text-lg md:text-lg lg:text-xl "><span class="text-lg md:text-lg lg:text-xl"><i class="bi bi-globe"></i></span> EN</h1>
-  
-
+    
+    
             <i id="menuIcon" class="bi bi-list block md:hidden text-3xl text-[#019C71] cursor-pointer"></i>
         </nav>
-
+    
         <!-- THE TWO CONTAINER  -->
-        <div id="container" class="  absolute z-50  right-[20%] top-[10%] w-[65%] mx-auto border shadow-custom bg-white rounded-xl hidden">
-
+        <div id="container" class="fixed  z-50  right-[20%] top-[10%] w-[65%] mx-auto border shadow-custom bg-white rounded-xl hidden ">
+    
         </div>
-
-        <div id="container1" class=" absolute z-50  right-[20%] top-[10%] w-[65%] mx-auto border shadow-custom bg-white rounded-xl hidden">
-
+    
+        <div id="container1" class=" fixed z-50  right-[20%] top-[10%] w-[65%] mx-auto border shadow-custom bg-white rounded-xl hidden ">
+    
         </div>
-
+    
         
         <!-- menu button  -->
         <div id="menuDisplay" class="overflow-y-scroll fixed z-indexed hidden h-[100vh] bg-white top-[0] w-full  p-[10px]">
@@ -202,6 +202,7 @@
         </div>
 
 
+
         <div class="relative flex flex-column">
             <div class="bg-[#2B88E7] absolute p-44 top-[420px] left-6 rounded-full blur-[50px] md:p-56 md:top-32 md:left-20"></div>
         
@@ -228,7 +229,7 @@
         <div class="items-center text-center flex-col w-[95%]">
             <h1 class="text-3xl md:text-5xl font-semibold md:font-bold  my-[30px] ">Licensed and regulated</h1>
 
-            <div class="flex flex-col md:flex-row md:gap-[250px] items-center gap-[20px] justify-center mx-auto">
+            <div id="busStop-1" class="flex flex-col md:flex-row md:gap-[250px] items-center gap-[20px] justify-center mx-auto">
                 <img src="/Image/AMF.png" alt="AMF" class="w-48">
                 <img src="./Image/FIU.png" alt="" class="w-48">
             </div>                    

@@ -1,5 +1,3 @@
-// const { LocalWalletNotAvailableError } = require("web3");
-
 const questions = document.querySelectorAll('.que');
 
 // FREQUENTKY ASKED QUESTION
@@ -179,6 +177,8 @@ function toggleRotation2() {
 
 
 
+const containerDiv = document.getElementById('container');
+const containerDiv1 = document.getElementById('container1');
 
   
 
@@ -188,8 +188,6 @@ document.addEventListener("DOMContentLoaded", function() {
     const investAnchor = document.getElementById('invest');
     const aboutAnchor = document.getElementById('about');
     
-    const containerDiv = document.getElementById('container');
-    const containerDiv1 = document.getElementById('container1');
     
     const toggleContainerDisplay = () => {
         if( containerDiv.classList.contains("hidden")) {
