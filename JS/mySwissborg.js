@@ -202,19 +202,7 @@ function toggleRotation2() {
 
 
 
-// window.addEventListener('scroll', function() {
-//     const navbar = document.getElementById('navbar');
-//     const scrollTop = window.scrollY || window.pageYOffset;
 
-//     // Check if scroll position is below 120vh
-//     if (scrollTop >= 120 * window.innerHeight / 100) {
-//         navbar.classList.remove('glass-effect'); // Remove glass effect class
-//         navbar.style.backgroundColor = '#fff'; // Set background color to white
-//     } else {
-//         navbar.classList.add('glass-effect'); // Add glass effect class
-//         navbar.style.backgroundColor = 'transparent'; // Set background color to transparent
-//     }
-// });
 
 
 
