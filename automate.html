@@ -6,339 +6,431 @@
     <title>swissborg.io</title>
     <link href="/css/output.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link href="/css/homeStyle.css" rel="stylesheet">
 </head>
 <body>
     <section>
-        <div class="relative bg-gradient-to-b from-gray-800 to-gray-900 h-[110vh] md:h-[160vh] lg:h-[130vh]  text-white " >
-            <nav class=" top flex items-center justify-between w-[95%] lg:w-[95%] mx-auto pt-[20px]">
-                <div>
-                    <img src="" alt="">
-                    <a href=""><h1 class="text-2xl md:text-3xl lg:text-4xl font-bold cursor-pointer">SwissBorg</h1></a>
-                </div>
-            
-                <div class="hidden lg:flex items-center gap-8">
-                    <a class="text-sm md:text-base lg:text-md cursor-pointer font-semibold  hover:text-[#01C38D] hover:border-b-2 hover:border-[#01C38D]" href="">Invest</a>
-                    <a class="text-sm md:text-base lg:text-md cursor-pointer font-semibold  hover:text-[#01C38D] hover:border-b-2 hover:border-[#01C38D]" href="">About Us</a>
-                </div>
-            
-                <h1 class="hidden lg:block text-lg md:text-lg lg:text-xl "><span class="text-lg md:text-lg lg:text-xl"><i class="bi bi-globe"></i></span> EN</h1>
-      
+        <nav id="navbar" class=" fixed z-50 top-0  flex items-center justify-between w-full mx-auto p-[10px] bg-white shadow-custom">
+            <div class="flex items-center">
+                <img class="w-14" src="/images/swissapp-img.svg" alt="">
+                <a href=""><h1 class="text-2xl md:text-2xl lg:text-4xl font-bold cursor-pointer">SwissBorg</h1></a>
+            </div>
+        
+            <div id="checker" class="hidden md:flex items-center gap-8">
+                <a id="invest" class=" text-sm md:text-base lg:text-md cursor-pointer font-semibold  hover:text-[#01C38D] hover:border-b-2 hover:border-[#01C38D]">Invest</a>
+                <a id="about" class=" text-sm md:text-base lg:text-md cursor-pointer font-semibold  hover:text-[#01C38D] hover:border-b-2 hover:border-[#01C38D]">About Us</a>
+            </div>
+        
+            <h1 class="hidden md:block text-lg md:text-lg lg:text-xl "><span class="text-lg md:text-lg lg:text-xl"><i class="bi bi-globe"></i></span> EN</h1>
     
-                <i id="menuIcon" class="bi bi-list block lg:hidden text-3xl text-[#019C71] cursor-pointer"></i>
-            </nav>
+    
+            <i id="menuIcon" class="bi bi-list block md:hidden text-3xl text-[#019C71] cursor-pointer"></i>
+        </nav>
+
+        <!-- THE TWO CONTAINER  -->
+        <div id="container" class="fixed  z-50  right-[20%] top-[10%] w-[65%] mx-auto border shadow-custom bg-white rounded-xl hidden ">
+    
+        </div>
+    
+        <div id="container1" class=" fixed z-50  right-[20%] top-[10%] w-[65%] mx-auto border shadow-custom bg-white rounded-xl hidden ">
+    
+        </div>
+
+        
+        <!-- menu button  -->
+        <div id="menuDisplay" class="overflow-y-scroll fixed z-indexed hidden h-[100vh] bg-white top-[0] w-full  p-[10px]">
             
-            <!-- menu button  -->
-            <div id="menuDisplay" class="overflow-y-scroll fixed z-indexed hidden h-[100vh] bg-white top-[0] w-full  p-[10px]">
-                
-                <div class="flex items-center justify-between mb-[20px]">
-                    <div class="flex items-center">
-                        <img class="w-14" src="/images/swissapp-img.svg" alt="">
-                        <h1 class="font-bold text-3xl text-black">Swissborg</h1>
-                    </div>
-                    <i id="closeIcon" class="bi bi-x-lg hidden lg:hidden text-xl text-[#019c71] cursor-pointer"></i>            
+            <div class="flex items-center justify-between mb-[20px]">
+                <div class="flex items-center">
+                    <img class="w-14" src="/images/swissapp-img.svg" alt="">
+                    <h1 class="font-bold text-3xl text-black">Swissborg</h1>
                 </div>
-                <div class="border-b">
-                    <div class="flex items-center justify-between cursor-pointer  p-[1rem]" id="toggleDrop" onclick="toggleRotation()">
-                        <h1 class="text-black text-xl font-semibold">Invest</h1>
-                        <i class="bi bi-chevron-down text-[#019c71] text-xl" id="chevronIcon"></i>
-                    </div>
-        
-                    <div class="hidden my-[10px] overflow-y-auto p-[1rem]" id="investContent">
-                        <a class="high" href="">
-                            <div class="flex items-center justify-between mb-3">
-                                <div class="flex items-center justify-between gap-[7px]">
-                                    <img class="w-12" src="/Image/smart-engine-icon.svg" alt="">
-                                    <div class="flex flex-col ">
-                                        <h1 class="text-black font-medium mb-[4px]">Buy Cryptos</h1>
-                                        <p class="text-[#aaa] text-sm">Exchange instantly at the best price</p>
-                                    </div>
-                                </div>
-                                <i class="bi bi-chevron-right text-[#019c71] text-md"></i>
-                            </div>
-                        </a>
-                        <a class="high" href="">
-                            <div class="flex items-center justify-between mb-3">
-                                <div class="flex items-center justify-between gap-[7px]">
-                                    <img class="w-12" src="/Image/earn.svg" alt="">
-                                    <div class="flex flex-col">
-                                        <h1 class="text-black font-medium mb-[4px]">Earn Cryptos</h1>
-                                        <p class="text-[#aaa] text-sm">Generate passive income 24/7</p>
-                                    </div>
-                                </div>
-                                <i class="bi bi-chevron-right text-[#019c71] text-md"></i>
-                            </div>
-                        </a>
-                        <a class="high" href="http://127.0.0.1:5501/diversify.html">
-                            <div class="flex items-center justify-between mb-3">
-                                <div class="flex items-center justify-between gap-[7px]">
-                                    <img class="w-12" src="/Image/navbar-invest-Thematics.svg" alt="">
-                                    <div class="flex flex-col">
-                                        <h1 class="text-black font-medium mb-[4px]">Diversify with Thematics</h1>
-                                        <p class="text-[#aaa] text-sm">Crypto bundles to invest in entire sectors</p>
-                                    </div>
-                                </div>
-                                <i class="bi bi-chevron-right text-[#019c71] text-md"></i>
-                            </div>
-                        </a>
-                        <a class="high" href="http://127.0.0.1:5501/cardFunding.html">
-                            <div class="flex items-center justify-between mb-3">
-                                <div class="flex items-center justify-between gap-[7px]">
-                                    <img class="w-12" src="/Image/Card Deposit.svg" alt="">
-                                    <div class="flex flex-col">
-                                        <h1 class="text-black font-medium mb-[4px]">Card Funding</h1>
-                                        <p class="text-[#aaa] text-sm">Top up your fiat account using your credit and debit card</p>
-                                    </div>
-                                </div>
-                                <i class="bi bi-chevron-right text-[#019c71] text-md"></i>
-                            </div>
-                        </a>
-                        <a class="high" href="http://127.0.0.1:5501/allcryptos.html">
-                            <div class="flex items-center justify-between mb-3">
-                                <div class="flex items-center justify-between gap-[7px]">
-                                    <img class="w-12" src="/Image/Navigation-All_cryptos.svg" alt="">
-                                    <div class="flex flex-col">
-                                        <h1 class="text-black font-medium mb-[4px]">All Cryptos</h1>
-                                        <p class="text-[#aaa] text-sm">More than 50 curated crypto assets</p>
-                                    </div>
-                                </div>
-                                <i class="bi bi-chevron-right text-[#019c71] text-md"></i>
-                            </div>
-                        </a>
-                        <a class="high" href="http://127.0.0.1:5501/assetAnalysis.html">
-                            <div class="flex items-center justify-between mb-3">
-                                <div class="flex items-center justify-between gap-[7px]">
-                                    <img class="w-12" src="/Image/Navigation-Asset_Analysis.svg" alt="">
-                                    <div class="flex flex-col">
-                                        <h1 class="text-black font-medium mb-[4px]">Asset Analysis</h1>
-                                        <p class="text-[#aaa] text-sm">Live analysis of all cryptos</p>
-                                    </div>
-                                </div>
-                                <i class="bi bi-chevron-right text-[#019c71] text-md"></i>
-                            </div>
-                        </a>
-                        <a class="high" href="http://127.0.0.1:5501/portfolio.html">
-                            <div class="flex items-center justify-between mb-3">
-                                <div class="flex items-center justify-between gap-[7px]">
-                                    <img class="w-12" src="/Image/navbar-invest-Portfolio Analytics.svg" alt="">
-                                    <div class="flex flex-col">
-                                        <h1 class="text-black font-medium mb-[4px]">Portfolio Visualizer</h1>
-                                        <p class="text-[#aaa] text-sm">Live monitoring of your portfolio</p>
-                                    </div>
-                                </div>
-                                <i class="bi bi-chevron-right text-[#019c71] text-md"></i>
-                            </div>
-                        </a>
-                        <a class="high" href="http://127.0.0.1:5501/automate.html">
-                            <div class="flex items-center justify-between mb-3">
-                                <div class="flex items-center justify-between gap-[7px]">
-                                    <img class="w-12" src="/Image/icon-navigation-AutoInvest.svg" alt="">
-                                    <div class="flex flex-col">
-                                        <h1 class="text-black font-medium mb-[4px]">Auto Invest</h1>
-                                        <p class="text-[#aaa] text-sm">Automate Your Crypto Investment with Swissborg</p>
-                                    </div>
-                                </div>
-                                <i class="bi bi-chevron-right text-[#019c71] text-md"></i>
-                            </div>
-                        </a>
-                        <a class="high" href="http://127.0.0.1:5501/investwithalpha.html">
-                            <div class="flex items-center justify-between mb-3">
-                                <div class="flex items-center justify-between gap-[7px]">
-                                    <img class="w-12" src="/Image/navigation-alpha.svg" alt="">
-                                    <div class="flex flex-col">
-                                        <h1 class="text-black font-medium mb-[4px]">Invest through Alpha <span>New</span></h1>
-                                        <p class="text-[#aaa] text-sm">Discover the next emerging projects</p>
-                                    </div>
-                                </div>
-                                <i class="bi bi-chevron-right text-[#019c71] text-md"></i>
-                            </div>
-                        </a>
-                    </div>
+                <i id="closeIcon" class="bi bi-x-lg hidden md:hidden text-xl text-[#019c71] cursor-pointer"></i>            
+            </div>
+            <div class="border-b">
+                <div class="flex items-center justify-between cursor-pointer  p-[1rem]" id="toggleDrop" onclick="toggleRotation()">
+                    <h1 class="text-black text-xl font-semibold">Invest</h1>
+                    <i class="bi bi-chevron-down text-[#019c71] text-xl" id="chevronIcon"></i>
                 </div>
-        
-                <div class="border-b ">
-                    <div class="flex items-center justify-between cursor-pointer p-[1rem]" id="toggleDrop2" onclick="toggleRotation2()">
-                        <h1 class="text-black text-xl font-semibold">About Us</h1>
-                        <i class="bi bi-chevron-down text-[#019c71] text-xl" id="chevronIcon2"></i>
-                    </div>
-        
-                    <div class="hidden my-[20px] overflow-y-scroll p-[1rem]" id="aboutContent">
-                        <a class="high" href="">
-                            <div class="flex items-center justify-between mb-3">
-                                <div class="flex items-center justify-between gap-[7px]">
-                                    <img class="w-12" src="/Image/smart-engine-icon.svg" alt="">
-                                    <div class="flex flex-col">
-                                        <h1 class="text-black font-medium mb-[10px]">Buy Cryptos</h1>
-                                        <p class="text-[#aaa] text-sm">Exchange instantly at the best price</p>
-                                    </div>
+    
+                <div class="hidden my-[10px] overflow-y-auto p-[1rem]" id="investContent">
+                    <a class="high" href="">
+                        <div class="flex items-center justify-between mb-3">
+                            <div class="flex items-center justify-between gap-[7px]">
+                                <img class="w-12" src="/Image/smart-engine-icon.svg" alt="">
+                                <div class="flex flex-col ">
+                                    <h1 class="text-black font-medium mb-[4px]">Buy Cryptos</h1>
+                                    <p class="text-[#aaa] text-sm">Exchange instantly at the best price</p>
                                 </div>
-                                <i class="bi bi-chevron-right text-[#019c71] text-md"></i>
                             </div>
-                        </a>
-                    </div>
+                            <i class="bi bi-chevron-right text-[#019c71] text-md"></i>
+                        </div>
+                    </a>
+                    <a class="high" href="">
+                        <div class="flex items-center justify-between mb-3">
+                            <div class="flex items-center justify-between gap-[7px]">
+                                <img class="w-12" src="/Image/earn.svg" alt="">
+                                <div class="flex flex-col">
+                                    <h1 class="text-black font-medium mb-[4px]">Earn Cryptos</h1>
+                                    <p class="text-[#aaa] text-sm">Generate passive income 24/7</p>
+                                </div>
+                            </div>
+                            <i class="bi bi-chevron-right text-[#019c71] text-md"></i>
+                        </div>
+                    </a>
+                    <a class="high" href="http://127.0.0.1:5501/diversify.html">
+                        <div class="flex items-center justify-between mb-3">
+                            <div class="flex items-center justify-between gap-[7px]">
+                                <img class="w-12" src="/Image/navbar-invest-Thematics.svg" alt="">
+                                <div class="flex flex-col">
+                                    <h1 class="text-black font-medium mb-[4px]">Diversify with Thematics</h1>
+                                    <p class="text-[#aaa] text-sm">Crypto bundles to invest in entire sectors</p>
+                                </div>
+                            </div>
+                            <i class="bi bi-chevron-right text-[#019c71] text-md"></i>
+                        </div>
+                    </a>
+                    <a class="high" href="http://127.0.0.1:5501/cardFunding.html">
+                        <div class="flex items-center justify-between mb-3">
+                            <div class="flex items-center justify-between gap-[7px]">
+                                <img class="w-12" src="/Image/Card Deposit.svg" alt="">
+                                <div class="flex flex-col">
+                                    <h1 class="text-black font-medium mb-[4px]">Card Funding</h1>
+                                    <p class="text-[#aaa] text-sm">Top up your fiat account using your credit and debit card</p>
+                                </div>
+                            </div>
+                            <i class="bi bi-chevron-right text-[#019c71] text-md"></i>
+                        </div>
+                    </a>
+                    <a class="high" href="http://127.0.0.1:5501/allcryptos.html">
+                        <div class="flex items-center justify-between mb-3">
+                            <div class="flex items-center justify-between gap-[7px]">
+                                <img class="w-12" src="/Image/Navigation-All_cryptos.svg" alt="">
+                                <div class="flex flex-col">
+                                    <h1 class="text-black font-medium mb-[4px]">All Cryptos</h1>
+                                    <p class="text-[#aaa] text-sm">More than 50 curated crypto assets</p>
+                                </div>
+                            </div>
+                            <i class="bi bi-chevron-right text-[#019c71] text-md"></i>
+                        </div>
+                    </a>
+                    <a class="high" href="http://127.0.0.1:5501/assetAnalysis.html">
+                        <div class="flex items-center justify-between mb-3">
+                            <div class="flex items-center justify-between gap-[7px]">
+                                <img class="w-12" src="/Image/Navigation-Asset_Analysis.svg" alt="">
+                                <div class="flex flex-col">
+                                    <h1 class="text-black font-medium mb-[4px]">Asset Analysis</h1>
+                                    <p class="text-[#aaa] text-sm">Live analysis of all cryptos</p>
+                                </div>
+                            </div>
+                            <i class="bi bi-chevron-right text-[#019c71] text-md"></i>
+                        </div>
+                    </a>
+                    <a class="high" href="http://127.0.0.1:5501/portfolio.html">
+                        <div class="flex items-center justify-between mb-3">
+                            <div class="flex items-center justify-between gap-[7px]">
+                                <img class="w-12" src="/Image/navbar-invest-Portfolio Analytics.svg" alt="">
+                                <div class="flex flex-col">
+                                    <h1 class="text-black font-medium mb-[4px]">Portfolio Visualizer</h1>
+                                    <p class="text-[#aaa] text-sm">Live monitoring of your portfolio</p>
+                                </div>
+                            </div>
+                            <i class="bi bi-chevron-right text-[#019c71] text-md"></i>
+                        </div>
+                    </a>
+                    <a class="high" href="http://127.0.0.1:5501/automate.html">
+                        <div class="flex items-center justify-between mb-3">
+                            <div class="flex items-center justify-between gap-[7px]">
+                                <img class="w-12" src="/Image/icon-navigation-AutoInvest.svg" alt="">
+                                <div class="flex flex-col">
+                                    <h1 class="text-black font-medium mb-[4px]">Auto Invest</h1>
+                                    <p class="text-[#aaa] text-sm">Automate Your Crypto Investment with Swissborg</p>
+                                </div>
+                            </div>
+                            <i class="bi bi-chevron-right text-[#019c71] text-md"></i>
+                        </div>
+                    </a>
+                    <a class="high" href="http://127.0.0.1:5501/investwithalpha.html">
+                        <div class="flex items-center justify-between mb-3">
+                            <div class="flex items-center justify-between gap-[7px]">
+                                <img class="w-12" src="/Image/navigation-alpha.svg" alt="">
+                                <div class="flex flex-col">
+                                    <h1 class="text-black font-medium mb-[4px]">Invest through Alpha <span>New</span></h1>
+                                    <p class="text-[#aaa] text-sm">Discover the next emerging projects</p>
+                                </div>
+                            </div>
+                            <i class="bi bi-chevron-right text-[#019c71] text-md"></i>
+                        </div>
+                    </a>
                 </div>
             </div>
-        </div>
-        <div class="flex gap-[45px] items-center py-[10rem] px-[2rem]">
-            <div>
-                <h1 class="text-[70px] font-semibold">Automate your investments</h1>
-                <p class="text-[20px] pt-[26px] font-semibold text-gray-500">Wealth building requires patience, knowledge and discipline. What if all it took was just one good start?</p>
-                <p class="text-[20px] pb-[32px] font-semibold text-gray-500">Say goodbye to worries! Unlock your wealth potential with Auto-Invest today.</p>
-                <button class="text-white font-semibold bg-[#35d49a] px-[25px] py-[8px] rounded-lg">Download app</button>
+    
+            <div class="border-b ">
+                <div class="flex items-center justify-between cursor-pointer p-[1rem]" id="toggleDrop2" onclick="toggleRotation2()">
+                    <h1 class="text-black text-xl font-semibold">About Us</h1>
+                    <i class="bi bi-chevron-down text-[#019c71] text-xl" id="chevronIcon2"></i>
+                </div>
+    
+                <div class="hidden my-[20px] overflow-y-scroll p-[1rem]" id="aboutContent">
+                    <a class="high" href="http://127.0.0.1:5501/abouttml">
+                        <div class="flex items-center justify-between mb-3">
+                            <div class="flex items-center justify-between gap-[7px]">
+                                <img class="w-12" src="/Image/swissborg-app.svg" alt="">
+                                <div class="flex flex-col">
+                                    <h1 class="text-black font-medium mb-[10px]">About swissborg</h1>
+                                    <p class="text-[#aaa] text-sm">Learn more about Swissborg</p>
+                                </div>
+                            </div>
+                            <i class="bi bi-chevron-right text-[#019c71] text-md"></i>
+                        </div>
+                    </a>
+                    <a class="high" href="http://127.0.0.1:5501/affilate.html">
+                        <div class="flex items-center justify-between mb-3">
+                            <div class="flex items-center justify-between gap-[7px]">
+                                <img class="w-12" src="/Image/community-icon.svg" alt="">
+                                <div class="flex flex-col">
+                                    <h1 class="text-black font-medium mb-[10px]">Become an affilate for swissborg</h1>
+                                    <p class="text-[#aaa] text-sm">Join 100+ affilates worldwide</p>
+                                </div>
+                            </div>
+                            <i class="bi bi-chevron-right text-[#019c71] text-md"></i>
+                        </div>
+                    </a>
+                </div>
             </div>
-            <img src="/images/automate-img.avif" alt="" width="48%" >
+        </div>  
+
+        <div class="lg:flex md:flex-row sm:flex-col lg:gap-[70px] sm:gap-[30px] md:gap-[65px] items-center md:justify-center w-[90%] md:w-[100%] md:px-[2rem] mx-auto lg:py-[8rem] py-[8rem]">
+            <div class="text-center lg:text-start">
+                <h1 class="font-bold lg:text-[65px] text-3xl md:text-[40px] lg:text-left md:text-center sm:text-center font-sans leading-tight">Automate your investments</h1>
+                <p class="text-[16px] pt-[30px] md:text-[20px] lg:text-left md:text-center sm:text-center sm:text-[30px]">Wealth building requires patience, knowledge and discipline. What if all it took was just one good start?</p>
+                <p class="text-[16px] pb-[30px] md:text-[20px] lg:text-left md:text-center sm:text-center sm:text-[30px]">Say goodbye to worries! Unlock your wealth potential with Auto-Invest today.</p>
+                <button class="text-white font-semibold bg-[#35d49a] lg:px-[25px] lg:py-[8px] px-[75px] py-[8px] rounded-lg">Download app</button>
+            </div>
+            <img src="/images/automate-img.avif" class="md:w-[60%] lg:w-[45%] w-[95%] mt-[10%] sm:w-[50%] md:mx-auto mx-auto" alt="">
         </div>
 
-        <div class="flex justify-center gap-[120px] py-[7rem]">
-            <div>
-                <img src="/images/volatility-Graph-img.svg" class="mx-auto" alt="" width="30%">
-                <p class="text-[25px] font-semibold py-[20px]">Reduce market volatility</p>
+        <div class="lg:flex md:flex-row sm:flex-col  justify-center gap-[120px] lg:px-[2rem] px-[2rem] lg:py-[7rem] py-[1rem]">
+            <div class="flex gap-[20px] lg:flex-col">
+                <img src="/images/volatility-Graph-img.svg" class="lg:mx-auto lg:w-[28%] w-[25%]" alt="">
+                <p class="lg:text-[25px] text-[20px] font-semibold lg:py-[20px] py-[15px]">Reduce market volatility</p>
             </div>
-            <div>
-                <img src="/images/afordable-Lotus.svg" class="mx-auto" alt="" width="30%">
-                <p class="text-[25px] font-semibold py-[20px]">Reduce market volatility</p>
+            <div class="flex gap-[20px] lg:flex-col">
+                <img src="/images/afordable-Lotus.svg" class="lg:mx-auto lg:w-[28%] w-[25%]" alt="">
+                <p class="lg:text-[25px] text-[20px] font-semibold lg:py-[20px] py-[20px]">Affordable healthy habits</p>
             </div>
-            <div>
-                <img src="/images/trusted-Star-img.svg" class="mx-auto" alt="" width="30%">
-                <p class="text-[25px] font-semibold py-[20px]">Reduce market volatility</p>
-            </div>
-        </div>
-
-        <div>
-            <h1 class="text-center text-[35px] font-semibold">Learn more about Auto-Invest</h1>
-            <div class="flex mx-auto py-[50px] text-white">
-                <div class="autoinvest w-[35%] rounded-2xl mx-auto p-[20px]">
-                    <div class="text-left flex flex-col gap-[150px]">
-                        <i class="bi bi-play-circle-fill text-[16px]"></i>
-                        <p class="text-2xl font-bold">What is auto-invest</p>
-                    </div>
-                </div>
-                <div class="autoinvest w-[35%] rounded-2xl mx-auto p-[20px]">
-                    <div class="text-left flex flex-col gap-[150px]">
-                        <i class="bi bi-play-circle-fill text-[16px]"></i>
-                        <p class="text-2xl font-bold">Build wealth made simple</p>
-                    </div>
-                </div>
+            <div class="flex gap-[15px] lg:flex-col ">
+                <img src="/images/trusted-Star-img.svg" class="lg:mx-auto lg:w-[38%] w-[23%]" alt="">
+                <p class="lg:text-[25px] text-[20px] font-semibold lg:py-[20px] py-[15px]">Trusted by experts</p>
             </div>
         </div>
 
-        <div class="flex gap-[80px] justify-between items-center py-[6rem] px-[3rem]">
-            <img src="/images/dca-img.avif" alt="" width="38%">
-            <div class="pl-[7rem]">
-                <h1 class="text-[40px] font-semibold">What is Auto-Invest?</h1>
-                <p class="text-[20px] py-[2rem]">Auto-Invest uses Dollar Cost Averaging (DCA), a popular strategy among savvy investors, to reduce volatility by investing a fixed amount at regular intervals.</p>
+        <div class="my-[80px] px-[15px] md:px-[0px]">
+            <h1 class="text-left md:text-center text-3xl md:text-5xl lg:text-5xl font-semibold lg:font-bold ">Learn more about Auto-Invest</h1>
+            
+            <div class="flex items-center justify-center mx-auto w-[95%] md:w-[80%] h-full lg:w-[50%] gap-3 holder py-[50px]   text-white">
+                <button class="why w-[50%] h-[150px] lg:h-[200px] rounded-2xl mx-auto p-[10px] md:p-[25px]">
+                    <div class="text-left flex flex-col gap-[40px]  lg:gap-[90px] md:gap-[60px] ">
+                        <i class="bi bi-play-circle-fill text-xl"></i>
+    
+                        <h1 class="text-sm md:text-xl lg:text-2xl font-bold">What is Auto-Invest</h1>
+                    </div>
+                </button>
+    
+                <button class="why1 w-[50%] h-[150px] lg:h-[200px] rounded-2xl mx-auto p-[10px] md:p-[25px]">
+                    <div class="text-left flex flex-col gap-[40px] lg:gap-[90px] md:gap-[60px]">
+                        <i class="bi bi-play-circle-fill text-xl"></i>
+    
+                        <h1 class="text-sm md:text-xl lg:text-2xl font-bold">Building wealth made easy</h1>
+                    </div>
+                </button>
             </div>
         </div>
 
-        <div class="flex flex-col px-[10rem] py-[3rem] items-center">
-            <p class="font-bold text-[50px] py-[2rem] text-center leading-tight">Why is Auto-Invest good for you?</p>
-            <div class=" flex gap-[25px] items-center text-[18px]">
-                <a href="" class="px-[12px] py-[8px] bg-[#E5F9F3] text-[#01C38D] hover:font-bold rounded-lg">Long-term wealth</a>
-                <a href="">Invest better</a>
-                <a href="">It's stress free!</a>
-                <a href="">You have the power</a>
+        <div class="lg:flex flex-col-reverse md:flex-row sm:flex-col gap-[80px] justify-between items-center lg:py-[6rem] lg:px-[3rem] py-[1rem] px-[22px]">
+            <img src="/images/dca-img.avif" class="lg:w-[38%]" alt="">
+            <div class="lg:pl-[7rem] text-left">
+                <h1 data-aos="fade-up" class="lg:text-[40px] text-[30px] font-semibold">What is Auto-Invest?</h1>
+                <p data-aos="fade-up" class="lg:text-[20px] text-[16px] lg:py-[2rem] py-[10px]">Auto-Invest uses Dollar Cost Averaging (DCA), a popular strategy among savvy investors, to reduce volatility by investing a fixed amount at regular intervals.</p>
+            </div>
+        </div>
+
+        <div class="lg:w-[70%] w-[95%] md:w-[95%] lg:px[4rem] md:px-[1rem] mx-auto md:py-[1rem] py-[2rem] items-center">
+            <p  data-aos="fade-up" class="font-bold text-[30px] md:text-[28px] lg:text-[40px] lg:py-[2rem] py-[1rem] text-center mx-auto leading-tight">Why is Auto-Invest good for you</p>
+            <div data-aos="flip-right" class="flex lg:gap-[5px] gap-[2px] items-center justify-center lg:text-[15px] md:text-[18px] text-[12px]">
+                <button class="px-2 md:px-6 py-2 rounded-md  focus:outline-none text-sm md:text-lg">Long-term wealth</button>
+                <button class="px-2 md:px-6 py-2 rounded-md  focus:outline-none text-sm md:text-lg">Invest better</button>
+                <!-- <button class="px-2 md:px-6 py-2 rounded-md focus:outline-none text-sm md:text-lg">It's stress free!</button>
+                <button class="px-2 md:px-6 py-2 rounded-md focus:outline-none text-sm md:text-lg">You have the power</button> -->
             </div>
 
-            <div class="flex gap-[60px] items-center px-[2rem] py-[3rem]">
-                <div class="px-[2rem]">
-                    <h1 class="font-bold text-[30px] py-[25px]">Long term wealth building</h1>
-                    <p class="text-[16px]">Auto-Invest reduces price volatility, leading to a smoother average buying price and potentially higher returns.</p>
+            <div class="lg:flex md:flex-row sm:flex-col gap-[10px] items-center lg:px-[2rem] px-[15px] py-[1rem]">
+                <div class="lg:px-[2rem]">
+                    <h1 class="font-bold lg:text-[30px] text-[25px] lg:py-[25px] py-[10px]">Long term wealth building</h1>
+                    <p class="lg:text-[16px] text-[14px]">Auto-Invest reduces price volatility, leading to a smoother average buying price and potentially higher returns.</p>
                 </div>
-                <img src="/images/longtermwealth.img" alt="" width="45%">
+                <img src="/images/longtermwealth.img" class="lg:w-[45%] mt-[10%]" alt="">
+            </div>
+            <div class="lg:flex md:flex-row sm:flex-col gap-[10px] items-center lg:px-[2rem] px-[15px] py-[1rem]">
+                <div class="lg:px-[2rem]">
+                    <h1 class="font-bold lg:text-[30px] text-[25px] lg:py-[25px] py-[10px]">Become a better investor</h1>
+                    <p class="lg:text-[16px] text-[14px]">No need to spend hours managing your wealth anymore: Auto-invest is fully automated and takes less than a minute to set up!.</p>
+                </div>
+                <img src="/images/invest-better-img.png" class="lg:w-[45%] mt-[10%]" alt="">
             </div>
         </div>
 
-        <div class="flex items-center gap-[80px] justify-center px-[3rem] py-[8rem] bg-[#F6F7F8]">
-            <img src="/images/howitworks-ethereum-img.avif" alt="" width="38%">
-            <div class="pl-[8rem]">
-                <h1 class="text-[38px] font-bold pb-[2rem]">How it works</h1>
-                <p class="text-[20px]">Smaller investments mostly out-perform lump-sum investments in the long-term.</p>
-                <p class="text-[20px] py-[1rem]">With Auto-Invest you gain a better average buying price that reduces your risk & potentially increases the return on Investment.</p>
-                <p class="text-[20px]">*For example, investing in Ethereum weekly for the past 3 years would result in a 132.25% return*</p>
+        <div class="lg:flex md:flex-row sm:flex-col lg:w-[100%] w-[100%] md:w-[95%] flex-col-reverse items-center gap-[80px] justify-center lg:px-[3rem] px-[20px] lg:py-[3rem] py-[3rem] bg-[#F6F7F8]">
+            <img src="/images/howitworks-ethereum-img.avif" class="lg:w-[40%] mt-[5%] lg:mt-0" alt="">
+            <div class="lg:pl-[6rem] ">
+                <h1 data-aos="fade-up" class="lg:text-[38px] font-bold lg:pb-[2rem] text-[25px] lg:py-[10px] py-[10px]">How it works</h1>
+                <p data-aos="fade-up" class="lg:text-[20px] text-[15px]">Smaller investments mostly out-perform lump-sum investments in the long-term.</p>
+                <p data-aos="fade-up" class="lg:text-[20px] text-[15px] lg:py-[1rem] py-[10px]">With Auto-Invest you gain a better average buying price that reduces your risk & potentially increases the return on Investment.</p>
+                <p data-aos="fade-up" class="lg:text-[20px] text-[15px]">*For example, investing in Ethereum weekly for the past 3 years would result in a 132.25% return*</p>
             </div>
         </div>
 
         <!-- Frequently asked quedtions -->
-        <div class="flex flex-col md:flex-row justify-center w-full md:w-[95%] lg:w-[60%] mx-auto gap-[60px] md:gap-[100px]">
-            <h1 class="text-3xl lg:text-[40px] md:w-[20%] text-left font-bold pl-[20px] md:pl-[0px]">Frequently asked questions</h1>
+        <div class="flex flex-col md:flex-row justify-center w-[90%] md:w-[80%] lg:w-[70%] mx-auto gap-[30px] md:gap-[100px] py-[40px]">
+            <h1 class="text-3xl lg:text-[40px] md:w-[20%] text-left font-bold lg:pl-[20px] md:pl-[0px]">Frequently asked questions</h1>
+    
+    
             <div class="flex flex-col items-center w-[95%] mx-auto md:w-full justify-between">
-
-                <div class="flex flex-col w-full my-[10px] pb-[25px] border-b border-black faq">
-                    <div class="flex justify-between md:gap-[200px] cursor-pointer que">
-                        <h1 class="text-lg font-bold">In short, what is thematic investing?</h1>
+    
+                <div class="flex flex-col w-full my-[10px] pb-[10px] lg:pb-[20px] border-b border-black faq">
+                    <div class="flex justify-between md:gap-[100px] cursor-pointer que">
+                        <h1 class="text-sm md:text-md lg:text-xl font-bold">Is Auto-Invest suitable for any market condition??</h1>
                         <i class="bi bi-chevron-down text-[#01C38D]"></i>
                     </div>
-
-                    <div class="my-[20px] res hidden">
-                        <p>SwissBorg Thematics offers a unique investment approach, grouping the most promising crypto assets by themes to strengthen your portfolio. With just one tap, you're investing with SwissBorg's experts and our advanced algorithms in your team, ensuring you always have the best-selected tokens and a consistently updated investment.</p>
+    
+                    <div class=" my-[10px] md:my-[20px] res hidden">
+                        <p class="font-normal text-sm md:text-md  text-[a1a1a1]">SwissBorg Thematics offers a unique investment approach, grouping the most promising crypto assets by themes to strengthen your portfolio. With just one tap, you're investing with SwissBorg's experts and our advanced algorithms in your team, ensuring you always have the best-selected tokens and a consistently updated investment.</p>
+                    </div>
+                </div>
+    
+                <div class="flex flex-col w-full my-[10px] pb-[10px] lg:pb-[20px] border-b border-black faq">
+                    <div class="flex justify-between md:gap-[100px] cursor-pointer que">
+                        <h1 class="text-sm md:text-md lg:text-xl font-bold">Can I use my bank account with Auto-Invest?</h1>
+                        <i class="bi bi-chevron-down text-[#01C38D]"></i>
+                    </div>
+    
+                    <div class=" my-[10px] md:my-[20px] hidden">
+                        <p class="font-normal text-sm md:text-md  text-[a1a1a1]">Your Thematic consists of various tokens/coins, each with a defined target percentage in line with their risk and reward potential. Because of crypto’s volatility, these percentages can easily drift away. To maintain the desired target percentage of each coin, necessary exchanges are therefore made to rebalance asset allocations. Rebalancing automatically takes profit from outperformers & accumulates tokens at lower price points. More <a class="font-semibold text-[#01C38D]" target="_blank" href="https://www.forbes.com/advisor/investing/rebalance-investments/">here</a>.</p>
+                    </div>
+                </div>
+    
+                <div class="flex flex-col w-full my-[10px] pb-[10px] lg:pb-[20px] border-b border-black faq">
+                    <div class="flex justify-between md:gap-[100px] cursor-pointer que">
+                        <h1 class="text-sm md:text-md lg:text-xl font-bold">Are Auto-Invest fees on top of exchange fees?</h1>
+                        <i class="bi bi-chevron-down text-[#01C38D]"></i>
+                    </div>
+    
+                    <div class=" my-[10px] md:my-[20px] hidden">
+                        <p class="font-normal text-sm md:text-md  text-[a1a1a1]">For your portfolio to remain relevant & well diversified in fast-changing markets, SwissBorg reviews continuously the assets within its Thematics. We evaluate new opportunities and change asset composition & allocations periodically to ensure that each Thematic evolves true to its theme & performs at its optimal level.</p>
+                    </div>
+                </div>
+    
+                <div class="flex flex-col w-full my-[10px] pb-[10px] lg:pb-[20px] border-b border-black faq">
+                    <div class="flex justify-between md:gap-[100px] cursor-pointer que">
+                        <h1 class="text-sm md:text-md lg:text-xl font-bold">When is Auto-Invest executing the exchange?</h1>
+                        <i class="bi bi-chevron-down text-[#01C38D]"></i>
+                    </div>
+    
+                    <div class=" my-[10px] md:my-[20px] hidden">
+                        <p class="font-normal text-sm md:text-md  text-[a1a1a1]">Yes, with Thematics you own all the underlying assets. It is a bundle of tokens, contrary to an ETF or an  index.</p>
+                    </div>
+                </div>
+    
+                <div class="flex flex-col w-full my-[10px] pb-[10px] lg:pb-[20px] border-b border-black faq">
+                    <div class="flex justify-between md:gap-[100px] cursor-pointer que">
+                        <h1 class="text-sm md:text-md lg:text-xl font-bold">Can I Auto-Invest into Thematics?</h1>
+                        <i class="bi bi-chevron-down text-[#01C38D]"></i>
+                    </div>
+    
+                    <div class=" my-[10px] md:my-[20px] hidden">
+                        <p class="font-normal text-sm md:text-md  text-[a1a1a1]">The minimum investment amount for the Golden Thematic is 40 EUR or the equivalent in your local currency. The minimum investment amount for the Best Blockchains Thematic and the Gaming Thematic is 50 EUR or the equivalent in your local currency. The minimum investment amount for the Banter Bundle is 250 EUR or the equivalent in your local currency.</p>
+                    </div>
+                </div>
+    
+                <div class="flex flex-col w-full my-[10px] pb-[10px] lg:pb-[20px] border-b border-black faq">
+                    <div class="flex justify-between md:gap-[100px] cursor-pointer que">
+                        <h1 class="text-sm md:text-md lg:text-xl font-bold">Can I create multiple Auto-Invest strategies per token?</h1>
+                        <i class="bi bi-chevron-down text-[#01C38D]"></i>
+                    </div>
+    
+                    <div class=" my-[10px] md:my-[20px] hidden">
+                        <p class="font-normal text-sm md:text-md  text-[a1a1a1]">There is no minimum investment period. You are free to sell your Thematic investment at any time. In the future, you will be able to earn rewards based on your holding duration.</p>
                     </div>
                 </div>
 
-                <div class="flex flex-col w-full my-[10px] pb-[25px] border-b border-black faq">
-                    <div class="flex justify-between gap-[200px] cursor-pointer que">
-                        <h1 class="text-lg font-bold">What is rebalancing?</h1>
+                <div class="flex flex-col w-full my-[10px] pb-[10px] lg:pb-[20px] border-b border-black faq">
+                    <div class="flex justify-between md:gap-[100px] cursor-pointer que">
+                        <h1 class="text-sm md:text-md lg:text-xl font-bold">What source of funds can I use?</h1>
                         <i class="bi bi-chevron-down text-[#01C38D]"></i>
                     </div>
-
-                    <div class="my-[20px] hidden">
-                        <p>Your Thematic consists of various tokens/coins, each with a defined target percentage in line with their risk and reward potential. Because of crypto’s volatility, these percentages can easily drift away. To maintain the desired target percentage of each coin, necessary exchanges are therefore made to rebalance asset allocations. Rebalancing automatically takes profit from outperformers & accumulates tokens at lower price points. More <a class="font-semibold text-[#01C38D]" target="_blank" href="https://www.forbes.com/advisor/investing/rebalance-investments/">here</a>.</p>
+    
+                    <div class=" my-[10px] md:my-[20px] hidden">
+                        <p class="font-normal text-sm md:text-md  text-[a1a1a1]">There is no minimum investment period. You are free to sell your Thematic investment at any time. In the future, you will be able to earn rewards based on your holding duration.</p>
                     </div>
                 </div>
 
-                <div class="flex flex-col w-full my-[10px] pb-[25px] border-b border-black faq">
-                    <div class="flex justify-between gap-[200px] cursor-pointer que">
-                        <h1 class="text-lg font-bold">What is reallocation?</h1>
+                <div class="flex flex-col w-full my-[10px] pb-[10px] lg:pb-[20px] border-b border-black faq">
+                    <div class="flex justify-between md:gap-[100px] cursor-pointer que">
+                        <h1 class="text-sm md:text-md lg:text-xl font-bold">Can I use several tokens to invest in 1 token when using Auto-Invest?</h1>
                         <i class="bi bi-chevron-down text-[#01C38D]"></i>
                     </div>
-
-                    <div class="my-[20px] hidden">
-                        <p>For your portfolio to remain relevant & well diversified in fast-changing markets, SwissBorg reviews continuously the assets within its Thematics. We evaluate new opportunities and change asset composition & allocations periodically to ensure that each Thematic evolves true to its theme & performs at its optimal level.</p>
+    
+                    <div class=" my-[10px] md:my-[20px] hidden">
+                        <p class="font-normal text-sm md:text-md  text-[a1a1a1]">There is no minimum investment period. You are free to sell your Thematic investment at any time. In the future, you will be able to earn rewards based on your holding duration.</p>
+                    </div>
+                </div>
+        
+                <div class="flex flex-col w-full my-[10px] pb-[10px] lg:pb-[20px] border-b border-black faq">
+                    <div class="flex justify-between md:gap-[100px] cursor-pointer que">
+                        <h1 class="text-sm md:text-md lg:text-xl font-bold">Can I Auto-Invest from my Earn account?</h1>
+                        <i class="bi bi-chevron-down text-[#01C38D]"></i>
+                    </div>
+    
+                    <div class=" my-[10px] md:my-[20px] hidden">
+                        <p class="font-normal text-sm md:text-md  text-[a1a1a1]">There is no minimum investment period. You are free to sell your Thematic investment at any time. In the future, you will be able to earn rewards based on your holding duration.</p>
+                    </div>
+                </div>
+            
+                <div class="flex flex-col w-full my-[10px] pb-[10px] lg:pb-[20px] border-b border-black faq">
+                    <div class="flex justify-between md:gap-[100px] cursor-pointer que">
+                        <h1 class="text-sm md:text-md lg:text-xl font-bold">Where can I see the Auto-Invest transaction?</h1>
+                        <i class="bi bi-chevron-down text-[#01C38D]"></i>
+                    </div>
+    
+                    <div class=" my-[10px] md:my-[20px] hidden">
+                        <p class="font-normal text-sm md:text-md  text-[a1a1a1]">There is no minimum investment period. You are free to sell your Thematic investment at any time. In the future, you will be able to earn rewards based on your holding duration.</p>
                     </div>
                 </div>
 
-                <div class="flex flex-col w-full my-[10px] pb-[25px] border-b border-black faq">
-                    <div class="flex justify-between gap-[200px] cursor-pointer que">
-                        <h1 class="text-lg font-bold">Do I really own the tokens/coins?</h1>
+                <div class="flex flex-col w-full my-[10px] pb-[10px] lg:pb-[20px] border-b border-black faq">
+                    <div class="flex justify-between md:gap-[100px] cursor-pointer que">
+                        <h1 class="text-sm md:text-md lg:text-xl font-bold">What’s next for Auto-Invest?</h1>
                         <i class="bi bi-chevron-down text-[#01C38D]"></i>
                     </div>
-
-                    <div class="my-[20px] hidden">
-                        <p>Yes, with Thematics you own all the underlying assets. It is a bundle of tokens, contrary to an ETF or an  index.</p>
-                    </div>
-                </div>
-
-                <div class="flex flex-col w-full my-[10px] pb-[25px] border-b border-black faq">
-                    <div class="flex justify-between gap-[200px] cursor-pointer que">
-                        <h1 class="text-lg font-bold">What is the minimum investment amount?</h1>
-                        <i class="bi bi-chevron-down text-[#01C38D]"></i>
-                    </div>
-
-                    <div class="my-[20px] hidden">
-                        <p>The minimum investment amount for the Golden Thematic is 40 EUR or the equivalent in your local currency. The minimum investment amount for the Best Blockchains Thematic and the Gaming Thematic is 50 EUR or the equivalent in your local currency. The minimum investment amount for the Banter Bundle is 250 EUR or the equivalent in your local currency.</p>
-                    </div>
-                </div>
-
-                <div class="flex flex-col w-full my-[10px] pb-[25px] border-b border-black faq">
-                    <div class="flex justify-between gap-[200px] cursor-pointer que">
-                        <h1 class="text-lg font-bold">What is the minimum investment period?</h1>
-                        <i class="bi bi-chevron-down text-[#01C38D]"></i>
-                    </div>
-
-                    <div class="my-[20px] hidden">
-                        <p>There is no minimum investment period. You are free to sell your Thematic investment at any time. In the future, you will be able to earn rewards based on your holding duration.</p>
+    
+                    <div class=" my-[10px] md:my-[20px] hidden">
+                        <p class="font-normal text-sm md:text-md  text-[a1a1a1]">There is no minimum investment period. You are free to sell your Thematic investment at any time. In the future, you will be able to earn rewards based on your holding duration.</p>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="flex items-center justify-center gap-[90px] py-[4rem] px-[10rem]">
+        <div class="lg:flex md:flex-row sm:flex-col items-center justify-center gap-[90px] py-[4rem] lg:px-[10rem] px-[3rem]">
             <div class="phone">
-                <h1 class="text-[35px] font-bold py-[2rem]">Automate your crypto investments with SwissBorg</h1>
-                <li class="text-[16px]">Choose the asset you want to invest in</li>
-                <li class="text-[16px] py-[1rem]">Select the frequency of your investments</li>
-                <li class="text-[16px]">Choose the source of funds account</li>
-                <li class="py-[1rem] text-[16px]">Input the recurrent amount</li>
-                <li class="text-[16px]">Confirm. Done!</li>
+                <h1 data-aos="fade-up" class="lg:text-[35px] text-xl font-bold py-[2rem]">Automate your crypto investments with SwissBorg</h1>
+                <div data-aos="fade-up">
+                    <li class="lg:text-[16px] text-[15px]">Choose the asset you want to invest in</li>
+                    <li class="lg:text-[16px] text-[15px] lg:py-[1rem] py-[8px]">Select the frequency of your investments</li>
+                    <li class="lg:text-[16px] text-[15px]">Choose the source of funds account</li>
+                    <li class="lg:py-[1rem] text-[15px] py-[8px] lg:text-[16px]">Input the recurrent amount</li>
+                    <li class="lg:text-[16px] text-[15px]">Confirm. Done!</li>
+                </div>
                 <div class="py-[2rem]">
                     <p>App is not available in  NG</p>
                     <button class="bg-[#35d49a] py-[5px] px-[15px] font-bold text-white rounded-lg mt-[10px]">Notify me</button>
@@ -351,16 +443,16 @@
     </section>
 
     <section class="flex flex-col justify-between">
-        <div class="flex justify-between px-[3rem] py-[3rem] items-center">
-            <div class="flex flex-col-reverse-1 gap-[8px]">
+        <div class="lg:flex md:flex-row sm:flex-col w-[100%] lg:justify-between lg:px-[3rem] px-[1rem] gap-[10px] lg:py-[3rem] items-center">
+            <div class="flex flex-col-reverse-1 gap-[8px] lg:py-0 py-[30px]">
                 <img src="/images/cookies-img.svg" alt="">
                 <a href="" class="text-[17px] text-gray-400 font-bold">Manage cookies settings</a>
             </div>
-            <input type="" placeholder="dropdown" class="px-[20px] py-[5px] rounded-sm w-[25%]" style="border: 1px solid gray">
+            <input type="" placeholder="dropdown" class="px-[20px] py-[5px] rounded-sm lg:w-[25%] w-[100%]" style="border: 1px solid gray">
         </div>
         
-        <div class="flex gap-[250px] px-[2rem] py-[2rem] ">
-            <div class="flex gap-[120px] justify-between">
+        <div class="lg:flex md:flex-row sm:flex-col w-[100%] gap-[250px] lg:px-[2rem] px-[1rem] py-[2rem] ">
+            <div class="lg:flex md:flex-row sm:flex-col lg:gap-[120px] justify-between">
                 <div class="flex flex-col leading-8">
                     <h1 class="font-bold text-[18px] text-gray-400">SwissBorg app</h1>
                     <a href="" class="text-gray-400">Buy cryptos</a>
@@ -390,13 +482,13 @@
                 <a href="" class="text-gray-400">Help Center</a>
             </div>
         </div>
-
-        <div class="flex flex-col-reverse-1 gap-[8px] px-[2rem] py-[2rem]">
-            <i class="bi bi-plus px-[3px] py-[1px] bg-red-500 text-white rounded-full text-[19px]"></i>
-            <p class="text-gray-400">Proudly engineered in Switzerland</p>
+        
+        <div class="flex items-center flex-col-reverse-1 gap-[8px] lg:px-[2rem] px-[1rem] py-[2rem]">
+            <img class="lg:w-10 w-5 rounded-full" src="/Image/swit.png" alt="">
+            <p class="text-gray-400 text-[14px]">Proudly engineered in Switzerland</p>
         </div>
 
-        <div class="flex px-[2rem] gap-[30px]">
+        <!-- <div class="flex px-[2rem] gap-[30px]">
             <div class="text-white py-[3rem] px-[6rem] text-center rounded-md" style="background-image: linear-gradient(135deg, #09a77d, #12E3BC);">
                 <h1 class="font-bold text-[30px]">Subscribe to our newsletter</h1>
                 <p class="text-[18px] py-[12px]">Receive official updates when you join our mailing list</p>
@@ -423,41 +515,43 @@
                     <i class="bi bi-tiktok bg-white text-[#735EFF] px-[8px] py-[5px] rounded-md"></i>
                 </div>
             </div>
-        </div>
+        </div> -->
     </section>
 
 
 
 
-    <footer class="py-[2rem] bg-[#d9dbdd] mt-[4rem]">
-        <div class="flex justify-between py-[2rem] px-[2rem] text-[13px] gap-[25px]"> 
-            <div class="w-[90%]">
-                <h1 class="font-bold leading-6 text-[#7c818b] pb-[25px]">Engineered in Switzerland</h1>
-                <p class="text-[#7c818b]">SBorg SA</p> 
-                <p class="text-[#7c818b]">Rue du Grand-Chêne 8, 1003 Lausanne Switzerland</p>
+    <footer class="py-[2rem] bg-[#d9dbdd] mt-[4rem] w-full">
+        <div class="mx-auto w-full md:w-[90%]">
+            <div class="flex flex-col md:flex-row justify-between py-[rem] px-[1rem] text-[13px] gap-[25px]"> 
+                <div class="w-full">
+                    <h1 class="font-bold leading-6 text-[#7c818b] pb-[25px]">Engineered in Switzerland</h1>
+                    <p class="text-[#7c818b]">SBorg SA</p> 
+                    <p class="text-[#7c818b]">Rue du Grand-Chêne 8, 1003 Lausanne Switzerland</p>
+                </div>
+                <div class="w-[85%]">
+                    <h1 class="font-bold leading-6 text-[#7c818b] pb-[12px] text-md">Operating the SwissBorg App under the license FVT000326 in Estonia and under the registration E2022-034 in France</h1>
+                    <p class="text-[#7c818b]">SwissBorg Solutions OÜ</p> 
+                    <p class="text-[#7c818b]">Pärnu mnt. 12, 10148 Tallinn, Estonia</p>
+                </div>
+                <div class="w-[90%]">
+                    <h1 class="font-bold leading-6 text-[#7c818b] pb-[12px]">SwissBorg Solutions OÜ is a partner of Modulr Finance B.V., a company registered in the Netherlands with company number 81852401, which is authorised and regulated by the Dutch Central Bank (DNB) as an Electronic Money Institution (Firm Reference Number: R182870) for the issuance of electronic money and payment services.</h1>
+                    <p class="text-[#7c818b]">Your account and related payment services are provided by Modulr Finance B.V. Your funds will be held in one or more segregated accounts and safeguarded in line with the Financial Supervision Act (Wet op het Financieel Toezicht, Wft) – for more information please see <a href="">here</a>.</p> 
+                </div>
+                <div class="w-[86%]">
+                    <p class="text-[#7c818b]">By using this website you agree to our Terms of Use. Nothing on this website should be construed as a recommendation for any action. SwissBorg Solutions OÜ is the owner of the license: FVT000326 (<a href="" class="text-[#09a77d]">link</a>) and E2022-034 (link). For more details, please see the <a href="" class="text-[#09a77d]">Terms of Use</a> of the SwissBorg app.</p>
+                </div>
             </div>
-            <div class="w-[85%]">
-                <h1 class="font-bold leading-6 text-[#7c818b] pb-[12px]">Operating the SwissBorg App under the license FVT000326 in Estonia and under the registration E2022-034 in France</h1>
-                <p class="text-[#7c818b]">SwissBorg Solutions OÜ</p> 
-                <p class="text-[#7c818b]">Pärnu mnt. 12, 10148 Tallinn, Estonia</p>
+    
+            <div class="flex flex-col md:flex-row md:items-center items-start text-left lg:items-center justify-between pt-[4rem] px-[2rem] text-[12px]">
+                <div class="py-[2rem] flex gap-[20px] text-[#19C897] font-bold">
+                    <a href="">Terms of Use</a>
+                    <a href="">Privacy Policy</a>
+                    <a href="">Cookies Policy</a>
+                    <a href="">Brand kit</a>
+                </div>
+                <p class="text-left justify-start px-[6rem] text-[#7c818b]">&copy SBorg SA. All Rights Reserved.</p>
             </div>
-            <div class="w-[90%]">
-                <h1 class="font-bold leading-6 text-[#7c818b] pb-[12px]">SwissBorg Solutions OÜ is a partner of Modulr Finance B.V., a company registered in the Netherlands with company number 81852401, which is authorised and regulated by the Dutch Central Bank (DNB) as an Electronic Money Institution (Firm Reference Number: R182870) for the issuance of electronic money and payment services.</h1>
-                <p class="text-[#7c818b]">Your account and related payment services are provided by Modulr Finance B.V. Your funds will be held in one or more segregated accounts and safeguarded in line with the Financial Supervision Act (Wet op het Financieel Toezicht, Wft) – for more information please see <a href="">here</a>.</p> 
-            </div>
-            <div class="w-[86%]">
-                <p class="text-[#7c818b]">By using this website you agree to our Terms of Use. Nothing on this website should be construed as a recommendation for any action. SwissBorg Solutions OÜ is the owner of the license: FVT000326 (<a href="" class="text-[#09a77d]">link</a>) and E2022-034 (link). For more details, please see the <a href="" class="text-[#09a77d]">Terms of Use</a> of the SwissBorg app.</p>
-            </div>
-        </div>
-
-        <div class="flex justify-between pt-[4rem] px-[2rem] text-[12px]">
-            <div class="py-[2rem] flex gap-[20px] text-[#09a77d]">
-                <a href="">Terms of Use</a>
-                <a href="">Privacy Policy</a>
-                <a href="">Cookies Policy</a>
-                <a href="">Brand kit</a>
-            </div>
-            <p class="px-[6rem] text-[#7c818b]">&copy SBorg SA. All Rights Reserved.</p>
         </div>
     </footer>
 

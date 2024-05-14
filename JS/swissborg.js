@@ -161,50 +161,50 @@ showContent(smartEngineContent);
 
 
 // four buttons
-const bestExecutionBtn = document.getElementById('bestExecutionBtn');
-const uniqueTradingPairBtn = document.getElementById('uniqueTradingPairBtn');
-const transparentBtn = document.getElementById('transparentBtn');
-const noHiddenFeesBtn = document.getElementById('noHiddenFeesBtn');
+// const bestExecutionBtn = document.getElementById('bestExecutionBtn');
+// const uniqueTradingPairBtn = document.getElementById('uniqueTradingPairBtn');
+// const transparentBtn = document.getElementById('transparentBtn');
+// const noHiddenFeesBtn = document.getElementById('noHiddenFeesBtn');
 
-function toggleClasses(clickedBtn) {
-    bestExecutionBtn.classList.remove('bg-[#E5F9F3]', 'text-[#01C38D]', 'font-bold');
-    uniqueTradingPairBtn.classList.remove('bg-[#E5F9F3]', 'text-[#01C38D]', 'font-bold');
-    transparentBtn.classList.remove('bg-[#E5F9F3]', 'text-[#01C38D]', 'font-bold');
-    noHiddenFeesBtn.classList.remove('bg-[#E5F9F3]', 'text-[#01C38D]', 'font-bold');
+// function toggleClasses(clickedBtn) {
+//     bestExecutionBtn.classList.remove('bg-[#E5F9F3]', 'text-[#01C38D]', 'font-bold');
+//     uniqueTradingPairBtn.classList.remove('bg-[#E5F9F3]', 'text-[#01C38D]', 'font-bold');
+//     transparentBtn.classList.remove('bg-[#E5F9F3]', 'text-[#01C38D]', 'font-bold');
+//     noHiddenFeesBtn.classList.remove('bg-[#E5F9F3]', 'text-[#01C38D]', 'font-bold');
 
-    clickedBtn.classList.add('bg-[#E5F9F3]', 'text-[#01C38D]', 'font-bold');
-}
+//     clickedBtn.classList.add('bg-[#E5F9F3]', 'text-[#01C38D]', 'font-bold');
+// }
 
-bestExecutionBtn.addEventListener('click', () => toggleClasses(bestExecutionBtn));
-uniqueTradingPairBtn.addEventListener('click', () => toggleClasses(uniqueTradingPairBtn));
-transparentBtn.addEventListener('click', () => toggleClasses(transparentBtn));
-noHiddenFeesBtn.addEventListener('click', () => toggleClasses(noHiddenFeesBtn));
+// bestExecutionBtn.addEventListener('click', () => toggleClasses(bestExecutionBtn));
+// uniqueTradingPairBtn.addEventListener('click', () => toggleClasses(uniqueTradingPairBtn));
+// transparentBtn.addEventListener('click', () => toggleClasses(transparentBtn));
+// noHiddenFeesBtn.addEventListener('click', () => toggleClasses(noHiddenFeesBtn));
 
-toggleClasses(bestExecutionBtn);
+// toggleClasses(bestExecutionBtn);
 
-// FUNCTIONALITY TO DISPLAY WHAT CORRESPONDING DIV 
+// // FUNCTIONALITY TO DISPLAY WHAT CORRESPONDING DIV 
 
-const bestExecutionContent = document.getElementById('bestExecutionContent');
-const uniqueTradingPairContent = document.getElementById('uniqueTradingPairContent');
-const transparentContent = document.getElementById('transparentContent');
-const noHiddenFeesContent = document.getElementById('noHiddenFeesContent');
+// const bestExecutionContent = document.getElementById('bestExecutionContent');
+// const uniqueTradingPairContent = document.getElementById('uniqueTradingPairContent');
+// const transparentContent = document.getElementById('transparentContent');
+// const noHiddenFeesContent = document.getElementById('noHiddenFeesContent');
 
-// Function to show content based on clicked button
-function showContent(content) {
-    bestExecutionContent.style.display = 'none';
-    uniqueTradingPairContent.style.display = 'none';
-    transparentContent.style.display = 'none';
-    noHiddenFeesContent.style.display = 'none';
+// // Function to show content based on clicked button
+// function showContent(content) {
+//     bestExecutionContent.style.display = 'none';
+//     uniqueTradingPairContent.style.display = 'none';
+//     transparentContent.style.display = 'none';
+//     noHiddenFeesContent.style.display = 'none';
 
-    content.style.display = 'flex';
-}
+//     content.style.display = 'flex';
+// }
 
-bestExecutionBtn.addEventListener('click', () => showContent(bestExecutionContent));
-uniqueTradingPairBtn.addEventListener('click', () => showContent(uniqueTradingPairContent));
-transparentBtn.addEventListener('click', () => showContent(transparentContent));
-noHiddenFeesBtn.addEventListener('click', () => showContent(noHiddenFeesContent))
+// bestExecutionBtn.addEventListener('click', () => showContent(bestExecutionContent));
+// uniqueTradingPairBtn.addEventListener('click', () => showContent(uniqueTradingPairContent));
+// transparentBtn.addEventListener('click', () => showContent(transparentContent));
+// noHiddenFeesBtn.addEventListener('click', () => showContent(noHiddenFeesContent))
 
-showContent(bestExecutionContent);
+// showContent(bestExecutionContent);
 
 
 

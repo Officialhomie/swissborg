@@ -313,17 +313,17 @@ if (toggleDrop2 && aboutContent) {
 }
 
 
-window.addEventListener('scroll', function() {
-    const navbar = document.getElementById('navbar');
-    const busStop1 = document.getElementById('busStop-1');
-    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+// window.addEventListener('scroll', function() {
+//     const navbar = document.getElementById('navbar');
+//     const busStop1 = document.getElementById('busStop-1');
+//     const scrollTop = window.scrollY || document.documentElement.scrollTop;
     
-    // Change background color of nav based on scroll position
-    if (scrollTop < busStop1.offsetTop) {
-        navbar.style.backgroundColor = 'transparent';
-    } else if (scrollTop >= busStop1.offsetTop) {
-        navbar.style.backgroundColor = '#fff'; // Change to red when scrolling to section 2
-    } else {
-        return;
-    }
-});
+//     // Change background color of nav based on scroll position
+//     if (scrollTop < busStop1.offsetTop) {
+//         navbar.style.backgroundColor = 'transparent';
+//     } else if (scrollTop >= busStop1.offsetTop) {
+//         navbar.style.backgroundColor = '#fff'; // Change to red when scrolling to section 2
+//     } else {
+//         return;
+//     }
+// });
